@@ -13,3 +13,26 @@
         max-height: 100vh;
         margin: auto;
     }
+
+    .body {
+        height: 2000px;
+        background-color: gray;
+    }
+
+    .header {
+        background-image: url("image/bg1.jpg");
+        height: 600px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 600px;
+    }
+
+/*    .hvr-wobble-to-bottom-right {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }*/
