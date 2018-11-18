@@ -1048,9 +1048,9 @@ pre code {
     max-width: 41.666667%;
   }
     .col-md-5-5 {
-    -ms-flex: 0 0 47.666667%;
-    flex: 0 0 47.666667%;
-    max-width: 47.666667%;
+    -ms-flex: 0 0 46.666667%;
+    flex: 0 0 46.666667%;
+    max-width: 46.666667%;
   }
   .col-md-6 {
     -ms-flex: 0 0 50%;
@@ -1154,7 +1154,7 @@ pre code {
     margin-left: 8.333333%;
   }
     .offset-md-1-5 {
-    margin-left: 13%;
+    margin-left: 13.433333%;
   }
   .offset-md-2 {
     margin-left: 16.666667%;
@@ -7552,7 +7552,10 @@ button.bg-dark:focus {
 .my-4 {
   margin-top: 1.5rem !important;
 }
-
+.mt-4-5,
+.my-4-5 {
+  margin-top: 1.8rem !important;
+}
 .mr-4,
 .mx-4 {
   margin-right: 1.5rem !important;
