@@ -134,14 +134,38 @@ body, html {
     transition: all 0.4s ease-in-out;
 }
 
-.iconUserName{
+.iconUserNameLogin{
     top: 140px;
     position: absolute;
     right: 40px;
 }
 
-.iconPassword{
+.iconPasswordLogin{
     top: 190px;
+    position: absolute;
+    right: 40px;
+}
+
+.iconFullNameSignUp{
+    top: 110px;
+    position: absolute;
+    right: 40px;
+}
+
+.iconUserNameSignUp{
+    top: 158px;
+    position: absolute;
+    right: 40px;
+}
+
+.iconPasswordSignUp{
+    top: 205px;
+    position: absolute;
+    right: 40px;
+}
+
+.iconConfirmPasswordSignUp{
+    top: 251px;
     position: absolute;
     right: 40px;
 }

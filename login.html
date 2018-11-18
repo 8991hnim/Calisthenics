@@ -7,38 +7,32 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="helper/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="helper/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="helper/hover/css/hover.css"  media="all">
+    <link rel="stylesheet" href="helper/hover/css/hover.css" media="all">
     <script type="text/javascript" src="helper/js/bootstrap.js"></script>
     <script type="text/javascript" src="helper/jquery/jquery.js"></script>
 </head>
 
 <body>
+    <div class="bg-image"></div>
+    <div class="bg-text">
+        <h2 class="mt-4">TRY HARD</h2>
+        <div class="txtLogin row mt-5" id="txtLogin">
+            <input type="text" class="form-control col-md-10 col-xs-12" placeholder="Account" id="txtUserNameLogin" name="">
+            <i class="iconUserNameLogin fa fa-user"></i>
+        </div>
+        <div class="txtLogin row mt-2" id="txtLogin">
+            <input type="password" class="form-control col-md-10 col-xs-12" placeholder="Password" id="txtPasswordLogin" name="">
+            <i class="iconPasswordLogin fa fa-lock"></i>
+            <div class="form-control-border"></div>
+        </div>
+        <button style="border-radius: 18px; color: #009900; font-weight: bold; background-color: white" class="col-md-11 btn btn-default hvr-float-shadow mt-5">LOG IN</button>
 
-<div class="bg-image"></div>
+          <p class="mt-4" style="font-size: 12px">Don't have an account? 
+              <a href="signup.html" class="hvr-buzz" style="text-decoration: none; color: #00bfff"> SIGN UP</a>
+          </p>
 
-<div class="bg-text">
-  <h2 class="mt-4">TRY HARD</h2>
-
-    <div class="txtLogin row mt-5" id="txtLogin">
-      <input type="text" class="form-control col-md-10 col-xs-12" placeholder="Account" id="txtUserNameLogin" name="">
-      <i class="iconUserName fa fa-user"></i>
+        
     </div>
-    <div class="txtLogin row mt-2" id="txtLogin">
-      <input type="password" class="form-control col-md-10 col-xs-12" placeholder="Password" id="txtPasswordLogin" name="">
-      <i class="iconPassword fa fa-lock"></i>
-      <div class="form-control-border"></div>
-    </div>
-
-       <button class="btn btn-dark hvr-grow-shadow mt-5">ĐĂNG NHẬP</button>
-
-
-        <a href="#" class="mt-2" style="text-decoration: none; color: green">
-            <button style="text-decoration: none; color: #66ff66;" class="btn btn-link hvr-buzz">Forgot your password?</button>
-        </a>
-
-</div>
-
-
 </body>
 
 </html>
