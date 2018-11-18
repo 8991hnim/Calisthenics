@@ -5,7 +5,7 @@
     }
 
     .header {
-        background-image: url("image/bg1.jpg");
+        background-image: url("image/background/bg1.jpg");
         height: 600px;
         width: 100%;
         background-repeat: no-repeat;
@@ -28,4 +28,19 @@
         text-align: center;
         background: linear-gradient(45deg, #00b359 0%,#006633 100%) !important;
     }
+
+    .btnLogin{
+        text-align: center;
+        color: #fff;
+        background-color: #008080;
+        border-color: #008080;
+        border-radius: 28px !important;
+    }
+
+    .btnLogin:hover {
+       text-align: center;
+       color: #fff;
+       background-color: #006666;
+       border-color: #006666;
+       border-radius: 28px;
 
