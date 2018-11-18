@@ -1,6 +1,6 @@
 
     .body {
-        height: 2000px;
+        height: 200px;
         background-color: gray;
     }
 
@@ -50,3 +50,98 @@
        border-radius: 28px;
    }
 
+
+   .bg-image {
+    height: 100px;
+  /* The image used */
+  background-image: url("image/test/twoplank.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0.4,0.4,0.4, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center !important;
+  height: 400px;
+  width: 300px;
+  background: linear-gradient(45deg, rgb(153, 0, 0) 0%, rgb(128, 0, 96) 100%) !important;
+  opacity: 0.5;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.txtLogin input{
+    border-right: none; 
+    border-left: none; 
+    border-top: none;
+    border-bottom: 1px solid #ff8080 !important;
+    background: 0 0 !important;
+    background-color: initial;
+    border-radius: 0;
+    color: white !important;
+    transition: none !important;
+    margin: 0 auto;
+    position: relative;
+}
+
+#txtLogin .form-control::placeholder {
+  color: white !important;
+  opacity: 1;
+}
+
+.form-control + .form-control-border {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: black;
+    height: 5px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.iconUserName{
+    top: 140px;
+    position: absolute;
+    right: 40px;
+}
+
+.iconPassword{
+    top: 190px;
+    position: absolute;
+    right: 40px;
+}
