@@ -87,7 +87,28 @@
   width: 340px;
   background: linear-gradient(45deg, rgb(153, 0, 0) 0%, rgb(128, 0, 96) 100%) !important;
   opacity: 0.5;
+  
+  /* animation w3shools*/
+  position: relative;
+  -webkit-animation-name: example;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 3s;    
+  animation-fill-mode: forwards;
 }
+
+@-webkit-keyframes example {
+    from {top: -450px;}
+    to {top: -300px;}
+}
+
+@keyframes example {
+    from {top: -450px;}
+    to {top: -300px;}
+}
+/* animation w3shools*/
+
 
 body, html {
   height: 100%;
@@ -205,4 +226,8 @@ body, html {
 
 .heightRowLoginSignUp span{
     color: #fff !important;
+}
+.footer{
+  height: 100px;
+  background-color: #333;
 }

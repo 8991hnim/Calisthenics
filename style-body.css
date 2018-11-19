@@ -1,0 +1,23 @@
+.rowCategory{
+
+}
+
+body{
+	height: auto;
+	width: auto;
+	background: linear-gradient(135deg, rgb(128, 0, 96) 0%,gray 50%, teal 100%) !important;
+}
+
+.cellCategory{
+	height: 400px;
+	width: auto;
+	background-image: url("image/test/minhthao.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.footer{
+	height: 100px;
+	background-color: #333;
+}
+
