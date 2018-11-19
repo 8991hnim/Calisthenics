@@ -99,12 +99,12 @@
 }
 
 @-webkit-keyframes example {
-    from {top: -450px;}
+    from {top: -600px;}
     to {top: -300px;}
 }
 
 @keyframes example {
-    from {top: -450px;}
+    from {top: -600px;}
     to {top: -300px;}
 }
 /* animation w3shools*/

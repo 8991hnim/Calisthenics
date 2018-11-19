@@ -5,15 +5,15 @@
 body{
 	height: auto;
 	width: auto;
-	background: linear-gradient(135deg, rgb(128, 0, 96) 0%,gray 50%, teal 100%) !important;
 }
 
 .cellCategory{
 	height: 400px;
 	width: auto;
-	background-image: url("image/test/minhthao.jpg");
+	background-image: url("image/test/push-up.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	opacity: 0.9;
 }
 
 .footer{
@@ -21,3 +21,8 @@ body{
 	background-color: #333;
 }
 
+.rowCategory .cellCategory:hover{
+	z-index: 1;
+	opacity: 1;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
