@@ -135,37 +135,37 @@ body, html {
 }
 
 .iconUserNameLogin{
-    top: 140px;
+    top: 175px;
     position: absolute;
     right: 40px;
 }
 
 .iconPasswordLogin{
-    top: 190px;
+    top: 222px;
     position: absolute;
     right: 40px;
 }
 
 .iconFullNameSignUp{
-    top: 110px;
+    top: 133px;
     position: absolute;
     right: 40px;
 }
 
 .iconUserNameSignUp{
-    top: 158px;
+    top: 181px;
     position: absolute;
     right: 40px;
 }
 
 .iconPasswordSignUp{
-    top: 205px;
+    top: 228px;
     position: absolute;
     right: 40px;
 }
 
 .iconConfirmPasswordSignUp{
-    top: 251px;
+    top: 274px;
     position: absolute;
     right: 40px;
 }
