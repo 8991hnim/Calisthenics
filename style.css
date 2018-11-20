@@ -15,34 +15,31 @@
         color: white !important;
     }
 
-    .header a {
-        text-align: center;
-        background: linear-gradient(45deg, #e61d36 0%,#f08138 100%);
+    .header span{
+      text-align:center;
     }
     .header .healthy a{
         text-align: center;
         background: linear-gradient(45deg, #00b359 0%,#006633 100%) !important;
     }
 
-    .header .training a {
+    .header .training  a{
         text-align: center;
         background: linear-gradient(45deg, #e61d36 0%,#f08138 100%) !important;
     }
 
     .btnLoginHome{
-        text-align: center !important;
-        color: #fff !important;
-        background-color: #008080 !important;
-        border-color: #008080 !important;
+        text-align: center ;
+        color: #fff ;
+        background-color: #008080 ;
+        border-color: #008080 ;
         border-radius: 28px !important;
     }
 
     .btnLoginHome:hover {
-       text-align: center !important;
-       color: #fff !important;
-       background-color: #006666 !important;
-       border-color: #006666 !important;
-       border-radius: 28px !important;
+       background-color: #006666;
+       border-color: #006666 ;
+       color:#fff;
    }
 
 
