@@ -5,6 +5,7 @@
 body{
 	height: auto;
 	width: auto;
+	background: linear-gradient(45deg, rgb(153, 0, 0) 0%, rgb(128, 0, 96) 100%) !important;
 }
 
 .cellCategory{
