@@ -1,9 +1,4 @@
 
-    .body {
-        height: 200px;
-        background-color: gray;
-    }
-
     .header {
         background-image: url("image/background/bg1.jpg");
         height: 600px;
@@ -114,6 +109,7 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(90deg, #0d0d0d 0%, #1a1a1a 50% , #0d0d0d 100%)  !important;
 }
 
 * {
@@ -229,5 +225,20 @@ body, html {
 }
 .footer{
   height: 100px;
-  background-color: #333;
+  background-color: #000;
+}
+
+.cellCategory{
+  height: 400px;
+  width: auto;
+  background-image: url("image/test/push-up.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.rowCategory .cellCategory:hover{
+  z-index: 1;
+  opacity: 1;
+  box-shadow: 0 0 10px 0 #b30000;
 }
