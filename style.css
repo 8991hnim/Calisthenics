@@ -299,6 +299,10 @@ a{
     width: 180px;
 }
 
+.avatar-circle:hover{
+    border: 2px solid teal;
+}
+
 .avatar-xxlg {
     width: 180px;
     height: 180px;
