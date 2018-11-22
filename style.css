@@ -83,11 +83,12 @@
   /* animation w3shools*/
   position: relative;
   -webkit-animation-name: example;  /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
+  -webkit-animation-duration: 1s;  /* Safari 4.0 - 8.0 */    
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-name: example;
-  animation-duration: 3s;    
+  animation-duration: 1s;    
   animation-fill-mode: forwards;
+  border-radius: 15px;
 }
 
 @-webkit-keyframes example {
@@ -334,3 +335,12 @@ a{
     color: #fff;
 }
 
+
+/*css post*/
+.headerPost {
+    background-image: url("image/background/bg_abs.jpg");
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 700px;
+}
