@@ -8,9 +8,35 @@
 
 .button {
     display: inline-block;
-    padding: 1em;
-    background-color: #008060;
     color: white !important;
+}
+
+.btnHome a{
+	font-size: 11px;
+}
+
+@media (min-width: 768px){
+    .button {
+	    display: inline-block;
+	    padding: 1em;
+	    background-color: #008060;
+	    color: white !important;
+	}
+	.btnHome a{
+		font-size: 18px !important;
+	}
+}
+
+@media (min-width: 576px){
+    .button {
+	    display: inline-block;
+	    padding: 1em;
+	    background-color: #008060;
+	    color: white !important;
+	}
+	.btnHome a{
+		font-size: 13px;
+	}
 }
 
 .header span {
@@ -19,12 +45,14 @@
 
 .btnHome .healthy {
     text-align: center;
-    background: linear-gradient(45deg, #00b359 0%, #006633 100%) !important;
+    background: linear-gradient(-90deg, #001a1a, #004d4d);
+    border-radius: 0 40px 40px 0;
 }
 
 .btnHome .training {
     text-align: center;
-    background: linear-gradient(45deg, #e61d36 0%, #f08138 100%) !important;
+    background: linear-gradient(to right, #330000 , #800000);
+    border-radius: 40px 0 0 40px;
 }
 
 .btnLoginHome {
