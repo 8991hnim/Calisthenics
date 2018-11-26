@@ -1,10 +1,27 @@
-.header {
+/*.header {
     background-image: url("image/background/bg1.jpg");
     height: 600px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: 100% 600px;
+}*/
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%) !important;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* SLIDE & HOME*/
+
 
 .button {
     display: inline-block;
@@ -39,20 +56,34 @@
 	}
 }
 
-.header span {
+.heightRowLoginSignUp span {
     text-align: center;
 }
 
-.btnHome .healthy {
-    text-align: center;
-    background: linear-gradient(-90deg, #001a1a, #004d4d);
-    border-radius: 0 40px 40px 0;
+.btnSignUpHome {
+    color: #ffa64d !important;
+    text-decoration: none !important;
+    font-size: 17px !important;
+}
+
+.heightRowLoginSignUp {
+    height: 430px !important;
+}
+
+.heightRowLoginSignUp span {
+    color: #fff !important;
 }
 
 .btnHome .training {
     text-align: center;
     background: linear-gradient(to right, #330000 , #800000);
     border-radius: 40px 0 0 40px;
+}
+
+.btnHome .healthy {
+    text-align: center;
+    background: linear-gradient(-90deg, #001a1a, #004d4d);
+    border-radius: 0 40px 40px 0;
 }
 
 .btnLoginHome {
@@ -93,16 +124,20 @@
     z-index: 2;
 }
 
+/* SLIDE HOME */
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/*  BLUR FORM LOG IN & SIGN UP  */
+
 .bg-image {
     height: 100px;
-    /* The image used */
     background-image: url("image/test/twoplank.jpg");
 
     /* Add the blur effect */
     filter: blur(8px);
     -webkit-filter: blur(8px);
 
-    /* Full height */
     height: 100%;
 
     /* Center and scale the image nicely */
@@ -170,17 +205,6 @@
 /* animation w3shools*/
 
 
-body,
-html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(90deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%) !important;
-}
-
-* {
-    box-sizing: border-box;
-}
 
 .txtLogin input {
     border-right: none;
@@ -199,22 +223,6 @@ html {
 #txtLogin .form-control::placeholder {
     color: white !important;
     opacity: 0.6;
-}
-
-.form-control+.form-control-border {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    background: black;
-    height: 5px;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
 }
 
 .iconUserNameLogin {
@@ -276,25 +284,15 @@ html {
     font-size: 12px !important;
 }
 
-.btnSignUpHome {
-    color: #ffa64d !important;
-    text-decoration: none !important;
-    font-size: 17px !important;
-}
 
-.heightRowLoginSignUp {
-    height: 430px !important;
-}
 
-.heightRowLoginSignUp span {
-    color: #fff !important;
-}
+/*  BLUR FORM LOG IN & SIGN UP  */
 
-.footer {
-    height: auto;
-    background-color: #222;
-    color: #fff;
-}
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* CATEGORY BODY */
 
 .cellCategory {
     height: 400px;
@@ -344,6 +342,19 @@ html {
 
 #cardio {
     background-image: url("image/ImageCategory/cardio.jpg");
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+/* CONTACT & FOOTER */
+
+.footer {
+    height: auto;
+    background-color: #222;
+    color: #fff;
 }
 
 .main-founder {
@@ -420,9 +431,11 @@ b {
     }
 }
 
+/*----------------------------------------------------------------------------------------------------*/
 
 
-/*css post*/
+/* POST of CATEGORY */
+
 .headerPost {
     background-image: url("image/background/bg_abs.jpg");
     height: 600px;
