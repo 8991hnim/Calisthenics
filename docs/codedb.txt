@@ -1,0 +1,72 @@
+CREATE TABLE category
+(
+ 	ID INT PRIMARY KEY AUTO_INCREMENT,
+    Name TEXT,
+    Background TEXT
+)
+
+CREATE TABLE post
+(
+ 	ID INT PRIMARY KEY AUTO_INCREMENT,
+    Title TEXT,
+    Content TEXT,
+    ShortContent TEXT,
+    LinkYoutube TEXT,
+    Image TEXT,
+    Background TEXT,
+    CategoryID INT,
+    FOREIGN KEY (CategoryID) REFERENCES category(ID)
+)
+
+CREATE TABLE `user`
+(
+ 	ID INT PRIMARY KEY AUTO_INCREMENT,
+    Account TEXT,
+    Pass TEXT,
+    Username TEXT,
+    Type INT
+)
+
+CREATE TABLE exercise
+(
+ 	ID INT PRIMARY KEY AUTO_INCREMENT,
+    Name TEXT,
+    Gif TEXT
+)
+
+CREATE TABLE `level`
+(
+ 	ID INT PRIMARY KEY AUTO_INCREMENT,
+    Name TEXT
+)
+
+CREATE TABLE detail_level
+(
+ 	ID INT PRIMARY KEY AUTO_INCREMENT,
+    LevelID INT,
+    Day CHAR(2),
+    FOREIGN KEY (LevelID) REFERENCES `level`(ID) 
+)
+
+CREATE TABLE detail_day
+(
+ 	ID INT PRIMARY KEY AUTO_INCREMENT,
+    DetailLevelID INT,
+    ExerciseID INT,
+    `Set` CHAR(2),
+    `Rep` CHAR(2),
+    BreakTime TEXT,
+    FOREIGN KEY (DetailLevelID) REFERENCES detail_level(ID), 
+    FOREIGN KEY (ExerciseID) REFERENCES exercise(ID)
+)
+
+CREATE TABLE progress_training
+(
+ 	ID INT PRIMARY KEY AUTO_INCREMENT,
+    UserID INT,
+    LevelID INT,
+    DayTrained CHAR(2),
+    FOREIGN KEY (UserID) REFERENCES `user`(ID), 
+    FOREIGN KEY (LevelID) REFERENCES `level`(ID)
+)
+
