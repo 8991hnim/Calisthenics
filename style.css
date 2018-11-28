@@ -294,12 +294,18 @@ html {
 
 /* CATEGORY BODY */
 
+.rowCategory a{
+    padding-top: 170px;
+    font-family: Agency FB;
+    font-size: 50px;
+}
+
 .cellCategory {
     height: 400px;
     width: auto;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .rowCategory .cellCategory:hover {
@@ -437,14 +443,32 @@ b {
 /* POST of CATEGORY */
 
 .headerPost {
-    background-image: url("image/background/bg_abs.jpg");
-    height: 600px;
+    background-image: url("image/test/push-up.jpg");
+    height: 300px;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: 100% 700px;
+    background-size: 100% 300px;
 }
 
+@media (min-width: 576px){
+    .headerPost {
+        background-image: url("image/test/push-up.jpg");
+        height: 450px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 450px;
+    }
+}
 
+@media (min-width: 768px){
+    .headerPost {
+        background-image: url("image/test/push-up.jpg");
+        height: 800px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 800px;
+    }
+}
 
 /*----------------------------------------------------------------------------------------------------*/
 
@@ -458,19 +482,13 @@ b {
 
 .result{
     border-top: 1px solid gray;
+    font-size: 15px;
 }
 
 #selectLevel{
     height: 100px;
     padding-top: 2rem;
     font-size: 30px;
-}
-
-#selectLevel:hover{
-    transition: 0.3s;
-
-    font-size: 35px;
-    padding-top: 1.5rem;
 }
 
 .level1{
