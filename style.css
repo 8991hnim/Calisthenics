@@ -504,11 +504,21 @@ b {
 .btnGroupDay1  button{
     width: 88px;
     background: #004d4d;
-    border-color: #004d4d;
+    color: white;
+}
+
+.btnGroupDay1  button:hover{
+    background: #993333;
 }
 
 .btnGroupDay2  button{
     width: 88px;
+    background: #004d4d;
+    color: white;
+}
+
+.btnGroupDay2  button:hover{
+    background: #993333;
 }
 
 #imgExercise{
