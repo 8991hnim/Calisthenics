@@ -450,6 +450,17 @@ b {
     background-size: 100% 300px;
 }
 
+.btnGroupDay1{
+    position: absolute; 
+    top: 64%; 
+}
+
+
+.btnGroupDay2{
+    position: absolute; 
+    top: 62%; 
+}
+
 @media (min-width: 576px){
     .headerPost {
         background-image: url("image/test/push-up.jpg");
@@ -457,6 +468,16 @@ b {
         width: 100%;
         background-repeat: no-repeat;
         background-size: 100% 450px;
+    }
+
+    .btnGroupDay1{
+        position: absolute; 
+        top: 76%; 
+    }
+
+    .btnGroupDay2{
+        position: absolute; 
+        top: 74%; 
     }
 }
 
@@ -468,6 +489,32 @@ b {
         background-repeat: no-repeat;
         background-size: 100% 800px;
     }
+
+    .btnGroupDay1{
+        position: absolute; 
+        top: 87%; 
+    }
+
+    .btnGroupDay2{
+        position: absolute; 
+        top: 86%; 
+    }
+}
+
+.btnGroupDay1  button{
+    width: 88px;
+    background: #004d4d;
+    border-color: #004d4d;
+}
+
+.btnGroupDay2  button{
+    width: 88px;
+}
+
+#imgExercise{
+    background-image: url(docs/demo.jpg);
+    height: auto;
+    width: auto;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
