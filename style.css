@@ -442,23 +442,13 @@ b {
 
 /* POST of CATEGORY */
 
-.headerPost {
-    background-image: url("image/test/push-up.jpg");
-    height: 300px;
+
+ .headerPost {
     width: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 300px;
 }
 
 .btnGroupDay1{
     position: absolute; 
-    top: 64%; 
-}
-
-
-.btnGroupDay2{
-    position: absolute; 
-    top: 62%; 
 }
 
 @media (min-width: 576px){
@@ -473,11 +463,6 @@ b {
     .btnGroupDay1{
         position: absolute; 
         top: 76%; 
-    }
-
-    .btnGroupDay2{
-        position: absolute; 
-        top: 74%; 
     }
 }
 
@@ -494,15 +479,9 @@ b {
         position: absolute; 
         top: 87%; 
     }
-
-    .btnGroupDay2{
-        position: absolute; 
-        top: 86%; 
-    }
 }
 
 .btnGroupDay1  button{
-    width: 88px;
     background: #004d4d;
     color: white;
 }
@@ -511,14 +490,8 @@ b {
     background: #993333;
 }
 
-.btnGroupDay2  button{
-    width: 88px;
-    background: #004d4d;
-    color: white;
-}
-
-.btnGroupDay2  button:hover{
-    background: #993333;
+.btn-group-lg > .btn{
+    border-radius: 0 !important;
 }
 
 #imgExercise{
