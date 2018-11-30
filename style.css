@@ -440,10 +440,10 @@ b {
 /*----------------------------------------------------------------------------------------------------*/
 
 
-/* POST of CATEGORY */
+/* TRAINING */
 
 
- .headerPost {
+ .headerTraining {
     width: 100%;
 }
 
@@ -452,8 +452,33 @@ b {
     top: 10%;
 }
 
+
+.btn-group-lg > .btn{
+    border-radius: 0 !important;
+}
+
+.backNext{
+    font-size: 25px;
+    color: #004d4d;
+}
+
+.backNext:hover{
+    transition: 1s;
+    color: #17a2b8;
+}
+
+.btnFinishTraining{
+    font-size: 40px;
+    color: #009933;
+}
+
+.btnFinishTraining:hover{
+    transition: 1s;
+    color: #00ff80;
+}
+
 @media (min-width: 576px){
-    .headerPost {
+    .headerTraining {
         background-image: url("image/test/push-up.jpg");
         height: 450px;
         width: 100%;
@@ -465,12 +490,32 @@ b {
         position: absolute; 
         top: 86%; 
     }
+
+    .backNext{
+        font-size: 30px;
+        color: #004d4d;
+    }
+
+    .backNext:hover{
+        transition: 1s;
+        color: #17a2b8;
+    }
+
+    .btnFinishTraining{
+        font-size: 50px;
+        color: #009933;
+    }
+
+    .btnFinishTraining:hover{
+        transition: 1s;
+        color: #00ff80;
+    }
 }
 
 @media (min-width: 768px){
-    .headerPost {
-        background-image: url("image/test/push-up.jpg");
-        height: 800px;
+    .headerTraining {
+        background-image: url("image/background/bg-training.jpg");
+        height: 600px;
         width: 100%;
         background-repeat: no-repeat;
         background-size: 100% 800px;
@@ -479,6 +524,26 @@ b {
     .btnGroupDay1{
         position: absolute; 
         top: 90%; 
+    }
+
+    .backNext{
+        font-size: 40px;
+        color: #004d4d;
+    }
+
+    .backNext:hover{
+        transition: 1s;
+        color: #17a2b8;
+    }
+
+    .btnFinishTraining{
+        font-size: 70px;
+        color: #009933;
+    }
+
+    .btnFinishTraining:hover{
+        transition: 1s;
+        color: #00ff80;
     }
 }
 
@@ -491,9 +556,6 @@ b {
     background: #993333;
 }
 
-.btn-group-lg > .btn{
-    border-radius: 0 !important;
-}
 
 /*----------------------------------------------------------------------------------------------------*/
 

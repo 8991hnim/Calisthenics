@@ -15,7 +15,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 headerPost text-center" style="position: relative;">
+            <div class="col-12 col-sm-12 col-md-12 headerTraining text-center" style="position: relative;">
                 <div class="btn-group btn-group-lg flex-wrap btnGroupDay1">
                     <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">01</button> 
                     <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">02</button>
@@ -33,44 +33,62 @@
             </div>
         </div>
         <div class="container">
-            <h2 class="text-center text-danger mt-3 mb-3">Ngày 1!</h2>
-            <div class="row mt-4 mb-4">
-                <div class="col-1 col-sm-1 col-md-1">
-                    <a href="">
-                        <i class="fa fa-chevron-left" id="btnLeftExercise"></i>
+            <h2 class="text-center text-danger mt-3 mb-3">Ngày 1</h2>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <a href="" class="btnFinishTraining" id="btnFinishTraining">
+                        <i class="fa fa-trophy"></i>
                     </a>
                 </div>
-                <img class="col-6 offset-1 col-sm-6 offset-sm-1 col-md-6 offset-md-1" src="docs/vinahey.gif" alt="fail picture">
-                <div class="col-md-3">
+            </div>
+            <div class="row">
+                <div class="col-1 col-sm-1 col-md-1">
+                    <a href="" class="col-md-12 backNext" id="btnLeftTraining">
+                        <i class="fa fa-chevron-left"></i>
+                    </a>
+                </div>
+                <div class="col-1 offset-9 col-sm-1 offset-sm-10 col-md-1 offset-md-10 text-right">
+                    <a href="" class="col-md-12 backNext" id="btnRightTraining">
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-5 mb-3">
+                <iframe class="col-12 col-sm-12 col-md-6 offset-md-1" height="315" src="https://www.youtube.com/embed/wAOmds7OPVk">
+                </iframe>
+                <div class="col-md-5 mt-5 text-center" id="infoTraining">
                     <div class="row mt-5">
-                        <div class="col-md-5">
+                        <div class="col-2 offset-4 col-sm-2 offset-sm-4 col-md-3 offset-md-0">
                             <p class="text-info">Name: </p>
                         </div>
-                        <div class="col-md-2 text-light" id="">21</div>
+                        <div class="col-6 col-sm-6 col-md-9 text-light text-left">
+                            <p id="nameTraining">how to train your dragon</p>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-2 offset-4 col-sm-2 offset-sm-4 col-md-3 offset-md-0">
                             <p class="text-info">Set: </p>
                         </div>
-                        <div class="col-md-2 text-light" id="">21</div>
+                        <div class="col-1 col-sm-1 col-md-1 text-light">
+                            <p id="setTraining">21</p>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-2 offset-4 col-sm-2 offset-sm-4 col-md-3 offset-md-0">
                             <p class="text-info">Rep: </p>
                         </div>
-                        <div class="col-md-2 text-light" id="">21</div>
+                        <div class="col-1 col-sm-1 col-md-1 text-light" id="">
+                            <p id="repTraining">21</p>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-5">
-                            <p class="text-info">Break time: </p>
+                        <div class="col-2 offset-4 col-sm-2 offset-sm-4 col-md-3 offset-md-0">
+                            <p class="text-info">Breaks: </p>
                         </div>
-                        <div class="col-md-2 text-light" id="">21</div>
+                        <div class="col-1 col-sm-1 col-md-1 text-light">
+                            <p id="breaksTraining">21</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-1 col-sm-1 col-md-1">
-                    <a href="">
-                        <i class="fa fa-chevron-right" id="btnRightExercise"></i>
-                    </a>
                 </div>
             </div>
         </div>
