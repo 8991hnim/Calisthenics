@@ -34,39 +34,41 @@ CREATE TABLE exercise
     Gif TEXT
 )
 
-CREATE TABLE `level`
-(
- 	ID INT PRIMARY KEY AUTO_INCREMENT,
-    Name TEXT
-)
 
-CREATE TABLE detail_level
+CREATE TABLE training
 (
- 	ID INT PRIMARY KEY AUTO_INCREMENT,
-    LevelID INT,
-    Day CHAR(2),
-    FOREIGN KEY (LevelID) REFERENCES `level`(ID) 
-)
-
-CREATE TABLE detail_day
-(
- 	ID INT PRIMARY KEY AUTO_INCREMENT,
-    DetailLevelID INT,
+ 	LevelID INT,
+    Day INT,
     ExerciseID INT,
-    `Set` CHAR(2),
-    `Rep` CHAR(2),
+    `Set` INT,
+    `Rep` INT,
     BreakTime TEXT,
-    FOREIGN KEY (DetailLevelID) REFERENCES detail_level(ID), 
+    PRIMARY KEY (LevelID, Day, ExerciseID), 
     FOREIGN KEY (ExerciseID) REFERENCES exercise(ID)
 )
 
+
+
 CREATE TABLE progress_training
 (
- 	ID INT PRIMARY KEY AUTO_INCREMENT,
     UserID INT,
     LevelID INT,
-    DayTrained CHAR(2),
+    DayTrained INT,
     FOREIGN KEY (UserID) REFERENCES `user`(ID), 
-    FOREIGN KEY (LevelID) REFERENCES `level`(ID)
+    FOREIGN KEY (LevelID) REFERENCES training(LevelID),
+    PRIMARY KEY (UserID, LevelID)
 )
+
+
+INSERT INTO `exercise` (`ID`, `Name`, `Gif`) VALUES (NULL, 'Jumping Jacks', 'iSSAk4XCsRA');
+INSERT INTO `exercise` (`ID`, `Name`, `Gif`) VALUES (NULL, 'Push-Up', 'wxhNoKZlfY8'), (NULL, 'Diamond Push-Up', 'J0DnG1_S92I'), (NULL, 'Clapping Push-Up', 'EYwWCgM198U');
+INSERT INTO `exercise` (`ID`, `Name`, `Gif`) VALUES (NULL, 'Pull-Up', 'XB_7En-zf_M'), (NULL, 'Chin-Up', 'b-ztMQpj8yc'), (NULL, 'Wide Grip Chin-Up', 'w_PxgjPlU6s'), (NULL, 'Wide Grip Pull-Up', 'iywjqUo5nmU');
+INSERT INTO `exercise` (`ID`, `Name`, `Gif`) VALUES (NULL, 'Close Grip Pull-Up', 'j--ftfgTL5I'), (NULL, 'Close Grip Chin-up', '6bTcFTRoqcw');
+INSERT INTO `exercise` (`ID`, `Name`, `Gif`) VALUES (NULL, 'Superman Push-up', '6iam4u23zuM'), (NULL, 'High Knee', 'oDdkytliOqE'), (NULL, 'Archer Push-Up', 'h_1-gJEaksI'), (NULL, 'Hindu Push-Up', 'I-KWxLXWBN0'), (NULL, 'Planche', 'UZ-1jwG7aQ4');
+INSERT INTO `exercise` (`ID`, `Name`, `Gif`) VALUES (NULL, 'One Arm Push-Up', 'JiHkxqbhNuw');
+INSERT INTO `exercise` (`ID`, `Name`, `Gif`) VALUES (NULL, 'Crunches', 'Xyd_fa5zoEU'), (NULL, 'Cross Arm Crunches', 'wgaIH-0rvQw'), (NULL, 'Russian Twist', 'wkD8rjkodUI'), (NULL, 'Mountain Climber', 'nmwgirgXLYM'), (NULL, 'Plank', 'pSHjTRCQxIw'), (NULL, 'Flutter Kicks', 'ANVdMDaYRts'), (NULL, 'Clapping Crunches', 'moaZFyRi0sM');
+INSERT INTO `exercise` (`ID`, `Name`, `Gif`) VALUES (NULL, 'Triple Clap Push-Up', '0hfmJaydq4o'), (NULL, 'Butt Bridge', '8bbE64NuDTU'), (NULL, 'V-Up', 'iP2fjvG0g3w'), (NULL, 'Reverse Crunches', 'hyv14e2QDq0');
+
+
+
 

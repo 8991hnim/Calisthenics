@@ -1,3 +1,17 @@
+<?php
+    include_once("config/core.php");
+    include_once("model/object/user.php");
+    if(isset($_GET["logout"])) {
+        session_destroy();
+        header("Location: {$home_url}index.php");
+    }else if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
+        $user = unserialize($_SESSION['current_user']);
+        $username = $user->username;
+    }
+
+   
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,11 +37,32 @@
                     <li class="nav-item col-10 col-sm-9 offset-sm-2 col-md-11 btnMenu">
                         <div class="row">
                             <div class="col-2 col-sm-9 col-md-2 offset-md-7 pt-3 text-right">
-                                <a href="login.php" class="btnLoginHome hvr-rotate">Log in</a>
+                                <?php
+                                    if(isset($username)){
+                                ?>
+                                    <a class="btnLoginHome hvr-rotate"><?php echo $username ?></a>
+                                    </div>
+                                    <!-- <form method="post"> -->
+                                    <div class="col-2 col-sm-3 col-md-3 pt-3">
+                                        
+                                                
+                                            <!-- <input class="btnSignUpHome hvr-rotate" type="submit" name="logout"> -->
+                                        
+                                <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
                             </div>
-                            <div class="col-2 col-sm-3 col-md-3 pt-3">
+                            <!-- </form> -->
+                                <?php
+                                    }else{
+                                ?>
+                                <a href="login.php" class="btnLoginHome hvr-rotate">Log in</a></div>
+                                <div class="col-2 col-sm-3 col-md-3 pt-3">
                                 <a href="signup.php" class="btnSignUpHome hvr-rotate">Sign up</a>
                             </div>
+                                <?php
+                                }
+                                ?>
+                            
+                            
                         </div>
                     </li>
                 </ul>

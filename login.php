@@ -1,3 +1,11 @@
+<?php
+    include_once("config/core.php");
+    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
+        header("Location: {$home_url}index.php");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +24,7 @@
     <div class="bg-image"></div>
     <div class="bg-text">
         <h2 class="mt-4">TRY HARD</h2>
+        
         <div class="txtLogin row mt-6" id="txtLogin">
             <input type="text" class="form-control col-md-10 col-xs-12" placeholder="Account" id="txtUserNameLogin" name="">
             <i class="iconUserNameLogin fa fa-user"></i>
@@ -24,11 +33,17 @@
             <input type="password" class="form-control col-md-10 col-xs-12" placeholder="Password" id="txtPasswordLogin" name="">
             <i class="iconPasswordLogin fa fa-lock"></i>
         </div>
-        <button class="col-md-11 btn btn-default hvr-wobble-top mt-6 btnLogin">LOG IN</button>
+        <button class="col-md-11 btn btn-default hvr-wobble-top mt-6 btnLogin" id="btnLogin">LOG IN</button>
+        <!-- </form> -->
         <p class="mt-4">Don't have an account? 
-            <a href="signup.php" class="hvr-buzz linkSignUp"> SIGN UP</a>
+            <a href="signup.php" class="hvr-buzz linkSignUp">SIGN UP</a>
         </p>
+         <div id="loginAlert"></div>
     </div>
+
+
+    <script type="text/javascript" src="view/loginView.js"></script>
+
 </body>
 
 </html>

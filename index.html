@@ -1,4 +1,10 @@
+<?php
+    include_once("config/core.php");
+    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
+        header("Location: {$home_url}index.php");
+    }
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
