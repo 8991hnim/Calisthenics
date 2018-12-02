@@ -26,7 +26,7 @@
         </div>
         <button class="col-md-11 btn btn-default hvr-wobble-top mt-6 btnLogin">LOG IN</button>
         <p class="mt-4">Don't have an account? 
-            <a href="signup.html" class="hvr-buzz linkSignUp"> SIGN UP</a>
+            <a href="signup.php" class="hvr-buzz linkSignUp"> SIGN UP</a>
         </p>
     </div>
 </body>
