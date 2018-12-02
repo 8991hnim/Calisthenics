@@ -140,7 +140,6 @@ html {
     background-color: rgba(0.4, 0.4, 0.4, 0.4);
     /* Black w/opacity/see-through */
     color: white;
-    font-weight: bold;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -153,11 +152,11 @@ html {
     width: 340px;
     background: linear-gradient(45deg, rgb(153, 0, 0) 0%, rgb(128, 0, 96) 100%) !important;
     opacity: 0.5;
+    border-radius: 10px;
 
 
 
     /* animation w3shools*/
-    position: relative;
     -webkit-animation-name: example;
     /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 1s;
@@ -167,26 +166,25 @@ html {
     animation-name: example;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    border-radius: 15px;
 }
 
 @-webkit-keyframes example {
     from {
-        top: -600px;
+        top: 0%;
     }
 
     to {
-        top: -300px;
+        top: 50%;
     }
 }
 
 @keyframes example {
     from {
-        top: -600px;
+        top: 0%;
     }
 
     to {
-        top: -300px;
+        top: 50%;
     }
 }
 /* animation w3shools*/
@@ -271,6 +269,9 @@ html {
     font-size: 12px !important;
 }
 
+p a {
+    font-weight: bolder;
+}
 
 
 /*  BLUR FORM LOG IN & SIGN UP  */
