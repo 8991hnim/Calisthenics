@@ -24,7 +24,6 @@ html {
 .menuHead{
     background-color: #000 !important;
     box-shadow: 0 0 3px 0 #004d4d;
-    padding: 0;
 }
 
 .button {
@@ -431,6 +430,9 @@ b {
 
 /* TRAINING */
 
+.textSelectedDay{
+    padding-top: 80px;
+}
 
  .headerTraining {
     width: 100%;
@@ -439,9 +441,8 @@ b {
 
 .btnGroupDay1{
     position: absolute; 
-    top: 10%;
+    top: 60%;
 }
-
 
 .btn-group-lg > .btn{
     border-radius: 0 !important;
@@ -478,6 +479,10 @@ b {
         width: 100%;
         background-repeat: no-repeat;
         background-size: 100% 450px;
+    }
+
+    .textSelectedDay{
+        padding-top: 0px;
     }
 
     .btnGroupDay1{
@@ -517,6 +522,10 @@ b {
         width: 100%;
         background-repeat: no-repeat;
         background-size: 100% 800px;
+    }
+
+    .textSelectedDay{
+        padding-top: 0px;
     }
 
     .btnGroupDay1{

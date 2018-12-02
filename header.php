@@ -22,8 +22,12 @@
                     </li>
                     <li class="nav-item col-10 col-sm-9 offset-sm-2 col-md-11 btnMenu">
                         <div class="row">
-                            <a href="login.php" class="col-2 col-sm-9 col-md-2 offset-md-7 pt-3 btnLoginHome hvr-rotate text-right">Log in</a>
-                            <a href="signup.php" class="col-2 col-sm-3 col-md-3 pt-3 btnSignUpHome hvr-rotate">Sign up</a>
+                            <div class="col-2 col-sm-9 col-md-2 offset-md-7 pt-3 text-right">
+                                <a href="login.php" class="btnLoginHome hvr-rotate">Log in</a>
+                            </div>
+                            <div class="col-2 col-sm-3 col-md-3 pt-3">
+                                <a href="signup.php" class="btnSignUpHome hvr-rotate">Sign up</a>
+                            </div>
                         </div>
                     </li>
                 </ul>

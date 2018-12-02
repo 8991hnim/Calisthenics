@@ -14,13 +14,22 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row menuHead">
-            <nav class="navbar navbar-expand-sm">
-                <ul class="navbar-nav">
-                    <li class="nav-item" id="nameCompanyMenu">
+        <div class="row">
+            <nav class="navbar navbar-expand-sm menuHead fixed-top">
+                <ul class="navbar-nav col-12 col-sm-12 col-md-12">
+                    <li class="nav-item col-1 col-sm-1 col-md-1" id="nameCompanyMenu">
                         <a class="nav-link" href="index.php" title="Home">MVTech</a>
                     </li>
-                    
+                    <li class="nav-item col-10 col-sm-9 offset-sm-2 col-md-11 btnMenu">
+                        <div class="row">
+                            <div class="col-2 col-sm-9 col-md-2 offset-md-7 pt-3 text-right">
+                                <a href="login.php" class="btnLoginHome hvr-rotate">Log in</a>
+                            </div>
+                            <div class="col-2 col-sm-3 col-md-3 pt-3">
+                                <a href="signup.php" class="btnSignUpHome hvr-rotate">Sign up</a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -43,7 +52,9 @@
             </div>
         </div>
         <div class="container">
-            <h2 class="text-center text-danger mt-3 mb-3">Ngày 1</h2>
+            <div class="textSelectedDay">
+                <h2 class="text-center text-danger mt-3 mb-3">Ngày 1</h2>
+            </div>
             <div class="row text-center">
                 <div class="col-md-12">
                     <a href="post.php" class="btnFinishTraining" title="Finish" id="btnFinishTraining">
@@ -70,35 +81,35 @@
                 </div>
                 <div class="col-md-5 mt-5 text-center" id="infoTraining">
                     <div class="row mt-5">
-                        <div class="col-2 offset-4 col-sm-2 offset-sm-4 col-md-3 offset-md-0">
+                        <div class="col-2 col-sm-2 offset-sm-4 col-md-3 offset-md-0">
                             <p class="text-info">Name: </p>
                         </div>
-                        <div class="col-6 col-sm-6 col-md-9 text-light text-left">
+                        <div class="col-10 col-sm-6 col-md-9 text-light text-left">
                             <p id="nameTraining">how to train your dragon</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-2 offset-4 col-sm-2 offset-sm-4 col-md-3 offset-md-0">
+                        <div class="col-2 col-sm-2 offset-sm-4 col-md-3 offset-md-0">
                             <p class="text-info">Set: </p>
                         </div>
                         <div class="col-1 col-sm-1 col-md-1 text-light">
-                            <p id="setTraining">21</p>
+                            <p id="setTraining">2100</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-2 offset-4 col-sm-2 offset-sm-4 col-md-3 offset-md-0">
+                        <div class="col-2 col-sm-2 offset-sm-4 col-md-3 offset-md-0">
                             <p class="text-info">Rep: </p>
                         </div>
                         <div class="col-1 col-sm-1 col-md-1 text-light" id="">
-                            <p id="repTraining">21</p>
+                            <p id="repTraining">2100</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-2 offset-4 col-sm-2 offset-sm-4 col-md-3 offset-md-0">
+                        <div class="col-2 col-sm-2 offset-sm-4 col-md-3 offset-md-0">
                             <p class="text-info">Breaks: </p>
                         </div>
                         <div class="col-1 col-sm-1 col-md-1 text-light">
-                            <p id="breaksTraining">21</p>
+                            <p id="breaksTraining">2100</p>
                         </div>
                     </div>
                 </div>
