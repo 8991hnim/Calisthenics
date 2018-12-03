@@ -151,7 +151,7 @@ html {
     height: 450px;
     width: 340px;
     background: linear-gradient(45deg, rgb(153, 0, 0) 0%, rgb(128, 0, 96) 100%) !important;
-    opacity: 0.5;
+    opacity: 0.6;
     border-radius: 10px;
 
 
@@ -472,6 +472,7 @@ b {
 .btnMenu{
     display: none;
 }
+
 
 @media (min-width: 576px){
     .headerTraining {

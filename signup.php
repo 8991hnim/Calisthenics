@@ -1,3 +1,14 @@
+<?php
+    include_once("config/core.php");
+    echo('vinh1');
+    if(isset($_SESSION['signup_in']) && $_SESSION['signup_in']){
+        echo('vinh');
+        header("Location: {$home_url}login.php");
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,25 +28,26 @@
     <div class="bg-text">
         <h2 class="mt-3">TRY HARD</h2>
         <div class="txtLogin row mt-5" id="txtLogin">
-            <input type="text" class="form-control col-md-10 col-xs-12" placeholder="Full name" id="txtUserNameLogin">
+            <input type="text" class="form-control col-md-10" placeholder="Full name" id="txtUserNameSignUp">
             <i class="iconFullNameSignUp fa fa-wheelchair"></i>
         </div>
         <div class="txtLogin row mt-2" id="txtLogin">
-            <input type="text" class="form-control col-md-10 col-xs-12" placeholder="Account" id="txtUserNameLogin">
+            <input type="text" class="form-control col-md-10" placeholder="Account" id="txtAccountSignUp">
             <i class="iconUserNameSignUp fa fa-user"></i>
         </div>
         <div class="txtLogin row mt-2" id="txtLogin">
-            <input type="password" class="form-control col-md-10 col-xs-12" placeholder="Password" id="txtPasswordLogin">
+            <input type="password" class="form-control col-md-10" placeholder="Password" id="txtPasswordSignUp">
             <i class="iconPasswordSignUp fa fa-lock"></i>
-            <div class="form-control-border"></div>
         </div>
         <div class="txtLogin row mt-2" id="txtLogin">
-            <input type="password" class="form-control col-md-10 col-xs-12" placeholder="Confirm password" id="txtPasswordLogin">
+            <input type="password" class="form-control col-md-10" placeholder="Confirm password" id="txtConfirmPasswordSignUp">
             <i class="iconConfirmPasswordSignUp fa fa-unlock-alt"></i>
-            <div class="form-control-border"></div>
         </div>
-        <button class="col-md-11 btn btn-default hvr-wobble-top  mt-5 btnSignUp">SIGN UP</button>
+        <button class="col-md-11 btn btn-default hvr-wobble-top mt-5 mb-3 btnSignUp" id="btnSignUp">SIGN UP</button>
+        <div id="signupAlert"></div>
     </div>
+
+    <script type="text/javascript" src="signupPresenter.js"></script>
 </body>
 
 </html>
