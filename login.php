@@ -42,7 +42,7 @@
     </div>
 
 
-    <script type="text/javascript" src="view/loginView.js"></script>
+    <script type="text/javascript" src="presenter/loginPresenter.js"></script>
 
 </body>
 
