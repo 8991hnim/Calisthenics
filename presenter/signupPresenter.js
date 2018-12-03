@@ -17,7 +17,7 @@ $(document).ready(function(){
 			if(passwordSignup != confirmPasswordSignup){
 				$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">Confirm password incorrect.</div>');
 	            $(".bg-text").height(450);
-	            $('#signupAlert').padding(30);
+	            $('#signupAlert').margin(30);
 			}
 
 		$.ajax({

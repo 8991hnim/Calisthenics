@@ -26,14 +26,14 @@
         <h2 class="mt-4">TRY HARD</h2>
         
         <div class="txtLogin row mt-6" id="txtLogin">
-            <input type="text" class="form-control col-md-10 col-xs-12" placeholder="Account" id="txtUserNameLogin" name="">
+            <input type="text" class="form-control col-md-10" placeholder="Account" id="txtUserNameLogin" name="">
             <i class="iconUserNameLogin fa fa-user"></i>
         </div>
         <div class="txtLogin row mt-2" id="txtLogin">
-            <input type="password" class="form-control col-md-10 col-xs-12" placeholder="Password" id="txtPasswordLogin" name="">
+            <input type="password" class="form-control col-md-10" placeholder="Password" id="txtPasswordLogin" name="">
             <i class="iconPasswordLogin fa fa-lock"></i>
         </div>
-        <button class="col-md-11 btn btn-default hvr-wobble-top mt-6 btnLogin" id="btnLogin">LOG IN</button>
+        <button class="col-md-11 btn btn-default hvr-wobble-top mt-5 btnLogin" id="btnLogin">LOG IN</button>
         <!-- </form> -->
         <p class="mt-4">Don't have an account? 
             <a href="signup.php" class="hvr-buzz linkSignUp">SIGN UP</a>

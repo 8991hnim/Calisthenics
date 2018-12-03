@@ -13,8 +13,8 @@ $(document).ready(function() {
             success: function(res) {
                 alert(res);
                 if (res == "Fail") {
-                	$('#loginAlert').html('<div class="alert alert-danger"><strong>Access Denied.</strong> Your username or password maybe incorrect.</div>');
-                    $(".bg-text").height(490);
+                	$('#loginAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;"><strong>Access Denied.</strong> Your username or password maybe incorrect.</div>');
+                    $(".bg-text").height(460);
                 }else{
                     location.reload(home_url+"index.php?action=login_success");
                 }
