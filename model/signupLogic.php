@@ -1,6 +1,7 @@
 <?php
 	include('../config/configDb.php');
 	include('object/user.php');
+	include('../config/core.php');
 
 	if(isset($_POST["userName"]) && isset($_POST["account"]) && isset($_POST["password"]) && isset($_POST["confirmPassword"]))
 	{
@@ -26,7 +27,7 @@
 	        $insert->execute();
 
 	        echo('xong');
-            $_SESSION['signup_in'] = true;
+            $_SESSION['signup_success'] = true;
 	        
    		}
 

@@ -1,8 +1,6 @@
 <?php
     include_once("config/core.php");
-    echo('vinh1');
-    if(isset($_SESSION['signup_in']) && $_SESSION['signup_in']){
-        echo('vinh');
+    if(isset($_SESSION['signup_success']) && $_SESSION['signup_success']){
         header("Location: {$home_url}login.php");
     }
 
