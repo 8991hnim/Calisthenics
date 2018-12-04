@@ -26,7 +26,7 @@
 	         $_SESSION['current_user'] = serialize($user);
 	         $_SESSION['logged_in'] = true;
 
-	         echo ("Xinchao".$user->username);
+	         echo ("Xin chao ".$user->username);
    		}else{
    			echo "Fail";
    		}

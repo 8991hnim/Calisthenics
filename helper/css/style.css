@@ -16,7 +16,11 @@ html {
 
 /* SLIDE & HOME*/
 
-#nameCompanyMenu a{
+.btnManager{
+    height: 45px;
+}
+
+#nameCompanyMenu{
     font-family: Impact;
     font-size: 25px;
 }

@@ -11,39 +11,38 @@ $(document).ready(function(){
 		if(userNameSignup.length == 0 || accountSignup.length == 0 || passwordSignup.length == 0 || confirmPasswordSignup.length == 0){
 			$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">Please fill in the blank. </div>');
             $(".bg-text").height(450);
-            $('#signupAlert').margin(30);
 		}
 		else
 			if(passwordSignup != confirmPasswordSignup){
 				$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">Confirm password incorrect.</div>');
 	            $(".bg-text").height(450);
-	            $('#signupAlert').margin(30);
 			}
+			else{
+				$.ajax({
 
-		$.ajax({
+					url: "model/signupLogic.php",
+					data: {
+						 userName: userNameSignup, 				
+						 account: accountSignup, 
+						 password: passwordSignup
+					},
+					type: "POST",
+					success: function(res){
+						if (res=='existAccount'){
+							$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder; font-size: 15px;">Account already exists!</div>');
+				            $(".bg-text").height(450);
+						} 
+						else if(res=='xong'){
+							alert('add success');
+							location.reload();
+						}
+					},
+					error: function(xhr, status, errorThrown) {
+		                console.log(errorThrown + status + xhr);
+		            }
 			
-
-			url: "model/signupLogic.php",
-			data: {
-				 userName: userNameSignup, 				
-				 account: accountSignup, 
-				 password: passwordSignup, 
-				 confirmPassword: confirmPasswordSignup
-			},
-			type: "POST",
-			success: function(res){
-				if (res=='existAccount'){
-					$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder; font-size: 15px;">Account already exists!</div>');
-		            $(".bg-text").height(450);
-		            $('#signupAlert').margin(30);
-				} 
-				else if(res=='xong'){
-					alert('add success');
-					location.reload();
-				}
+				});
 			}
-			
-		});
 
 	})
 

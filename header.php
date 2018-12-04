@@ -6,10 +6,8 @@
         header("Location: {$home_url}index.php");
     }else if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
         $user = unserialize($_SESSION['current_user']);
-        $username = $user->username;
-    }
 
-   
+    } 
 ?>
 
 <!DOCTYPE html>
@@ -29,43 +27,50 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <nav class="navbar navbar-expand-sm menuHead fixed-top">
-                <ul class="navbar-nav col-12 col-sm-12 col-md-12">
-                    <li class="nav-item col-1 col-sm-1 col-md-1" id="nameCompanyMenu">
-                        <a class="nav-link" href="index.php" title="Home">MVTech</a>
-                    </li>
-                    <li class="nav-item col-10 col-sm-9 offset-sm-2 col-md-11 btnMenu">
-                        <div class="row">
-                            <div class="col-2 col-sm-9 col-md-2 offset-md-7 pt-3 text-right">
+            <nav class="col-md-12 navbar navbar-expand-md navbar-dark menuHead fixed-top">
+                <a class="nav-link" href="index.php" title="Home" id="nameCompanyMenu">MVTech</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav col-12 col-sm-12 col-md-12">
+                        <li class="nav-item col-12 col-sm-9 offset-sm-2 col-md-12">
+                            <div class="row">
                                 <?php
-                                    if(isset($username)){
-                                ?>
-                                    <a class="btnLoginHome hvr-rotate"><?php echo $username ?></a>
-                                    </div>
-                                    <!-- <form method="post"> -->
-                                    <div class="col-2 col-sm-3 col-md-3 pt-3">
-                                        
-                                                
-                                            <!-- <input class="btnSignUpHome hvr-rotate" type="submit" name="logout"> -->
-                                        
-                                <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
-                            </div>
-                            <!-- </form> -->
-                                <?php
+
+                                    if(isset($user)){
+                                        if($user->type==1){
+                                         echo'<div class="col-5 offset-sm-1 col-sm-4 offset-md-4 col-md-3 text-right">
+                                                <button class="btn btn-danger col-12 col-sm-12 col-md-9 hvr-pop btnManager">Manager</button>
+                                              </div>
+                                              <div class="col-4 col-sm-3 col-md-2 pt-3 text-right">
+                                                   <a class="btnLoginHome hvr-rotate">'.$user->username.'</a>
+                                              </div>
+                                              <div class="col-3 col-sm-3 col-md-2 pt-3">
+                                                   <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
+                                              </div>';
+                                        }else{
+                                            echo '<div class="col-7 col-sm-7 col-md-9 pt-3 text-right">
+                                                    <a href="login.php" class="btnLoginHome hvr-rotate">'.$user->username.'</a>
+                                                  </div>
+                                                  <div class="col-5 col-sm-5 col-md-2 pt-3">
+                                                    <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
+                                                  </div>';
+                                        }
                                     }else{
+                                        echo '<div class="col-6 col-sm-6 col-md-2 offset-md-7 pt-3 text-right">
+                                                <a href="login.php" class="btnLoginHome hvr-rotate">Log in</a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-2 pt-3">
+                                                <a href="signup.php" class="btnSignUpHome hvr-rotate">Sign up</a>
+                                            </div>';
+                                    }
+
                                 ?>
-                                <a href="login.php" class="btnLoginHome hvr-rotate">Log in</a></div>
-                                <div class="col-2 col-sm-3 col-md-3 pt-3">
-                                <a href="signup.php" class="btnSignUpHome hvr-rotate">Sign up</a>
                             </div>
-                                <?php
-                                }
-                                ?>
-                            
-                            
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>  
             </nav>
         </div>
         
@@ -76,10 +81,10 @@
                 -->
                 <div class="btnSlideHome">
                     <div class="row btnHome col-md-12">
-                        <a href="" data-toggle="modal" data-target="#modalLevel" class="button hvr-wobble-to-bottom-right training col-6 col-sm-4 offset-sm-2 col-md-4 offset-md-2">
-                            TRAINING
-                        </a>
-                        <a href="login.html" class="button hvr-wobble-to-bottom-right healthy col-6 col-sm-4 col-md-4">
+                       
+                        <?php showPopupLevel() ?>
+
+                        <a href="post.php" class="button hvr-wobble-to-bottom-right healthy col-6 col-sm-4 col-md-4">
                             NUTRITION
                         </a>
                     </div>
@@ -117,6 +122,8 @@
             </div>
         </div>
 
+
+<!-- modal show level -->
         <div class="modal" id="modalLevel">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -156,3 +163,37 @@
             </div>
         </div>
 
+
+
+        <!-- modal Request Login -->
+        <div id="modalRequestLogin" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p>You must login before start training!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" href="login.php" class="btn btn-success con-md-1 offset-md-5">OK</a>
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+ <?php 
+    function showPopupLevel(){
+
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
+            echo '<a href="" data-toggle="modal" data-target="#modalLevel" class="button hvr-wobble-to-bottom-right training col-6 col-sm-4 offset-sm-2 col-md-4 offset-md-2">
+                TRAINING
+                </a>';
+
+        }else{
+            echo '<a href="" data-toggle="modal" data-target="#modalRequestLogin" class="button hvr-wobble-to-bottom-right training col-6 col-sm-4 offset-sm-2 col-md-4 offset-md-2">
+                TRAINING
+                </a>';
+        }
+
+    }
+?>

@@ -3,12 +3,12 @@
 	include('object/user.php');
 	include('../config/core.php');
 
-	if(isset($_POST["userName"]) && isset($_POST["account"]) && isset($_POST["password"]) && isset($_POST["confirmPassword"]))
+	if(isset($_POST["userName"]) && isset($_POST["account"]) && isset($_POST["password"]))
 	{
 		$userName = $_POST["userName"];
 		$account = $_POST["account"];
 		$password = $_POST["password"];
-		$confirmPassword = $_POST["confirmPassword"];
+		$type = 2;
 
 		$stmt = $conn->prepare("SELECT * FROM user WHERE Account = :account");
 		$stmt->bindParam(':account', $account);
@@ -19,11 +19,11 @@
    			echo 'existAccount';
    		}
    		else{
-			$insert = $conn->prepare("INSERT INTO user VALUES(:userName, :account, :password, :confirmPassword, 2)");
+			$insert = $conn->prepare("INSERT INTO user(Account, Pass, Username, Type) VALUES(:userName, :account, :password, :type)");
 	        $insert->bindParam(':userName', $userName);
 	        $insert->bindParam(':account', $account);
 	        $insert->bindParam(':password', $password);
-	        $insert->bindParam(':confirmPassword', $confirmPassword);
+	        $insert->bindParam(':type', $type);
 	        $insert->execute();
 
 	        echo('xong');

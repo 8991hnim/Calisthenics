@@ -1,6 +1,7 @@
 <?php
     include_once("config/core.php");
     if(isset($_SESSION['signup_success']) && $_SESSION['signup_success']){
+        session_destroy();
         header("Location: {$home_url}login.php");
     }
 
