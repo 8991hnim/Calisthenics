@@ -33,17 +33,10 @@
 	        $row = $user_signup->fetch(PDO::FETCH_ASSOC);
 	        $id = $row['ID'];
 
-    		$insert_progess_train = $conn->prepare("INSERT INTO progress_training(UserID, LevelID, DayTrained) VALUES (:id ,1,0)");
-	        $insert_progess_train->bindParam(':id', $id);
+    		$insert_progess_train = $conn->prepare("INSERT INTO progress_training(UserID, LevelID, DayTrained) VALUES ($id ,1,0),
+    			($id ,2,0),($id ,3,0)");
+	       ert_progess_train3->bindParam(':id', $id);
 	        $insert_progess_train->execute();
-
-	        $insert_progess_train2 = $conn->prepare("INSERT INTO progress_training(UserID, LevelID, DayTrained) VALUES (:id ,2,0)");
-	        $insert_progess_train2->bindParam(':id', $id);
-	        $insert_progess_train2->execute();
-
-	        $insert_progess_train3 = $conn->prepare("INSERT INTO progress_training(UserID, LevelID, DayTrained) VALUES (:id ,3,0)");
-	        $insert_progess_train3->bindParam(':id', $id);
-	        $insert_progess_train3->execute();
 
 
 	        echo('success');
