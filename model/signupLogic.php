@@ -9,6 +9,7 @@
 		$account = $_POST["account"];
 		$password = $_POST["password"];
 		$type = 2;
+		$hash_pass = password_hash($password, PASSWORD_DEFAULT);
 
 		$stmt = $conn->prepare("SELECT * FROM user WHERE Account = :account");
 		$stmt->bindParam(':account', $account);
@@ -19,10 +20,10 @@
    			echo 'existAccount';
    		}
    		else{
-			$insert = $conn->prepare("INSERT INTO user(Account, Pass, Username, Type) VALUES(:userName, :account, :password, :type)");
+			$insert = $conn->prepare("INSERT INTO user(Account, Pass, Username, Type) VALUES(:account, :password, :userName, :type)");
 	        $insert->bindParam(':userName', $userName);
 	        $insert->bindParam(':account', $account);
-	        $insert->bindParam(':password', $password);
+	        $insert->bindParam(':password', $hash_pass);
 	        $insert->bindParam(':type', $type);
 	        $insert->execute();
 

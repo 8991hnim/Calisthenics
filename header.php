@@ -36,37 +36,39 @@
                     <ul class="navbar-nav col-12 col-sm-12 col-md-12">
                         <li class="nav-item col-12 col-sm-9 offset-sm-2 col-md-12">
                             <div class="row">
+
                                 <?php
 
                                     if(isset($user)){
                                         if($user->type==1){
-                                         echo'<div class="col-5 offset-sm-1 col-sm-4 offset-md-4 col-md-3 text-right">
+                                         echo'<!--<div class="col-4 col-sm-4 offset-md-5 col-md-2 text-right">
                                                 <button class="btn btn-danger col-12 col-sm-12 col-md-9 hvr-pop btnManager">Manager</button>
+                                              </div>-->  <!-- Quản lý -->
+                                              <div class="col-7 col-sm-7 col-md-9 text-right">
+                                                   <a href="" class="btnLoginHome hvr-rotate">'.$user->username.'</a>
                                               </div>
-                                              <div class="col-4 col-sm-3 col-md-2 pt-3 text-right">
-                                                   <a class="btnLoginHome hvr-rotate">'.$user->username.'</a>
-                                              </div>
-                                              <div class="col-3 col-sm-3 col-md-2 pt-3">
+                                              <div class="col-5 col-sm-5 col-md-2">
                                                    <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
                                               </div>';
                                         }else{
-                                            echo '<div class="col-7 col-sm-7 col-md-9 pt-3 text-right">
-                                                    <a href="login.php" class="btnLoginHome hvr-rotate">'.$user->username.'</a>
+                                            echo '<div class="col-7 col-sm-7 col-md-9 text-right">
+                                                    <a class="btnLoginHome hvr-rotate">'.$user->username.'</a>
                                                   </div>
-                                                  <div class="col-5 col-sm-5 col-md-2 pt-3">
+                                                  <div class="col-5 col-sm-5 col-md-2">
                                                     <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
                                                   </div>';
                                         }
                                     }else{
-                                        echo '<div class="col-6 col-sm-6 col-md-2 offset-md-7 pt-3 text-right">
+                                        echo '<div class="col-6 col-sm-6 col-md-2 offset-md-7 text-right">
                                                 <a href="login.php" class="btnLoginHome hvr-rotate">Log in</a>
                                             </div>
-                                            <div class="col-6 col-sm-4 col-md-2 pt-3">
+                                            <div class="col-6 col-sm-4 col-md-2">
                                                 <a href="signup.php" class="btnSignUpHome hvr-rotate">Sign up</a>
                                             </div>';
                                     }
 
                                 ?>
+
                             </div>
                         </li>
                     </ul>
@@ -169,13 +171,10 @@
         <div id="modalRequestLogin" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <div class="modal-body">
+                    <div class="modal-body text-center">
                         <p>You must login before start training!</p>
                     </div>
-                    <div class="modal-footer">
-                        <a type="button" href="login.php" class="btn btn-success con-md-1 offset-md-5">OK</a>
-                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                    </div>
+                    <a href="login.php" class="btn btn-success hvr-float-shadow con-md-1 offset-md-5 btnLoginBeforeTrain">OK</a>
                 </div>
             </div>
         </div>
