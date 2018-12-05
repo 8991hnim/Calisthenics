@@ -55,7 +55,7 @@ $(document).ready(function() {
         if (pos == 0) $('#btnPrevious').css("display", "none");
         if (pos == arrayExercise.length - 1) {
             $('#btnNext').css("display", "none");
-            $('#btnFinishTraining').css("display", "block");
+            $('#btnFinishTraining').css("display", "inline-block");
         }
 
 

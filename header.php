@@ -132,7 +132,7 @@
                     <div class="row">
                         <div class="col-4 col-sm-4 col-md-4 level1">
                             <div class="row">
-                                <a href="training.php" class="col-md-12 hvr-float" id="selectLevel">
+                                <a href="training.php?level=1&day=1" class="col-md-12 hvr-float" id="selectLevel">
                                     <p class="text-center text-light">LEVEL 1</p>
                                 </a>
                             </div>
