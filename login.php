@@ -2,6 +2,9 @@
     include_once("config/core.php");
     if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
         header("Location: {$home_url}index.php");
+    }else if(isset($_SESSION['require_login']) && isset($_SESSION['require_login'])){
+        $alertLogin = true;
+        session_destroy();
     }
 
 ?>
@@ -22,7 +25,14 @@
 
 <body>
     <div class="bg-image"></div>
-    <div class="bg-text">
+    <?php
+        if(isset($alertLogin)){
+            echo '<div class="bg-text" style="height:490px">';
+        }else{
+            echo '<div class="bg-text">';
+        }
+    ?>
+   
         <h2 class="mt-4">TRY HARD</h2>
         
         <div class="txtLogin row mt-6" id="txtLogin">
@@ -38,7 +48,14 @@
         <p class="mt-4">Don't have an account? 
             <a href="signup.php" class="hvr-buzz linkSignUp">SIGN UP</a>
         </p>
-         <div id="loginAlert"></div>
+         <div id="loginAlert">
+            <?php 
+            if(isset($alertLogin)){
+                echo '<div class="alert alert-info" style="color: red; font-weight: bolder;">Please login first.</div>;';
+            }
+            ?>
+             
+         </div>
     </div>
 
 

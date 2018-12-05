@@ -6,8 +6,19 @@
         header("Location: {$home_url}index.php");
     }else if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
         $user = unserialize($_SESSION['current_user']);
-
+    }else{
+        $_SESSION['require_login'] = true;
+        header("Location: {$home_url}login.php");
+        return;
     } 
+
+    if(isset($_GET["level"]) && isset($_GET["day"]) && $_GET["level"]<4 && $_GET["level"]>0 && $_GET["day"] < 13 && $_GET["day"] > 0){
+        $level = $_GET["level"];
+        $day = $_GET["day"];
+    }else{
+        header("Location: {$home_url}index.php"); //vào training không thông qua modal
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -40,33 +51,20 @@
 
                                     if(isset($user)){
                                         if($user->type==1){
-                                         echo'<div class="col-5 offset-sm-1 col-sm-4 offset-md-4 col-md-3 text-right">
-                                                <button class="btn btn-danger col-12 col-sm-12 col-md-9 hvr-pop btnManager">Manager</button>
-                                              </div>
-                                              <div class="col-4 col-sm-3 col-md-2 pt-3 text-right">
-                                                   <a class="btnLoginHome hvr-rotate">'.$user->username.'</a>
-                                              </div>
-                                              <div class="col-3 col-sm-3 col-md-2 pt-3">
-                                                   <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
+                                         echo'<div class="col-7 col-sm-7 col-md-9 text-right">
+                                                   <a href="" class="btnLoginHome hvr-rotate">'.$user->username.'</a>
                                               </div>';
                                         }else{
                                             echo '<div class="col-7 col-sm-7 col-md-9 text-right">
-                                                    <a href="login.php" class="btnLoginHome hvr-rotate">'.$user->username.'</a>
-                                                  </div>
-                                                  <div class="col-5 col-sm-5 col-md-2">
-                                                    <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
+                                                       <a class="btnLoginHome hvr-rotate">'.$user->username.'</a>
                                                   </div>';
                                         }
-                                    }else{
-                                        echo '<div class="col-6 col-sm-6 col-md-2 offset-md-7 pt-3 text-right">
-                                                <a href="login.php" class="btnLoginHome hvr-rotate">Log in</a>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-2 pt-3">
-                                                <a href="signup.php" class="btnSignUpHome hvr-rotate">Sign up</a>
-                                            </div>';
                                     }
 
                                 ?>
+                                <div class="col-5 col-sm-5 col-md-2">
+                                    <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -75,25 +73,28 @@
         </div>
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 headerTraining text-center">
-                <div class="btn-group btn-group-lg flex-wrap btnGroupDay">
-                    <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">01</button> 
-                    <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">02</button>
-                    <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">03</button>
-                    <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">04</button>
-                    <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">05</button>
-                    <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">06</button>
-                    <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">07</button>
-                    <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">08</button>
-                    <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">09</button>
-                    <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">10</button>
-                    <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">11</button>
-                    <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">12</button>
+                <div class="btn-group btn-group-lg flex-wrap btnGroupDay" id="btnGroup">
+                    <button type="button" data-id=<?php echo $level?> style="display:none" id="btnGetLevel"></button> 
+                    <button type="button" data-id=<?php echo $day?> style="display:none" id="btnGetDay"></button> 
+
+                    <button type="button" data-id="1" class="col-3 col-sm-1 col-md-1 btn hvr-float">01</button> 
+                    <button type="button" data-id="2" class="col-3 col-sm-1 col-md-1 btn hvr-float">02</button>
+                    <button type="button" data-id="3" class="col-3 col-sm-1 col-md-1 btn hvr-float">03</button>
+                    <button type="button" data-id="4" class="col-3 col-sm-1 col-md-1 btn hvr-float">04</button>
+                    <button type="button" data-id="5" class="col-3 col-sm-1 col-md-1 btn hvr-float">05</button>
+                    <button type="button" data-id="6" class="col-3 col-sm-1 col-md-1 btn hvr-float">06</button>
+                    <button type="button" data-id="7" class="col-3 col-sm-1 col-md-1 btn hvr-float">07</button>
+                    <button type="button" data-id="8" class="col-3 col-sm-1 col-md-1 btn hvr-float">08</button>
+                    <button type="button" data-id="9" class="col-3 col-sm-1 col-md-1 btn hvr-float">09</button>
+                    <button type="button" data-id="10" class="col-3 col-sm-1 col-md-1 btn hvr-float">10</button>
+                    <button type="button" data-id="11" class="col-3 col-sm-1 col-md-1 btn hvr-float">11</button>
+                    <button type="button" data-id="12" class="col-3 col-sm-1 col-md-1 btn hvr-float">12</button>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="textSelectedDay">
-                <h2 class="text-center text-danger mt-3 mb-3">Ngày 1</h2>
+                <h2 id="dayNumber" class="text-center text-danger mt-3 mb-3">Day Here</h2>
             </div>
             <div class="row text-center">
                 <div class="col-md-12">
@@ -103,19 +104,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-1 col-sm-1 col-md-1">
-                    <a href="" class="col-md-12 backNext" title="Back" id="btnLeftTraining">
+                <div class="backNext col-1 col-sm-1 col-md-1">
+                    <a type="button" class="col-md-12 " title="Back" id="btnPrevious">
                         <i class="fa fa-chevron-left"></i>
                     </a>
                 </div>
-                <div class="col-1 offset-9 col-sm-1 offset-sm-10 col-md-1 offset-md-10 text-right">
-                    <a href="" class="col-md-12 backNext" title="Next" id="btnRightTraining">
+                <div class="backNext col-1 offset-9 col-sm-1 offset-sm-10 col-md-1 offset-md-10 text-right">
+                    <a class="col-md-12 " title="Next" id="btnNext">
                         <i class="fa fa-chevron-right"></i>
                     </a>
                 </div>
             </div>
             <div class="row mt-5 mb-3">
-                <div class="col-12 col-sm-12 col-md-6 offset-md-1">
+                <div class="actualyoutube  col-12 col-sm-12 col-md-6 offset-md-1">
                     <iframe class="row" height="315" width="100%" src="https://www.youtube.com/embed/CQ7XUCQ6pbE">
                     </iframe>
                 </div>
@@ -159,3 +160,5 @@
 <?php 
         require"footer.php";
  ?>
+
+ <script type="text/javascript" src="presenter/trainingPresenter.js"></script>

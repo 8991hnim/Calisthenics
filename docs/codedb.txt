@@ -69,6 +69,10 @@ INSERT INTO `exercise` (`ID`, `Name`, `Gif`) VALUES (NULL, 'One Arm Push-Up', 'J
 INSERT INTO `exercise` (`ID`, `Name`, `Gif`) VALUES (NULL, 'Crunches', 'Xyd_fa5zoEU'), (NULL, 'Cross Arm Crunches', 'wgaIH-0rvQw'), (NULL, 'Russian Twist', 'wkD8rjkodUI'), (NULL, 'Mountain Climber', 'nmwgirgXLYM'), (NULL, 'Plank', 'pSHjTRCQxIw'), (NULL, 'Flutter Kicks', 'ANVdMDaYRts'), (NULL, 'Clapping Crunches', 'moaZFyRi0sM');
 INSERT INTO `exercise` (`ID`, `Name`, `Gif`) VALUES (NULL, 'Triple Clap Push-Up', '0hfmJaydq4o'), (NULL, 'Butt Bridge', '8bbE64NuDTU'), (NULL, 'V-Up', 'iP2fjvG0g3w'), (NULL, 'Reverse Crunches', 'hyv14e2QDq0');
 
+--LEVEL 1
+--ngay 1
+INSERT INTO `training` (`LevelID`, `Day`, `ExerciseID`, `Set`, `Rep`, `BreakTime`) VALUES ('1', '1', '1', '30', '1', '30 giây'), ('1', '1', '12', '1', '50', '30 giây');
+INSERT INTO `training` (`LevelID`, `Day`, `ExerciseID`, `Set`, `Rep`, `BreakTime`) VALUES ('1', '1', '2', '2', '10', '30 giây '), ('1', '1', '3', '3', '5', '30 giây');
 
-
-
+--ngay2
+INSERT INTO `training` (`LevelID`, `Day`, `ExerciseID`, `Set`, `Rep`, `BreakTime`) VALUES ('1', '2', '1', '1', '30', '30s'), ('1', '2', '12', '50', '1', '30s'), ('1', '2', '17', '2', '10', '30s'), ('1', '2', '23', '2', '6', '30s'), ('1', '2', '21', '1', '60', '30s');
