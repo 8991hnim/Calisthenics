@@ -28,11 +28,12 @@ $(document).ready(function(){
 					},
 					type: "POST",
 					success: function(res){
+						alert(res);
 						if (res=='existAccount'){
 							$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder; font-size: 15px;">Account already exists!</div>');
 				            $(".bg-text").height(450);
 						} 
-						else if(res=='xong'){
+						else if(res=='success'){
 							alert('add success');
 							location.reload();
 						}
