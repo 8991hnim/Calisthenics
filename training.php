@@ -1,3 +1,15 @@
+<?php
+    include_once("config/core.php");
+    include_once("model/object/user.php");
+    if(isset($_GET["logout"])) {
+        session_destroy();
+        header("Location: {$home_url}index.php");
+    }else if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
+        $user = unserialize($_SESSION['current_user']);
+
+    } 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,27 +27,55 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <nav class="navbar navbar-expand-sm menuHead fixed-top">
-                <ul class="navbar-nav col-12 col-sm-12 col-md-12">
-                    <li class="nav-item col-1 col-sm-1 col-md-1" id="nameCompanyMenu">
-                        <a class="nav-link" href="index.php" title="Home">MVTech</a>
-                    </li>
-                    <li class="nav-item col-10 col-sm-9 offset-sm-2 col-md-11 btnMenu">
-                        <div class="row">
-                            <div class="col-2 col-sm-9 col-md-2 offset-md-7 pt-3 text-right">
-                                <a href="login.php" class="btnLoginHome hvr-rotate">Log in</a>
+            <nav class="col-md-12 navbar navbar-expand-md navbar-dark menuHead fixed-top">
+                <a class="nav-link" href="index.php" title="Home" id="nameCompanyMenu">MVTech</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav col-12 col-sm-12 col-md-12">
+                        <li class="nav-item col-12 col-sm-9 offset-sm-2 col-md-12">
+                            <div class="row">
+                                <?php
+
+                                    if(isset($user)){
+                                        if($user->type==1){
+                                         echo'<div class="col-5 offset-sm-1 col-sm-4 offset-md-4 col-md-3 text-right">
+                                                <button class="btn btn-danger col-12 col-sm-12 col-md-9 hvr-pop btnManager">Manager</button>
+                                              </div>
+                                              <div class="col-4 col-sm-3 col-md-2 pt-3 text-right">
+                                                   <a class="btnLoginHome hvr-rotate">'.$user->username.'</a>
+                                              </div>
+                                              <div class="col-3 col-sm-3 col-md-2 pt-3">
+                                                   <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
+                                              </div>';
+                                        }else{
+                                            echo '<div class="col-7 col-sm-7 col-md-9 text-right">
+                                                    <a href="login.php" class="btnLoginHome hvr-rotate">'.$user->username.'</a>
+                                                  </div>
+                                                  <div class="col-5 col-sm-5 col-md-2">
+                                                    <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
+                                                  </div>';
+                                        }
+                                    }else{
+                                        echo '<div class="col-6 col-sm-6 col-md-2 offset-md-7 pt-3 text-right">
+                                                <a href="login.php" class="btnLoginHome hvr-rotate">Log in</a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-2 pt-3">
+                                                <a href="signup.php" class="btnSignUpHome hvr-rotate">Sign up</a>
+                                            </div>';
+                                    }
+
+                                ?>
                             </div>
-                            <div class="col-2 col-sm-3 col-md-3 pt-3">
-                                <a href="signup.php" class="btnSignUpHome hvr-rotate">Sign up</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>  
             </nav>
         </div>
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 headerTraining text-center">
-                <div class="btn-group btn-group-lg flex-wrap btnGroupDay1">
+                <div class="btn-group btn-group-lg flex-wrap btnGroupDay">
                     <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">01</button> 
                     <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">02</button>
                     <button type="button" class="col-3 col-sm-1 col-md-1 btn hvr-float">03</button>

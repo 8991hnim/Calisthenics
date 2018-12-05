@@ -444,7 +444,7 @@ b {
     position: relative;
 }
 
-.btnGroupDay1{
+.btnGroupDay{
     position: absolute; 
     top: 60%;
 }
@@ -473,10 +473,6 @@ b {
     color: #00ff80;
 }
 
-.btnMenu{
-    display: none;
-}
-
 
 @media (min-width: 576px){
     .headerTraining {
@@ -491,34 +487,19 @@ b {
         padding-top: 0px;
     }
 
-    .btnGroupDay1{
+    .btnGroupDay{
         position: absolute; 
-        top: 86%; 
+        top: 89%; 
     }
 
     .backNext{
         font-size: 30px;
-        color: #004d4d;
-    }
-
-    .backNext:hover{
-        transition: 1s;
-        color: #17a2b8;
     }
 
     .btnFinishTraining{
         font-size: 50px;
-        color: #009933;
     }
 
-    .btnFinishTraining:hover{
-        transition: 1s;
-        color: #00ff80;
-    }
-
-    .btnMenu{
-        display: inline-block;
-    }
 }
 
 @media (min-width: 768px){
@@ -534,42 +515,27 @@ b {
         padding-top: 0px;
     }
 
-    .btnGroupDay1{
+    .btnGroupDay{
         position: absolute; 
-        top: 90%; 
+        top: 92%; 
     }
 
     .backNext{
         font-size: 40px;
-        color: #004d4d;
-    }
-
-    .backNext:hover{
-        transition: 1s;
-        color: #17a2b8;
     }
 
     .btnFinishTraining{
         font-size: 70px;
-        color: #009933;
     }
 
-    .btnFinishTraining:hover{
-        transition: 1s;
-        color: #00ff80;
-    }
-
-    .btnMenu{
-        display: inline-block;
-    }
 }
 
-.btnGroupDay1  button{
+.btnGroupDay  button{
     background: #004d4d;
     color: white;
 }
 
-.btnGroupDay1  button:hover{
+.btnGroupDay  button:hover{
     background: #993333;
 }
 
