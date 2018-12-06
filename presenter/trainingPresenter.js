@@ -58,14 +58,13 @@ $(document).ready(function() {
             $('#btnFinishTraining').css("display", "inline-block");
         }
 
-
         $("#nameTraining").text(arrayExercise[pos].name);
         $("#setTraining").text(arrayExercise[pos].set);
         $("#repTraining").text(arrayExercise[pos].rep);
         $("#breaksTraining").text(arrayExercise[pos].breakTime);
         $(".actualyoutube iframe").remove();
         $('<iframe height="315" width="100%" frameborder="0" allowfullscreen></iframe>')
-            .attr("src", arrayExercise[pos].gif)
+            .attr("src", arrayExercise[pos].urlYT)
             .appendTo(".actualyoutube");
     }
 })

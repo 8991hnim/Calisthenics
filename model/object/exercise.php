@@ -2,7 +2,7 @@
 	class Exercise{
 		public $id;
 		public $name;
-		public $gif;
+		public $urlYT;
 		public $set;
 		public $rep;
 		public $breakTime;
