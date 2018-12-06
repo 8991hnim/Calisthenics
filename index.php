@@ -103,3 +103,5 @@
     require "footer.php";
     
  ?>
+
+ <script type="text/javascript" src="presenter/indexPresenter.js"></script>

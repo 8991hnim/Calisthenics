@@ -6,6 +6,14 @@ $(document).ready(function() {
 
     $("#dayNumber").text("Day " + day);
 
+    //chỉnh màu nút 
+    $("#btnGroup button").each(function() {
+        console.log($(this).data('id'));
+        if($(this).data('id')<day){
+            $(this).css("background-color","green");
+        }
+    });
+
     $.ajax({
         url: "model/trainingLogic.php",
         data: {

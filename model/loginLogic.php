@@ -22,6 +22,7 @@
 		        $user->password = $row['Pass'];
 		        $user->type = $row['Type'];
 		        $user->username = $row['Username'];
+		        $user->email = $row['Email'];
 
 		         $_SESSION['current_user'] = serialize($user);
 		         $_SESSION['logged_in'] = true;

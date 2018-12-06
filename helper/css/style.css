@@ -589,7 +589,7 @@ b {
     font-size: 15px;
 }
 
-#selectLevel{
+.selectLevel{
     height: 100px;
     padding-top: 2rem;
     font-size: 30px;

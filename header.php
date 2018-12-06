@@ -126,13 +126,13 @@
 
 
 <!-- modal show level -->
-        <div class="modal" id="modalLevel">
+        <div class="modal" id="modalLevel" data-id="<?php echo $user->id ?>">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="row">
                         <div class="col-4 col-sm-4 col-md-4 level1">
                             <div class="row">
-                                <a href="training.php?level=1&day=1" class="col-md-12 hvr-float" id="selectLevel">
+                                <a href="" class="col-md-12 hvr-float selectLevel" id="selectLevel1">
                                     <p class="text-center text-light">LEVEL 1</p>
                                 </a>
                             </div>
@@ -142,7 +142,7 @@
                         </div>
                         <div class="col-4 col-sm-4 col-md-4 level2">
                             <div class="row">
-                                <a href="training.php" class="col-md-12 hvr-float" id="selectLevel">
+                                <a href="" class="col-md-12 hvr-float selectLevel" id="selectLevel2">
                                     <p class="text-center text-light">LEVEL 2</p>
                                 </a>
                             </div>
@@ -152,7 +152,7 @@
                         </div>
                         <div class="col-4 col-sm-4 col-md-4 level3">
                             <div class="row">
-                                <a href="training.php" class="col-md-12 hvr-float" id="selectLevel">
+                                <a href="" class="col-md-12 hvr-float selectLevel" id="selectLevel3">
                                     <p class="text-center text-light">LEVEL 3</p>
                                 </a>
                             </div>

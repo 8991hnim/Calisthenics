@@ -9,7 +9,6 @@ $(document).ready(function() {
             $(".bg-text").height(450);
         }
         else{
-            
             $.ajax({
                 url: "model/loginLogic.php",
                 type: "POST",
