@@ -35,7 +35,6 @@
 
     		$insert_progess_train = $conn->prepare("INSERT INTO progress_training(UserID, LevelID, DayTrained) VALUES ($id ,1,0),
     			($id ,2,0),($id ,3,0)");
-	       ert_progess_train3->bindParam(':id', $id);
 	        $insert_progess_train->execute();
 
 
