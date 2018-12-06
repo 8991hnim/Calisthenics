@@ -10,11 +10,11 @@ $(document).ready(function(){
 
 		if(userNameSignup.length == 0 || accountSignup.length == 0 || passwordSignup.length == 0 || confirmPasswordSignup.length == 0){
 			$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">Please fill in the blank. </div>');
-            $(".bg-text").height(450);
+            $(".bg-text").height(430);
 		}
 		else
 			if(passwordSignup != confirmPasswordSignup){
-				$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">Confirm password incorrect.</div>');
+				$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">The passwords you entered do not match.</div>');
 	            $(".bg-text").height(450);
 			}
 			else{
@@ -31,7 +31,7 @@ $(document).ready(function(){
 						alert(res);
 						if (res=='existAccount'){
 							$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder; font-size: 15px;">Account already exists!</div>');
-				            $(".bg-text").height(450);
+				            $(".bg-text").height(430);
 						} 
 						else if(res=='success'){
 							alert('add success');
