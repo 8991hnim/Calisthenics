@@ -24,9 +24,13 @@
 
 <body>
     <div class="bg-image"></div>
-    <div class="bg-text">
+    <div class="bg-text bg-signup">
         <h2 class="mt-3">TRY HARD</h2>
         <div class="txtLogin row mt-5" id="txtLogin">
+            <input type="text" class="form-control col-md-10" placeholder="Email" id="txtEmailSignUp">
+            <i class="iconEmailSignUp fa fa-envelope"></i>
+        </div>
+        <div class="txtLogin row mt-2" id="txtLogin">
             <input type="text" class="form-control col-md-10" placeholder="Full name" id="txtUserNameSignUp">
             <i class="iconFullNameSignUp fa fa-wheelchair"></i>
         </div>

@@ -153,6 +153,7 @@ html {
     background-size: cover;
 }
 
+
 /* Position text in the middle of the page/image */
 .bg-text {
     background-color: rgb(0, 0, 0);
@@ -168,7 +169,7 @@ html {
     width: 80%;
     padding: 20px;
     text-align: center !important;
-    height: 450px;
+    height: 480px;
     width: 340px;
     background: linear-gradient(45deg, rgb(153, 0, 0) 0%, rgb(128, 0, 96) 100%) !important;
     opacity: 0.6;
@@ -242,26 +243,32 @@ html {
     right: 40px;
 }
 
-.iconFullNameSignUp {
-    top: 133px;
+.iconEmailSignUp{
+    top: 134px;
     position: absolute;
     right: 40px;
 }
 
-.iconUserNameSignUp {
+.iconFullNameSignUp {
     top: 181px;
     position: absolute;
     right: 40px;
 }
 
-.iconPasswordSignUp {
+.iconUserNameSignUp {
     top: 228px;
     position: absolute;
     right: 40px;
 }
 
+.iconPasswordSignUp {
+    top: 275px;
+    position: absolute;
+    right: 40px;
+}
+
 .iconConfirmPasswordSignUp {
-    top: 274px;
+    top: 322px;
     position: absolute;
     right: 40px;
 }
@@ -283,6 +290,16 @@ html {
 .linkSignUp {
     text-decoration: none !important;
     color: #00bfff !important;
+}
+
+.forgot-pass{
+    color: gray; 
+    font-size: 13px;
+}
+
+.forgot-pass:hover{
+    transition: 1s;
+    color: #fff; 
 }
 
 .bg-text p {

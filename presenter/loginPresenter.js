@@ -6,7 +6,7 @@ $(document).ready(function() {
         var password = $('#txtPasswordLogin').val();
         if (account.length == 0 || password.length == 0){
             $('#loginAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">Please fill in the blank.</div>');
-            $(".bg-text").height(490);
+            $(".bg-text").height(450);
         }
         else{
             
@@ -18,11 +18,12 @@ $(document).ready(function() {
                     password: password
                 },
                 success: function(res) {
-                    alert(res);
+                    
                     if (res == "Fail") {
                     	$('#loginAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;"><strong>Access Denied.</strong> Your username or password maybe incorrect.</div>');
-                        $(".bg-text").height(490);
+                        $(".bg-text").height(480);
                     }else{
+                        alert(res);
                         location.reload();
                     }
 

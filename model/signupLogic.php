@@ -5,6 +5,7 @@
 
 	if(isset($_POST["userName"]) && isset($_POST["account"]) && isset($_POST["password"]))
 	{
+		$email = $_POST["email"];
 		$userName = $_POST["userName"];
 		$account = $_POST["account"];
 		$password = $_POST["password"];
@@ -20,7 +21,8 @@
    			echo 'existAccount';
    		}
    		else{
-			$insert = $conn->prepare("INSERT INTO user(Account, Pass, Username, Type) VALUES(:account, :password, :userName, :type)");
+			$insert = $conn->prepare("INSERT INTO user(Account, Pass, Username, Email, Type) VALUES(:account, :password, :userName, :email, :type)");
+			$insert->bindParam(':email', $email);
 	        $insert->bindParam(':userName', $userName);
 	        $insert->bindParam(':account', $account);
 	        $insert->bindParam(':password', $hash_pass);
