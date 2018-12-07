@@ -15,7 +15,7 @@
 							<p class="card-text">
 								Short content...
 							</p>
-							<button class="btn btn-info">Detail</button>
+							<button class="btn btn-danger btn-detail">Detail</button>
 						</div>
 					</div>
 				</div>
@@ -29,7 +29,7 @@
 							<p class="card-text">
 								Short content...
 							</p>
-							<button class="btn btn-info">Detail</button>
+							<button class="btn btn-danger btn-detail">Detail</button>
 						</div>
 					</div>
 				</div>
@@ -43,7 +43,7 @@
 							<p class="card-text">
 								Short content...
 							</p>
-							<button class="btn btn-info">Detail</button>
+							<button class="btn btn-danger btn-detail">Detail</button>
 						</div>
 					</div>
 				</div>
