@@ -10,9 +10,9 @@ $(document).ready(function() {
         },
         success: function(res) {
             var arrayProgressTraining = $.parseJSON(res);
-            $("#selectLevel1").attr("href", "training.php?level=1&day=" + arrayProgressTraining[0].dayTrained);
-            $("#selectLevel2").attr("href", "training.php?level=2&day=" + arrayProgressTraining[1].dayTrained);
-            $("#selectLevel3").attr("href", "training.php?level=3&day=" + arrayProgressTraining[2].dayTrained);
+            $("#selectLevel1").attr("href", "training.php?level=1&day=" + (parseInt(arrayProgressTraining[0].dayTrained, 10) + 1));
+            $("#selectLevel2").attr("href", "training.php?level=2&day=" + (parseInt(arrayProgressTraining[1].dayTrained, 10) + 1));
+            $("#selectLevel3").attr("href", "training.php?level=3&day=" + (parseInt(arrayProgressTraining[2].dayTrained, 10) + 1));
 
             $("#resultLevel1").text(arrayProgressTraining[0].dayTrained + "/12");
             $("#resultLevel2").text(arrayProgressTraining[1].dayTrained + "/12");

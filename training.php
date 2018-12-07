@@ -79,6 +79,7 @@
             <div class="col-12 col-sm-12 col-md-12 headerTraining text-center">
                 <button type="button" data-id=<?php echo $level?> style="display:none" id="btnGetLevel"></button> 
                 <button type="button" data-id=<?php echo $day?> style="display:none" id="btnGetDay"></button> 
+                <button type="button" data-id=<?php echo $user->id?> style="display:none" id="btnGetUserID"></button> 
                 
                 <div class="btn-group btn-group-lg flex-wrap btnGroupDay" id="btnGroup">           
                     <button type="button" data-id="1" class="col-3 col-sm-1 col-md-1 btn hvr-float">01</button> 

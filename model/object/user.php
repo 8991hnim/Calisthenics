@@ -7,3 +7,4 @@ class User{
     public $type;
     public $email;
 }
+?>

@@ -1,18 +1,14 @@
 $(document).ready(function() {
     var level = $('#btnGetLevel').attr('data-id');
     var day = $('#btnGetDay').attr('data-id');
+    var userID = $('#btnGetUserID').attr('data-id');
     var arrayExercise;
     var pos = 0;
+    var dayTrained = 0;
 
     $("#dayNumber").text("Day " + day);
 
-    //chỉnh màu nút 
-    $("#btnGroup button").each(function() {
-        console.log($(this).data('id'));
-        if($(this).data('id')<day){
-            $(this).css("background-color","green");
-        }
-    });
+
 
     $.ajax({
         url: "model/trainingLogic.php",
@@ -32,6 +28,33 @@ $(document).ready(function() {
         }
 
     });
+
+    $.ajax({
+        url: "model/trainingLogic.php",
+        data: {
+            level: level,
+            userID: userID
+        },
+        type: "POST",
+        success: function(res) {
+            dayTrained = res;
+            //chỉnh màu nút 
+            $("#btnGroup button").each(function() {
+                console.log($(this).data('id'));
+                if ($(this).data('id') <= dayTrained) {
+                    $(this).css("background-color", "green");
+                }
+                if($(this).data('id')==day){
+                    $(this).css("background-color","red");
+                }
+            });
+        },
+        error: function(xhr, status, errorThrown) {
+            console.log(errorThrown + status + xhr);
+        }
+
+    });
+
 
 
     $("#btnGroup").on("click", "button", function(event) {
