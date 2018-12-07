@@ -75,10 +75,7 @@
 </nav>
         
         <div class="row">
-            <div class="carousel slide bgHome" id="carousel-144218">
-                <!--
-                
-                -->
+            <div class="carousel slide bgHome" id="carousel-144218" data-ride="carousel">
                 <div class="btnSlideHome">
                     <div class="row btnHome col-md-12">
                        
@@ -89,33 +86,26 @@
                         </a>
                     </div>
                 </div>
+
                 <div class="carousel-inner">
-                    <div class="carousel-item active" id="activeSlideHome">
+                    <div class="carousel-item active">
                         <img class="d-block w-100" alt="Carousel Bootstrap First" src="image/background/bg_slide1.jpg" />
-                        <div class="carousel-caption">
-                        </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item ">
                         <img class="d-block w-100" alt="Carousel Bootstrap Third" src="image/background/bg_slide2.png" />
-                        <div class="carousel-caption">
-                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" alt="Carousel Bootstrap Second" src="image/background/bg_slide3.jpg" />
-                        <div class="carousel-caption">
-                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" alt="Carousel Bootstrap Second" src="image/background/bg_slide4.jpg" />
-                        <div class="carousel-caption">
-                        </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carousel-144218" data-slide="prev">
+                <a class="carousel-control-prev" href="#carousel-144218" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon"></span> 
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carousel-144218" data-slide="next">
+                <a class="carousel-control-next" href="#carousel-144218" role="button" data-slide="next">
                     <span class="carousel-control-next-icon"></span> 
                     <span class="sr-only">Next</span>
                 </a>
@@ -194,3 +184,10 @@
 
     }
 ?>
+
+<script>
+$('.carousel').carousel({
+  interval: 3000
+})
+
+</script>
