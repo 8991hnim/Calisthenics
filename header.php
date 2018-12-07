@@ -40,10 +40,10 @@
                               <a class="nav-link dropdown-toggle btnLoginHome" href="#" id="navbardrop" data-toggle="dropdown">
                                 '.$user->username.'
                               </a>
-                              <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Manage</a>
-                                <a class="dropdown-item" href="#">Setting</a>
-                                <a class="dropdown-item" href="index.php?logout=true">Log out</a>
+                              <div class="dropdown-menu dropdown-menu-right text-center">
+                                <a class="dropdown-item" href="#"><i class="fa fa-cogs"></i>&nbsp; Manage</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-user"></i>&nbsp; Profile</a>
+                                <a class="dropdown-item" href="index.php?logout=true"><i class="fa fa-sign-out"></i>&nbsp; Log out</a>
                               </div>
                             </li>
                         </ul>';
@@ -53,9 +53,9 @@
                               <a class="nav-link dropdown-toggle btnLoginHome" href="#" id="navbardrop" data-toggle="dropdown">
                                 '.$user->username.'
                               </a>
-                              <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Setting</a>
-                                <a class="dropdown-item" href="index.php?logout=true">Log out</a>
+                              <div class="dropdown-menu dropdown-menu-right text-center">
+                                <a class="dropdown-item" href="#"><i class="fa fa-user"></i>&nbsp; Profile</a>
+                                <a class="dropdown-item" href="index.php?logout=true"><i class="fa fa-sign-out"></i>&nbsp; Log out</a>
                               </div>
                             </li>
                         </ul>';

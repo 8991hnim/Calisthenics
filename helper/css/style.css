@@ -622,6 +622,10 @@ b {
 
 /*   POST of CATEGORY  */
 
+.colorPost{
+    background-color: #222;
+    color: #fff;
+}
 
 .headerPost {
         background-image: url("../../image/background/bg_abs.jpg");
