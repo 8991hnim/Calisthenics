@@ -22,7 +22,6 @@ $(document).ready(function() {
                     	$('#loginAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;"><strong>Access Denied.</strong> Your username or password maybe incorrect.</div>');
                         $(".bg-text").height(480);
                     }else{
-                        alert(res);
                         location.reload();
                     }
 

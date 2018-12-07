@@ -25,6 +25,8 @@
 </head>
 
 <body>
+<div class="container-fluid">
+
   <nav class="navbar navbar-expand-md navbar-dark menuHead fixed-top justify-content-end">
   <a class= "nav-link" id="nameCompanyMenu" title="Home" href="index.php">MVTech</a>
   
