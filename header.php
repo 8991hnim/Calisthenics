@@ -25,56 +25,52 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <nav class="col-md-12 navbar navbar-expand-md navbar-dark menuHead fixed-top">
-                <a class="nav-link" href="index.php" title="Home" id="nameCompanyMenu">MVTech</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav col-12 col-sm-12 col-md-12">
-                        <li class="nav-item col-12 col-sm-9 offset-sm-2 col-md-12">
-                            <div class="row">
+  <nav class="navbar navbar-expand-md navbar-dark menuHead fixed-top justify-content-end">
+  <a class= "nav-link" id="nameCompanyMenu" title="Home" href="index.php">MVTech</a>
+  
+    
+    <?php 
 
-                                <?php
-
-                                    if(isset($user)){
-                                        if($user->type==1){
-                                         echo'<!--<div class="col-4 col-sm-4 offset-md-5 col-md-2 text-right">
-                                                <button class="btn btn-danger col-12 col-sm-12 col-md-9 hvr-pop btnManager">Manager</button>
-                                              </div>-->  <!-- Quản lý -->
-                                              <div class="col-7 col-sm-7 col-md-9 text-right">
-                                                   <a href="" class="btnLoginHome hvr-rotate">'.$user->username.'</a>
-                                              </div>
-                                              <div class="col-5 col-sm-5 col-md-2">
-                                                   <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
-                                              </div>';
-                                        }else{
-                                            echo '<div class="col-7 col-sm-7 col-md-9 text-right">
-                                                    <a class="btnLoginHome hvr-rotate">'.$user->username.'</a>
-                                                  </div>
-                                                  <div class="col-5 col-sm-5 col-md-2">
-                                                    <a href="index.php?logout=true" class="btnSignUpHome hvr-rotate">Log out</a>
-                                                  </div>';
-                                        }
-                                    }else{
-                                        echo '<div class="col-6 col-sm-6 col-md-2 offset-md-7 text-right">
-                                                <a href="login.php" class="btnLoginHome hvr-rotate">Log in</a>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-2">
-                                                <a href="signup.php" class="btnSignUpHome hvr-rotate">Sign up</a>
-                                            </div>';
-                                    }
-
-                                ?>
-
-                            </div>
-                        </li>
-                    </ul>
-                </div>  
-            </nav>
-        </div>
+        if(isset($user)){
+            if($user->type==1){
+                echo ' <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle btnLoginHome" href="#" id="navbardrop" data-toggle="dropdown">
+                                '.$user->username.'
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Manage</a>
+                                <a class="dropdown-item" href="#">Setting</a>
+                                <a class="dropdown-item" href="index.php?logout=true">Log out</a>
+                              </div>
+                            </li>
+                        </ul>';
+            }else{
+                echo ' <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle btnLoginHome" href="#" id="navbardrop" data-toggle="dropdown">
+                                '.$user->username.'
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Setting</a>
+                                <a class="dropdown-item" href="index.php?logout=true">Log out</a>
+                              </div>
+                            </li>
+                        </ul>';
+            }
+        }
+        else{
+            echo '<li class="nav-item">
+                      <a class="nav-link btnLoginHome hvr-rotate" href="login.php">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link btnSignUpHome hvr-rotate" href="signup.php">Sign up</a>
+                  </li>
+                  ';
+        }
+     ?>
+                            
+</nav>
         
         <div class="row">
             <div class="carousel slide bgHome" id="carousel-144218">
