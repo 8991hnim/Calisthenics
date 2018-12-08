@@ -634,6 +634,11 @@ b {
 
 /*   POST   */
 
+.img-detail-post{
+    box-shadow: -15px 15px 10px 0px #003333;
+    border: none;
+}
+
 .btn-detail{
     padding: 3% 10%;
     position: relative;
@@ -646,7 +651,6 @@ b {
 .card-title {
     padding-left: 5px;
     padding-top: 5px;
-
 }
 
 .card-text {
@@ -658,35 +662,16 @@ b {
     color: #fff;
 }
 
-.headerPost {
-    background-image: url("../../image/background/bg_abs.jpg");
-    height: 200px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 200px;
-}
 
 
 @media (min-width: 576px) {
-    .headerPost {
-        background-image: url("../../image/background/bg_abs.jpg");
-        height: 280px;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-size: 100% 280px;
-    }
+    
 
 }
 
 
 @media (min-width: 768px) {
-    .headerPost {
-        background-image: url("../../image/background/bg_abs.jpg");
-        height: 410px;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-size: 100% 410px;
-    }
+    
 
 }
 
@@ -744,6 +729,7 @@ b {
   transition: 0.5s;
   background-color: #e86256;
   opacity: 1;
+  box-shadow: 0px 0px 10px 1px #ff884d;
 }
 
 @media only screen and (min-width: 768px) {

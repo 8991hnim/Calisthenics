@@ -20,6 +20,7 @@
     <script type="text/javascript" src="helper/bootstrap/js/bootstrap.js"></script>
     <link rel="stylesheet" type="text/css" href="helper/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="helper/hover/css/hover.css" media="all">
+    <link rel="stylesheet" type="text/css" href="helper/animate/animate.css">
     <link rel="stylesheet" type="text/css" href="helper/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="helper/css/style.css">
 </head>
