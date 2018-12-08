@@ -1,4 +1,4 @@
-$(document).ready(function() {
+    $(document).ready(function() {
     var level = $('#btnGetLevel').attr('data-id');
     var day = $('#btnGetDay').attr('data-id');
     var userID = $('#btnGetUserID').attr('data-id');
@@ -42,10 +42,10 @@ $(document).ready(function() {
             $("#btnGroup button").each(function() {
                 console.log($(this).data('id'));
                 if ($(this).data('id') <= dayTrained) {
-                    $(this).css("background-color", "green");
+                    $(this).css("background-color", "#3d5c5c");
                 }
                 if($(this).data('id')==day){
-                    $(this).css("background-color","red");
+                    $(this).css("background-color","#993333");
                 }
             });
         },

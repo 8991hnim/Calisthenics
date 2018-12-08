@@ -19,6 +19,16 @@ li {
 
 /* SLIDE & HOME*/
 
+.dropdown-menu {
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #006666 !important;
+  text-decoration: none !important;
+  background-color: #ffa64d !important;
+}
 
 .btnLoginBeforeTrain {
     margin-bottom: 2%;
