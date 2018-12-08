@@ -1,6 +1,7 @@
 <?php
-	include('../config/configDb.php');
-	include('object/user.php');
+	include('../../config/configDb.php');
+	include('../../model/user.php');
+	include_once("../../config/core.php");
 
 	if(isset($_POST["account"]) && isset($_POST["password"])){
 		$account = $_POST["account"];
@@ -14,7 +15,7 @@
    		$row = $stmt->fetch(PDO::FETCH_ASSOC);
    		if(isset($row)){
    			if (password_verify($password, $row['Pass'])){
-   				include_once("../config/core.php");
+   				
 
 				$user = new User;
 				$user->id = $row['ID'];

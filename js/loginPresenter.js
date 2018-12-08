@@ -10,7 +10,7 @@ $(document).ready(function() {
         }
         else{
             $.ajax({
-                url: "model/loginLogic.php",
+                url: "controller/user/login.php",
                 type: "POST",
                 data: {
                     account: account,

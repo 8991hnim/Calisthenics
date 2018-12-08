@@ -62,7 +62,7 @@
     </div>
 
 
-    <script type="text/javascript" src="presenter/loginPresenter.js"></script>
+    <script type="text/javascript" src="js/loginPresenter.js"></script>
 
 </body>
 

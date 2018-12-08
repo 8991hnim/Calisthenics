@@ -1,7 +1,7 @@
 <?php
-	include('../config/configDb.php');
-	include('../config/core.php');
-	include('object/progress_training.php');
+	include('../../config/configDb.php');
+	include('../../config/core.php');
+	include('../../model/progress_training.php');
 
 	if(isset($_POST['userID'])){
 		$userID = $_POST['userID'];

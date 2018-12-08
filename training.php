@@ -1,6 +1,6 @@
 <?php
     include_once("config/core.php");
-    include_once("model/object/user.php");
+    include_once("model/user.php");
     if(isset($_GET["logout"])) {
         session_destroy();
         header("Location: {$home_url}index.php");
@@ -166,4 +166,4 @@
         require"footer.php";
  ?>
 
- <script type="text/javascript" src="presenter/trainingPresenter.js"></script>
+ <script type="text/javascript" src="js/trainingPresenter.js"></script>

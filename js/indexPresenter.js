@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     //cập nhật kết quả tập modal box
     $.ajax({
-        url: "model/indexLogic.php",
+        url: "controller/exercise/GetProgressTraining.php",
         type: "POST",
         data: {
             userID: userID

@@ -103,4 +103,4 @@
     
  ?>
 
- <script type="text/javascript" src="presenter/indexPresenter.js"></script>
+ <script type="text/javascript" src="js/indexPresenter.js"></script>

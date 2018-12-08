@@ -1,6 +1,6 @@
 <?php
     include_once("config/core.php");
-    include_once("model/object/user.php");
+    include_once("model/user.php");
     if(isset($_GET["logout"])) {
         session_destroy();
         header("Location: {$home_url}index.php");

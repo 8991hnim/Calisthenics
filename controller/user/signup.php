@@ -1,7 +1,7 @@
 <?php
-	include('../config/configDb.php');
-	include('object/user.php');
-	include('../config/core.php');
+	include('../../config/configDb.php');
+	include('../../model/user.php');
+	include_once("../../config/core.php");
 
 	if(isset($_POST["userName"]) && isset($_POST["account"]) && isset($_POST["password"]))
 	{

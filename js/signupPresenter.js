@@ -26,7 +26,7 @@ $(document).ready(function(){
 				else{
 					$.ajax({
 
-						url: "model/signupLogic.php",
+						url: "controller/user/signup.php",
 						data: {
 							email: emailSignup,
 							userName: userNameSignup, 				

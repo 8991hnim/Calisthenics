@@ -85,3 +85,6 @@ INSERT INTO `training` (`LevelID`, `Day`, `ExerciseID`, `Set`, `Rep`, `BreakTime
 
 --ngay2
 INSERT INTO `training` (`LevelID`, `Day`, `ExerciseID`, `Set`, `Rep`, `BreakTime`) VALUES ('1', '2', '1', '1', '30', '30s'), ('1', '2', '12', '50', '1', '30s'), ('1', '2', '17', '2', '10', '30s'), ('1', '2', '23', '2', '6', '30s'), ('1', '2', '21', '1', '60', '30s');
+
+--cateogry
+INSERT INTO `category` (`ID`, `Name`) VALUES (NULL, 'bicep'), (NULL, 'tricep'), (NULL, 'forearms'), (NULL, 'shoulder'), (NULL, 'abs'), (NULL, 'cardio'), (NULL, 'chest'), (NULL, 'back'), (NULL, 'leg'), (NULL, 'nutrition');

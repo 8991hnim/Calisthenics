@@ -50,7 +50,7 @@
         <div id="signupAlert"></div>
     </div>
 
-    <script type="text/javascript" src="presenter/signupPresenter.js"></script>
+    <script type="text/javascript" src="js/signupPresenter.js"></script>
 </body>
 
 </html>

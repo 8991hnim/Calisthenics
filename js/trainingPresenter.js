@@ -11,7 +11,7 @@
 
 
     $.ajax({
-        url: "model/trainingLogic.php",
+        url: "controller/exercise/GetExerciseByDay.php",
         data: {
             level: level,
             day: day
@@ -30,7 +30,7 @@
     });
 
     $.ajax({
-        url: "model/trainingLogic.php",
+        url: "controller/exercise/GetDayTrained.php",
         data: {
             level: level,
             userID: userID
