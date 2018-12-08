@@ -1,6 +1,6 @@
 		
 		<a href="#0" title="Back to Top and Scrollspy" class="cd-top js-cd-top">Top</a>
-        <script src="js/main.js"></script>       
+        <script src="js/back-to-top.js"></script>       
         
         <div class="row">
             <div class="col-md-12 footer text-center">
