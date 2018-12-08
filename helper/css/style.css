@@ -622,7 +622,26 @@ b {
 /*----------------------------------------------------------------------------------------------------*/
 
 
-/*   POST of CATEGORY  */
+/*   POST   */
+
+.btn-detail{
+    padding: 3% 10%;
+    position: relative;
+    bottom: -8px;
+    float: right;
+    right: 3%;
+    /*left: 65%;*/
+}
+
+.card-title {
+    padding-left: 5px;
+    padding-top: 5px;
+
+}
+
+.card-text {
+    padding-left: 5px;
+}
 
 .colorPost {
     background-color: #222;
@@ -662,19 +681,8 @@ b {
 }
 
 
-/*----------------------------------------------------------------------------------------------------*/
-/* POST */
-.card-title {
-    padding-left: 5px;
-    padding-top: 5px;
 
-}
-
-.card-text {
-    padding-left: 5px;
-}
-
-/*----------------------------------------------------------------------------------------*/position: 
+/*----------------------------------------------------------------------------------------*/
 /* BACK TO TOP */
 
 *, *::after, *::before {
@@ -689,6 +697,7 @@ b {
   position: fixed;
   bottom: 40px;
   right: 10px;
+  border-radius: 50%;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   /* image replacement properties */
@@ -712,7 +721,8 @@ b {
 .cd-top.cd-top--show {
   /* the button becomes visible */
   visibility: visible;
-  opacity: 1;
+  opacity: .5;
+  z-index: 1;
 }
 
 .cd-top.cd-top--fade-out {
@@ -721,6 +731,7 @@ b {
 }
 
 .cd-top:hover {
+  transition: 0.5s;
   background-color: #e86256;
   opacity: 1;
 }
@@ -740,3 +751,6 @@ b {
     bottom: 30px;
   }
 }
+
+
+/*----------------------------------------------------------------------------------------------------*/

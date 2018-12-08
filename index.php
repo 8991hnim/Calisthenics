@@ -96,8 +96,6 @@
                 </div>
             </div>
         </div>
-        <a href="#0" class="cd-top js-cd-top">Top</a>
-        <script src="helper/main.js"></script>
 
 <?php 
 
