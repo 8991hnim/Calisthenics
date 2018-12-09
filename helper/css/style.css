@@ -759,3 +759,29 @@ b {
 
 
 /*----------------------------------------------------------------------------------------------------*/
+
+
+/*   PROFILE EDIT  */
+
+.edit-account i:hover {
+    color: #00b3b3;
+}
+
+.profile-thanks {
+    font-family: Impact; 
+    font-size: 25px;
+}
+
+@media (min-width: 576px){
+    .profile-thanks {
+        font-family: Impact; 
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 768px){
+    .profile-thanks {
+        font-family: Impact; 
+        font-size: 40px;
+    }
+}
