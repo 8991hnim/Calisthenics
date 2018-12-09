@@ -55,7 +55,7 @@
                                 '.$user->username.'
                               </a>
                               <div class="dropdown-menu dropdown-menu-right text-center">
-                                <a class="dropdown-item" href="#"><i class="fa fa-user"></i>&nbsp; Profile</a>
+                                <a class="dropdown-item" href="profile.php"><i class="fa fa-user"></i>&nbsp; Profile</a>
                                 <a class="dropdown-item" href="index.php?logout=true"><i class="fa fa-sign-out"></i>&nbsp; Log out</a>
                               </div>
                             </li>

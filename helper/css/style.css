@@ -763,8 +763,13 @@ b {
 
 /*   PROFILE EDIT  */
 
+.edit-account i {
+    color: orange;
+}
+
 .edit-account i:hover {
     color: #00b3b3;
+    cursor: pointer;
 }
 
 .profile-thanks {
