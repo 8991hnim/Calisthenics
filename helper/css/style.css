@@ -25,9 +25,9 @@ li {
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-  color: #006666 !important;
+  color: #fff !important;
   text-decoration: none !important;
-  background-color: #ffa64d !important;
+  background-color: #ff8533 !important;
 }
 
 .btnLoginBeforeTrain {
@@ -507,12 +507,12 @@ b {
 }
 
 .backNext a {
-    font-size: 40px;
+    font-size: 25px;
     color: #004d4d;
     cursor: pointer;
 }
 
-.backNext:hover {
+.backNext i:hover {
     transition: 1s;
     color: #17a2b8;
 }
@@ -546,7 +546,7 @@ b {
         top: 89%;
     }
 
-    .backNext {
+    .backNext a {
         font-size: 30px;
     }
 
@@ -574,7 +574,7 @@ b {
         top: 92%;
     }
 
-    .backNext {
+    .backNext a {
         font-size: 40px;
     }
 
@@ -634,12 +634,15 @@ b {
 
 /*   POST   */
 
-.img-detail-post{
-    box-shadow: -15px 15px 10px 0px #003333;
+.video-detail-post {
+    box-shadow: -10px 10px 0px 0px #003333;
     border: none;
+    height: 250px;
+    width:100%;
+    border-radius: 6px;
 }
 
-.btn-detail{
+.btn-detail {
     padding: 3% 10%;
     position: relative;
     bottom: -8px;
@@ -665,12 +668,19 @@ b {
 
 @media (min-width: 576px) {
     
-
+    .video-detail-post{
+        box-shadow: -13px 13px 0px 0px #003333;
+        height: 350px;
+    }
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
     
+    .video-detail-post{
+        box-shadow: -18px 18px 0px 0px #003333;
+        height: 500px;
+    }
 
 }
 

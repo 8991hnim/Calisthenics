@@ -9,31 +9,31 @@
                         <div class="row pt-2">
                             <a href="post.php?cat=bicep" id="bicep" class="hvr-bounce-in col-12 col-sm-12 col-md-4 mt-2 mb-1 cellCategory text-center text-light h1">
                                 <p>ABS</p>
-                        </a>
+                            </a>
                             <a href="post.php?cat=tricep" id="tricep" class="hvr-bounce-in col-12 col-sm-12 col-md-4 mt-2 mb-1 cellCategory">
-                        </a>
+                            </a>
                             <a href="post.php?cat=forearms" id="forearms" class="hvr-bounce-in col-12 col-sm-12 col-md-4 mt-2 mb-1 cellCategory">
-                        </a>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-12 rowCategory">
                         <div class="row">
                             <a href="post.php?cat=shoulder" id="shoulder" class="hvr-bounce-in col-12 col-sm-12 col-md-4 mt-2 mb-1 cellCategory">
-                        </a>
+                            </a>
                             <a href="post.php?cat=abs" id="abs" class="hvr-bounce-in col-12 col-sm-12 col-md-4 mt-2 mb-1 cellCategory">
-                        </a>
+                            </a>
                             <a href="post.php?cat=cardio" id="cardio" class="hvr-bounce-in col-12 col-sm-12 col-md-4 mt-2 mb-1 cellCategory">
-                        </a>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-12 pb-3 rowCategory">
                         <div class="row">
                             <a href="post.php?cat=chest" id="chest" class="hvr-bounce-in col-12 col-sm-12 col-md-4 mt-2 mb-1 cellCategory">
-                        </a>
+                            </a>
                             <a href="post.php?cat=back" id="back" class="hvr-bounce-in col-12 col-sm-12 col-md-4 mt-2 mb-1 cellCategory">
-                        </a>
+                            </a>
                             <a href="post.php?cat=leg" id="leg" class="hvr-bounce-in col-12 col-sm-12 col-md-4 mt-2 mb-1 cellCategory">
-                        </a>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -103,4 +103,3 @@
     
  ?>
 
- <script type="text/javascript" src="js/indexPresenter.js"></script>

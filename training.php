@@ -110,7 +110,7 @@
             </div>
             <div class="row">
                 <div class="backNext col-1 col-sm-1 col-md-1">
-                    <a type="button" class="col-md-12 " title="Back" id="btnPrevious">
+                    <a class="col-md-12 " title="Previous" id="btnPrevious">
                         <i class="fa fa-chevron-left"></i>
                     </a>
                 </div>
