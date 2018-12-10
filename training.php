@@ -102,8 +102,8 @@
                 <h2 id="dayNumber" class="text-center text-danger mt-3 mb-3">Day Here</h2>
             </div>
             <div class="row text-center">
-                <div class="col-md-12">
-                    <a href="post.php" class="btnFinishTraining" title="Finish" id="btnFinishTraining">
+                <div class="col-md-12 btnFinishTraining" >
+                    <a title="Finish" id="btnFinishTraining" style="cursor: pointer;">
                         <i class="fa fa-trophy"></i>
                     </a>
                 </div>

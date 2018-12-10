@@ -1,8 +1,9 @@
 <?php 
 	 include_once("config/core.php");
 
-    if(isset($_GET["id"])) {
+    if(isset($_GET["id"]) && isset($_GET["cat"])) {
         $postID = $_GET["id"];
+        $cat = $_GET["cat"];
     }else{
         header("Location: {$home_url}index.php");
     } 
@@ -10,6 +11,7 @@
 	require "header.php";
  ?>
 	<div id="container">
+		<div data-id="<?php echo $cat?>" id="getCatId" style="display:none;"></div>
 		<div class="row mb-5" data-id="<?php echo $postID ?>" id="getPostId">
 			<div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-10 offset-md-1 mt-3">
 				<div class="mb-5 actualyoutube" style="border-radius: 6px;">
@@ -22,12 +24,12 @@
 		</div>
 
 		<div class="row mt-3 mb-3">
-			<div class="col-md-10 offset-md-1 mt-3" style="">
+			<div class="col-md-10 offset-md-1 mt-3" >
 				<div class="row">
 					<h4 class="text-secondary col-10 offset-1 col-sm-10 offset-sm-1 offset-md-0">Related posts</h4>
 				</div>
-				<div class="row">
-					<div class="col-10 offset-1 col-sm-5 offset-sm-1 col-md-3 offset-md-0 mt-3 mb-3 hvr-hang">
+				<div class="row" id="relatedPost">
+					<!-- <div class="col-10 offset-1 col-sm-5 offset-sm-1 col-md-3 offset-md-0 mt-3 mb-3 hvr-hang">
 						<div class="card colorPost">
 							<img class="card-img-top" alt="Bootstrap Thumbnail First" src="image/infor/hoavinh.jpg" />
 							<div class="card-block">
@@ -82,7 +84,7 @@
 								<a class="btn btn-danger btn-detail">Detail</a>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

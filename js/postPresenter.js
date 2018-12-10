@@ -17,9 +17,6 @@ $(document).ready(function() {
                     $("#content").append(setupUI(value.id, value.title, value.shortContent, value.image));
                 });
             }
-            $.each(arrayPost, function(index, value) {
-                $("#content").append(setupUI(value.id, value.title, value.shortContent, value.image));
-            });
 
         },
         error: function(xhr, status, errorThrown) {
@@ -46,7 +43,7 @@ $(document).ready(function() {
     }
 
     $("body").delegate(".card-block a", "click", function() {
-        var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/detail_post.php?id=" + $(this).attr('data-id')));
+        var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/detail_post.php?cat="+cat+"&id=" + $(this).attr('data-id')));
         window.location.href = url.href;
     });
 });
