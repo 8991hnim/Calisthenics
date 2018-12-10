@@ -19,8 +19,8 @@
     <script type="text/javascript" src="helper/jquery/jquery.js"></script>
     <script type="text/javascript" src="helper/bootstrap/js/bootstrap.js"></script>
     <link rel="stylesheet" type="text/css" href="helper/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="helper/hover/css/hover.css" media="all">
     <link rel="stylesheet" type="text/css" href="helper/animate/animate.css">
+    <link rel="stylesheet" href="helper/hover/css/hover.css" media="all">
     <link rel="stylesheet" type="text/css" href="helper/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="helper/css/style.css">
 </head>
@@ -29,14 +29,14 @@
 <div class="container-fluid">
 
   <nav class="navbar navbar-expand-md navbar-dark menuHead fixed-top justify-content-end">
-  <a class= "nav-link" id="nameCompanyMenu" title="Home" href="index.php">MVTech</a>
+  <a class= "nav-link animated slideInRight" id="nameCompanyMenu" title="Home" href="index.php">MVTech</a>
   
     
     <?php 
 
         if(isset($user)){
             if($user->type==1){
-                echo ' <ul class="navbar-nav">
+                echo ' <ul class="navbar-nav animated slideInLeft">
                             <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle btnLoginHome" href="#" id="navbardrop" data-toggle="dropdown">
                                 '.$user->username.'
@@ -49,7 +49,7 @@
                             </li>
                         </ul>';
             }else{
-                echo ' <ul class="navbar-nav">
+                echo ' <ul class="navbar-nav animated slideInLeft">
                             <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle btnLoginHome" href="#" id="navbardrop" data-toggle="dropdown">
                                 '.$user->username.'
@@ -63,10 +63,10 @@
             }
         }
         else{
-            echo '<li class="nav-item">
+            echo '<li class="nav-item animated slideInLeft">
                       <a class="nav-link btnLoginHome hvr-rotate" href="login.php">Log in</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item animated slideInLeft">
                       <a class="nav-link btnSignUpHome hvr-rotate" href="signup.php">Sign up</a>
                   </li>
                   ';

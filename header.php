@@ -5,7 +5,7 @@
         <div class="row">
             <div class="carousel slide bgHome" id="carousel-144218" data-ride="carousel">
                 <div class="btnSlideHome">
-                    <div class="row btnHome col-md-12">
+                    <div class="row btnHome col-md-12 animated fadeInUp">
                        
                         <?php showPopupLevel() ?>
 

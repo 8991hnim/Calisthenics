@@ -32,6 +32,7 @@
     <link rel="stylesheet" type="text/css" href="helper/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="helper/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="helper/hover/css/hover.css" media="all">
+    <link rel="stylesheet" type="text/css" href="helper/animate/animate.css">
     <script type="text/javascript" src="helper/jquery/jquery.js"></script>
     <script type="text/javascript" src="helper/bootstrap/js/bootstrap.js"></script>
 </head>
@@ -40,31 +41,31 @@
     <div class="container-fluid">
         
         <nav class="navbar navbar-expand-md navbar-dark menuHead fixed-top justify-content-end">
-          <a class= "nav-link" id="nameCompanyMenu" title="Home" href="index.php">MVTech</a>
+          <a class= "nav-link animated slideInRight" id="nameCompanyMenu" title="Home" href="index.php">MVTech</a>
           
             <?php 
                 if(isset($user)){
                     if($user->type==1){
-                        echo ' <ul class="navbar-nav">
+                        echo ' <ul class="navbar-nav animated slideInLeft">
                                     <li class="nav-item dropdown">
                                       <a class="nav-link dropdown-toggle btnLoginHome" href="#" id="navbardrop" data-toggle="dropdown">
                                         '.$user->username.'
                                       </a>
                                       <div class="dropdown-menu dropdown-menu-right text-center">
                                         <a class="dropdown-item" href="#"><i class="fa fa-cogs"></i>&nbsp; Manage</a>
-                                        <a class="dropdown-item" href="#"><i class="fa fa-user"></i>&nbsp; Profile</a>
+                                        <a class="dropdown-item" href="profile.php"><i class="fa fa-user"></i>&nbsp; Profile</a>
                                         <a class="dropdown-item" href="index.php?logout=true"><i class="fa fa-sign-out"></i>&nbsp; Log out</a>
                                       </div>
                                     </li>
                                 </ul>';
                     }else{
-                        echo ' <ul class="navbar-nav">
+                        echo ' <ul class="navbar-nav animated slideInLeft">
                                     <li class="nav-item dropdown">
                                       <a class="nav-link dropdown-toggle btnLoginHome" href="#" id="navbardrop" data-toggle="dropdown">
                                         '.$user->username.'
                                       </a>
                                       <div class="dropdown-menu dropdown-menu-right text-center">
-                                        <a class="dropdown-item" href="#"><i class="fa fa-user"></i>&nbsp; Profile</a>
+                                        <a class="dropdown-item" href="profile.php"><i class="fa fa-user"></i>&nbsp; Profile</a>
                                         <a class="dropdown-item" href="index.php?logout=true"><i class="fa fa-sign-out"></i>&nbsp; Log out</a>
                                       </div>
                                     </li>
@@ -81,7 +82,7 @@
                 <button type="button" data-id=<?php echo $day?> style="display:none" id="btnGetDay"></button> 
                 <button type="button" data-id=<?php echo $user->id?> style="display:none" id="btnGetUserID"></button> 
                 
-                <div class="btn-group btn-group-lg flex-wrap btnGroupDay" id="btnGroup">           
+                <div class="btn-group btn-group-lg flex-wrap btnGroupDay animated fadeInUp" id="btnGroup">           
                     <button type="button" data-id="1" class="col-3 col-sm-1 col-md-1 btn hvr-float">01</button> 
                     <button type="button" data-id="2" class="col-3 col-sm-1 col-md-1 btn hvr-float">02</button>
                     <button type="button" data-id="3" class="col-3 col-sm-1 col-md-1 btn hvr-float">03</button>

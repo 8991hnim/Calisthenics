@@ -4,9 +4,9 @@
 
 <div class="container">
 	<div class="row mt-6"></div>
-	<p class="text-center text-light profile-thanks">MVTech thank Vinh!</p>
-	<p class="text-info mt-5 pt-5">Account management</p>
-	<table class="table table-dark table-hover">
+	<p class="text-center text-light animated fadeInDown profile-thanks">MVTech thank Vinh!</p>
+	<p class="text-info mt-5 pt-5 animated fadeInUp">Account management</p>
+	<table class="table table-dark table-hover animated fadeInUp">
     	<tbody>
       		<tr>
     			<td>Name</td>
@@ -30,8 +30,8 @@
       		</tr>
     	</tbody>
   	</table>
-  	<p class="text-info mt-5 pt-5">Training results</p>
-  	<div class="row">
+  	<p class="text-info mt-5 pt-5 animated fadeInUp">Training results</p>
+  	<div class="row animated fadeInUp">
   		<div class="col-12 col-sm-12 col-md-4 offset-md-0">
   			<table class="table table-dark table-hover">
 		    	<tbody class="text-center">
