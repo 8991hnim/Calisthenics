@@ -15,8 +15,7 @@ $(document).ready(function(){
             $(".bg-text").height(480);
 		} else 
 			if( !emailValid.test(emailSignup) ) { 
-				alert(emailSignup);
-				$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">The email invalid.</div>');
+ 				$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">The email invalid.</div>');
 	            $(".bg-text").height(480);
 			} else 
 				if(passwordSignup != confirmPasswordSignup){

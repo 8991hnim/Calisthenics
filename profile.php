@@ -12,24 +12,20 @@
     			<td>Name</td>
         		<td id="nameProfile" data-id="<?php echo $user->username ?>"> <?php echo $user->username ?> </td>
         		<td class="text-right edit-account" id="editNameProfile"><i class="fa fa-edit" title="Edit"></i></td>
-
-        		<!-- <td><input type="text" value="Nguyen Khac Vinh" class="form-control text-center" name=""></td>
-        		<td class="text-right edit-account"><button class="btn btn-success">Save changes</button></td> -->
-
       		</tr>
       		<tr>
         		<td>Email</td>
-        		<td id="emailProfile" data-id="<?php echo $user->email ?>"> <?php echo $user->email ?> </td>
-        		<td class="text-right edit-account" id="editEmailProfile"><i class="fa fa-edit" title="Edit"></i></td>
+        		<td id="emailProfile"> <?php echo $user->email ?> </td>
+        		<td class="text-right edit-account"><i class="text-danger fa fa-exclamation-circle" title="You can't change."></i></td>
       		</tr>
       		<tr>
         		<td>Account</td>
-        		<td id="accountProfile" data-id="<?php echo $user->account ?>"> <?php echo $user->account ?> </td>
-        		<td class="text-right edit-account" id="editAccountProfile"><i class="fa fa-edit" title="Edit"></i></td>
+        		<td id="accountProfile"> <?php echo $user->account ?> </td>
+        		<td class="text-right edit-account"><i class="text-danger fa fa-exclamation-circle" title="You can't change."></i></td>
       		</tr>
       		<tr>
         		<td>Password</td>
-        		<td><i class="fa fa-warning text-warning"></i> For security reasons, we can not show your password.</td>
+        		<td id="passwordProfile"><i class="fa fa-warning text-warning"></i> For security reasons, we can not show your password.</td>
         		<td class="text-right edit-account" id="editPasswordProfile"><i class="fa fa-edit" title="Edit"></i></td>
       		</tr>
     	</tbody>
