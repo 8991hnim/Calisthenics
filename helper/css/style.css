@@ -763,6 +763,16 @@ b {
 
 /*   PROFILE EDIT  */
 
+
+.table-radius{
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px 0px rgba(1, 1, 1, 1);
+}
+
+.firstRowTable{
+    border-top: none !important;
+}
+
 .edit-account i {
     color: orange;
 }
