@@ -4,14 +4,14 @@
 
 <div class="container">
 	<div class="row mt-6"></div>
-	<p class="text-center text-light animated fadeInDown profile-thanks">MVTech thank Vinh!</p>
-	<p class="text-info mt-5 pt-5 animated fadeInUp">Account management</p>
-	<table class="table table-dark table-hover animated fadeInUp">
+	<p class="text-center text-light animated fadeInDown profile-thanks">MVTech thank <?php echo $user->username ?>!</p>
+	<p class="text-info mt-5 pt-5">Account management</p>
+	<table class="table table-dark table-hover table-radius">
     	<tbody>
       		<tr>
-    			<td>Name</td>
-        		<td id="nameProfile" data-id="<?php echo $user->username ?>"> <?php echo $user->username ?> </td>
-        		<td class="text-right edit-account" id="editNameProfile"><i class="fa fa-edit" title="Edit"></i></td>
+    			<td class="firstRowTable">Name</td>
+        		<td class="firstRowTable" id="nameProfile" data-id="<?php echo $user->username ?>"> <?php echo $user->username ?> </td>
+        		<td class="firstRowTable text-right edit-account" id="editNameProfile"><i class="fa fa-edit" title="Edit"></i></td>
       		</tr>
       		<tr>
         		<td>Email</td>
@@ -30,13 +30,13 @@
       		</tr>
     	</tbody>
   	</table>
-  	<p class="text-info mt-5 pt-5 animated fadeInUp">Training results</p>
-  	<div class="row animated fadeInUp">
+  	<p class="text-info mt-5 pt-5 ">Training results</p>
+  	<div class="row">
   		<div class="col-12 col-sm-12 col-md-4 offset-md-0">
-  			<table class="table table-dark table-hover">
+  			<table class="table table-dark table-hover table-radius">
 		    	<tbody class="text-center">
 		      		<tr>
-		    			<td>Level 1</td>
+		    			<td class="firstRowTable">Level 1</td>
 		      		</tr>
 		      		<tr>
 		        		<td>Day number: 12</td>
@@ -51,10 +51,10 @@
   			</table>
   		</div>
   		<div class="col-12 col-sm-12 col-md-4 offset-md-0">
-  			<table class="table table-dark table-hover">
+  			<table class="table table-dark table-hover table-radius">
 		    	<tbody class="text-center">
 		      		<tr>
-		    			<td>Level 2</td>
+		    			<td class="firstRowTable">Level 2</td>
 		      		</tr>
 		      		<tr>
 		        		<td>Day number: 12</td>
@@ -69,10 +69,10 @@
   			</table>
   		</div>
   		<div class="col-12 col-sm-12 col-md-4 offset-md-0">
-  			<table class="table table-dark table-hover">
+  			<table class="table table-dark table-hover table-radius">
 		    	<tbody class="text-center">
 		      		<tr>
-		    			<td>Level 3</td>
+		    			<td class="firstRowTable">Level 3</td>
 		      		</tr>
 		      		<tr>
 		        		<td>Day number: 12</td>

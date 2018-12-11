@@ -15,7 +15,6 @@
    		$row = $stmt->fetch(PDO::FETCH_ASSOC);
    		if(isset($row)){
    			if (password_verify($password, $row['Pass'])){
-   				
 
 				$user = new User;
 				$user->id = $row['ID'];
