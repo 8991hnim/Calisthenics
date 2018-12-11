@@ -12,10 +12,15 @@
         return;
     } 
 
-    if(isset($_GET["level"]) && isset($_GET["day"]) && $_GET["level"]<4 && $_GET["level"]>0 && $_GET["day"] < 13 && $_GET["day"] >= 0){
+    if(isset($_GET["level"]) && isset($_GET["day"]) && $_GET["level"]<4 && $_GET["level"]>0 && $_GET["day"] <= 13 && $_GET["day"] >= 0){
+
         $level = $_GET["level"];
         $day = $_GET["day"];
         if($day==0) header("Location: {$home_url}training.php?level=".$level."&day=1"); //chưa tập lần nào
+        else if($day==13 && $level<3) header("Location: {$home_url}training.php?level=".++$level."&day=1"); //nếu ở ngày 12 và bấm finish
+        else if($day==13 && $level==3){
+            $day--; //lặp lại bài tập ngày 12, chưa nghĩ ra nên làm gì
+        }
     }else{
         header("Location: {$home_url}index.php"); //vào training không thông qua modal
     }
