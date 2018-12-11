@@ -590,8 +590,9 @@ b {
 }
 
 .btnGroupDay button:hover {
-    background: #993333;
+    background: #1a8cff;
 }
+
 
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -763,6 +764,11 @@ b {
 
 /*   PROFILE EDIT  */
 
+
+.table-radius input:focus{
+    box-shadow: 0px 0px 6px 0px #ff6600;
+    border-color: #ff6600;
+}
 
 .table-radius{
     border-radius: 8px;

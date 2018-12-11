@@ -24,7 +24,7 @@ $(document).ready(function() {
         if (nameChange.length == 0) {
             alert('Please fill in the blank.');
         }else{
-            if (nameChange.length < 5 || nameChange.length > 20){
+            if (nameChange.length < 6 || nameChange.length > 20){
                 alert('Username must be between 6 and 20 characters.');
             }else{
                 $.ajax({

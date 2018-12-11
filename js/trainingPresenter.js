@@ -40,13 +40,12 @@ $(document).ready(function() {
             // chỉnh màu nút 
             $("#btnGroup button").each(function() {
                 var currentBtnID = $(this);
-                currentBtnID.css("background-color", "#3d5c5c");
                 $.each(dayTrained, function(index, value) {
                     // alert(currentBtnID.attr('data-id') + "=" + value);
                     if (currentBtnID.attr('data-id') == value) {
-                        currentBtnID.css("background-color", "#993333");
+                        currentBtnID.css("background-color", "#3d5c5c");
                     }
-                    if(currentBtnID.data('id')==day) currentBtnID.css("background-color", "black");
+                    if(currentBtnID.data('id')==day) currentBtnID.css("background-color", "#1a8cff");
                 });
             });
         },
