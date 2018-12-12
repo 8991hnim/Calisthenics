@@ -11,7 +11,7 @@
  ?>
 
 	<div class="row" data-id="<?php echo $cat ?>" id="container">
-		<div class="col-md-10 offset-md-1 mt-3" style="">
+		<div class="col-md-10 offset-md-1 mt-3">
 			<div class="row" id="content">
 				
 				<!-- <div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-4 offset-md-0 mt-3 mb-3 hvr-hang">
@@ -72,11 +72,15 @@
 					</div>
 				</div> -->
 			</div>
+			<div id="pag" style="text-align:center;"></div>
+			
 		</div>
+
 	</div>
 
  <?php 
 	require"footer.php"
  ?>
 
- <script type="text/javascript" src="js/postPresenter.js"></script>
+
+<script type="text/javascript" src="js/postPresenter.js"></script>

@@ -18,6 +18,7 @@
     <title>Calisthenics</title>
     <script type="text/javascript" src="helper/jquery/jquery.js"></script>
     <script type="text/javascript" src="helper/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="helper/jquery.bootpag.js"></script>
     <link rel="stylesheet" type="text/css" href="helper/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="helper/animate/animate.css">
     <link rel="stylesheet" href="helper/hover/css/hover.css" media="all">
