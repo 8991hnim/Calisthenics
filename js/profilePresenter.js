@@ -34,8 +34,13 @@ $(document).ready(function() {
                     type: "POST",
                     success: function(res){
 
-                        alert(res);
-                        location.reload();
+                        if (res == 'current name'){
+                            location.reload();
+                        }else
+                            if (res = 'reset success'){
+                                alert(res);
+                                location.reload();
+                            }else alert('fail');
 
                     },
                     error: function(xhr, status, errorThrown) {
@@ -45,8 +50,6 @@ $(document).ready(function() {
                 });
             }
         }
-
-
 
     });
 
@@ -71,10 +74,10 @@ $(document).ready(function() {
                         alert(res);
 
                         $('#passwordProfile').html('<div class="input-group">' +
-                            '<input type="password" class="form-control text-center mr-1" placeholder="New password" id="">' +
-                            '<input type="password" class="form-control text-center" placeholder="Confirm new password" id="">' +
+                            '<input type="password" class="form-control text-center mr-1" placeholder="New password" id="txtNewPass">' +
+                            '<input type="password" class="form-control text-center" placeholder="Confirm new password" id="txtConfirmNewPass">' +
                             '</div>');
-                        $('#editPasswordProfile').html('<i class="btn btn-success pt-2 pb-2 fa fa-check text-light title="Save" id="btnSaveChangePassword""></i>&nbsp;<i class="btn btn-danger pt-2 pb-2 fa fa-close text-light" title="Cancel" id="btnCancelEdit"></i>');
+                        $('#editPasswordProfile').html('<i class="btn btn-success pt-2 pb-2 fa fa-check text-light title="Save" id="btnSaveResetPassword""></i>&nbsp;<i class="btn btn-danger pt-2 pb-2 fa fa-close text-light" title="Cancel" id="btnCancelEdit"></i>');
 
                     }
                     
@@ -87,15 +90,56 @@ $(document).ready(function() {
 
         }
 
-
-
-
-        //đoạn dưới hiện 2 textbox trên 1 dòng để nhập pass mới và xác nhận. k đc xóa code này
-        // $('#passwordProfile').html('<div class="input-group">' +
-        //     '<input type="password" class="form-control text-center mr-1" placeholder="New password" id="">' +
-        //     '<input type="password" class="form-control text-center" placeholder="Confirm new password" id="">' +
-        //     '</div>');
-        // $('#editPasswordProfile').html('<i class="btn btn-success pt-2 pb-2 fa fa-check text-light title="Save" id="btnSaveChangePassword""></i>&nbsp;<i class="btn btn-danger pt-2 pb-2 fa fa-close text-light" title="Cancel" id="btnCancelEdit"></i>');
+        
+       
     });
 
-})
+
+    $("body").delegate("#btnSaveResetPassword","click", function() {
+
+            var newPass = $('#txtNewPass').val();
+            var confirmNewPass = $('#txtConfirmNewPass').val();
+
+            if (newPass.length == 0 || confirmNewPass.length == 0) {
+
+                alert('Please fill in the blank.');
+
+            }else 
+                if(newPass != confirmNewPass){
+
+                    alert('The passwords you entered do not match.');
+
+                }else{
+
+                    $.ajax({
+
+                        url: "controller/user/change_profile.php",
+                        data: { newPass: newPass },
+                        type: "POST",
+                        success: function(res){
+
+                            if (res == '1'){
+                                alert('bi trung voi mat khau hien tai, chon mat khau khac');
+                                return;
+                            }else {
+                                alert(res);
+                                location.reload();
+                            }
+
+                        },
+                        error: function(xhr, status, errorThrown) {
+                                console.log(errorThrown + status + xhr);
+                        }
+
+                    });
+
+            }
+
+    });
+
+
+
+
+
+
+}) //document.ready

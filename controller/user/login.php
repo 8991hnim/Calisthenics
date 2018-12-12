@@ -8,10 +8,10 @@
 		$password = $_POST["password"];
 		// $hash_pass = password_hash($password, PASSWORD_DEFAULT);
 
-		$stmt = $conn->prepare("SELECT * FROM user WHERE Account = ?");
-		// $stmt->bindParam(':account', $account);
+		$stmt = $conn->prepare("SELECT * FROM user WHERE Account = :account");
+		$stmt->bindParam(':account', $account);
   //  		$stmt->bindParam(':password', $password);
-   		$stmt ->execute([$account]);
+   		$stmt ->execute();
    		$row = $stmt->fetch(PDO::FETCH_ASSOC);
    		if(isset($row)){
    			if (password_verify($password, $row['Pass'])){
