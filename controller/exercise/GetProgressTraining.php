@@ -13,7 +13,13 @@
 			$progressTraining = new ProgressTraining();
 			$progressTraining->userID = $row['UserID'];
 			$progressTraining->levelID = $row['LevelID'];
-			$progressTraining->dayTrained = $row['DayTrained'];
+			//lấy day trained max
+			$allDayTrained = explode(",",$row['DayTrained']);
+			$maxDayTrained = $allDayTrained[0];
+			foreach($allDayTrained as $day){
+				if($day > $maxDayTrained) $maxDayTrained = $day;
+			}
+			$progressTraining->dayTrained = $maxDayTrained;
 			array_push($arrayDayTrained, $progressTraining);
         }
 		
