@@ -11,41 +11,29 @@
 
 		$username = $_POST["nameChange"];
 
-		$queryName = $conn->prepare(" SELECT * FROM user WHERE Username = :username ");
-		$queryName->bindParam(':username', $username);
-   		$queryName ->execute();
-   		$num = $queryName->fetch(PDO::FETCH_ASSOC);
-   		if ($num > 0){
+		$stmt = $conn->prepare(" UPDATE user SET Username = :username WHERE ID = $id_user ");
+		$stmt->bindParam(':username',$username);
+   		$stmt->execute();
 
-   			echo 'current name';
+   		$query = $conn->prepare(" SELECT * FROM user WHERE ID = $id_user ");
+   		$query->execute();
+   		$row = $query->fetch(PDO::FETCH_ASSOC);
+   		if(isset($row)){
+
+			$user = new User;
+			$user->id = $row['ID'];
+	        $user->account = $row['Account'];
+	        $user->password = $row['Pass'];
+	        $user->type = $row['Type'];
+	        $user->username = $row['Username'];
+	        $user->email = $row['Email'];
+
+	        $_SESSION['current_user'] = serialize($user);
+
+	        echo 'reset success';
 
    		}else{
-
-   			$stmt = $conn->prepare(" UPDATE user SET Username = :username WHERE ID = $id_user ");
-			$stmt->bindParam(':username', $username);
-	   		$stmt ->execute();
-
-	   		$query = $conn->prepare(" SELECT * FROM user WHERE ID = $id_user ");
-	   		$query ->execute();
-	   		$row = $query->fetch(PDO::FETCH_ASSOC);
-	   		if(isset($row)){
-
-				$user = new User;
-				$user->id = $row['ID'];
-		        $user->account = $row['Account'];
-		        $user->password = $row['Pass'];
-		        $user->type = $row['Type'];
-		        $user->username = $row['Username'];
-		        $user->email = $row['Email'];
-
-		        $_SESSION['current_user'] = serialize($user);
-
-		        echo 'reset success';
-
-	   		}else{
-	   			echo "fail";
-	   		}
-
+   			echo "fail";
    		}
 
 	}

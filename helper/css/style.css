@@ -14,10 +14,26 @@ li {
     list-style-type: none;
 }
 
+.hide {
+    display: none ;
+}
+
+.show {
+    display: block ;
+}
+
 /*-------------------------------------------------------------------------------------------------------------------------*/
 
 
 /* SLIDE & HOME*/
+
+.dropdown-item-border {
+    border-top: 1px solid gray !important;
+}
+
+.padding-item {
+    padding: 8px 0px !important;
+}
 
 .dropdown-menu {
     padding: 0 !important;
@@ -28,6 +44,7 @@ li {
   color: #fff !important;
   text-decoration: none !important;
   background-color: #ff8533 !important;
+  border-left: 15px solid #cc5200;
 }
 
 .btnLoginBeforeTrain {

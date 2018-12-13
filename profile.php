@@ -10,8 +10,19 @@
     	<tbody>
       		<tr>
     			<td class="firstRowTable">Name</td>
-        		<td class="firstRowTable" id="nameProfile" data-id="<?php echo $user->username ?>"> <?php echo $user->username ?> </td>
-        		<td class="firstRowTable text-right edit-account" id="editNameProfile"><i class="fa fa-edit" title="Edit"></i></td>
+        		<td class="firstRowTable" id="nameProfile" data-id="<?php echo $user->username ?>"> 
+        			<?php echo $user->username ?> 
+        		</td>
+        		<td class="firstRowTable hide" id="nameProfile2" data-id="<?php echo $user->username ?>"> 
+        			<input type="text" value="<?php echo $user->username ?>" class="form-control text-center" id="txtNameProfile"> 
+        		</td>
+        		<td class="firstRowTable text-right edit-account" id="editNameProfile">
+        			<i class="fa fa-edit" title="Edit"></i>
+        		</td>
+        		<td class="firstRowTable text-right edit-account hide" id="editNameProfile2">
+        			<i class="btn btn-success pt-2 pb-2 fa fa-check text-light" title="Save" id="btnSaveChangeNameProfile"></i>
+        			&nbsp;<i class="btn btn-danger pt-2 pb-2 fa fa-close text-light" title="Cancel" id="btnCancelEdit"></i>
+        		</td>
       		</tr>
       		<tr>
         		<td>Email</td>
@@ -25,8 +36,36 @@
       		</tr>
       		<tr>
         		<td>Password</td>
-        		<td id="passwordProfile"><i class="fa fa-warning text-warning"></i> For security reasons, we can not show your password.</td>
-        		<td class="text-right edit-account" id="editPasswordProfile"><i class="fa fa-edit" title="Edit"></i></td>
+
+		<!-- cột thứ 2. ẩn hiện textbox đổi mật khẩu. lúc show lúc hide. chỉ hiện 1 <td>  -->
+        		<td id="passwordProfile">
+        			<i class="fa fa-warning text-warning"></i> For security reasons, we can not show your password.
+        		</td>
+        		<td id="passwordProfile2" class="hide">
+        			<input type="password" placeholder="Old password" class="form-control text-center" id="txtOldPassword">
+        		</td>
+        		<td id="passwordProfile3" class="hide">
+        			<div class="input-group">
+                        <input type="password" class="form-control text-center mr-1" placeholder="New password" id="txtNewPass">
+                        <input type="password" class="form-control text-center" placeholder="Confirm new password" id="txtConfirmNewPass">
+                    </div>
+                </td>
+        <!---------------------->
+
+        	<!-- cột thứ 3. ẩn hiện button Save or Cancel reset Password. lúc show lúc hide. chỉ hiện 1 <td>  -->
+        		<td class="text-right edit-account" id="editPasswordProfile">
+        			<i class="fa fa-edit" title="Edit"></i>
+        		</td>
+        		<td class="text-right edit-account hide" id="editPasswordProfile2">
+        			<i class="btn btn-info pt-2 pb-2 fa fa-arrow-right text-light" title="Continue" id="btnContinuePassword"></i>
+        			&nbsp;<i class="btn btn-danger pt-2 pb-2 fa fa-close text-light" title="Cancel" id="btnCancelEditPass"></i>
+        		</td>
+        		<td class="text-right edit-account hide" id="editPasswordProfile3">
+        			<i class="btn btn-success pt-2 pb-2 fa fa-check text-light" title="Save" id="btnSaveResetPassword"></i>
+        			&nbsp;<i class="btn btn-danger pt-2 pb-2 fa fa-close text-light" title="Cancel" id="btnCancelEditPass"></i>
+        		</td>
+			<!-------------->
+
       		</tr>
     	</tbody>
   	</table>

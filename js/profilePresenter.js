@@ -1,141 +1,182 @@
 
-
 $(document).ready(function() {
 
-    var name = $('#nameProfile').attr('data-id');
+    var currentName = $('#nameProfile').attr('data-id');
 
-    $('#editNameProfile').click(function() {
-    	$(this).off(); //clear su kien click 
-        $('#nameProfile').html('<input type="text" value="' + name + '" class="form-control text-center" id="txtNameProfile">');
-        $('#editNameProfile').html('<i class="btn btn-success pt-2 pb-2 fa fa-check text-light" title="Save" id="btnSaveChangeNameProfile"></i>&nbsp;<i class="btn btn-danger pt-2 pb-2 fa fa-close text-light" title="Cancel" id="btnCancelEdit"></i>');
+    $('#nameProfile2').addClass('hide');  
+    $('#editNameProfile2').addClass('hide');
+    $('#passwordProfile2').addClass('hide');
+    $('#editPasswordProfile2').addClass('hide');
+    $('#passwordProfile3').addClass('hide');
+    $('#editPasswordProfile3').addClass('hide');
 
-    });
+    $("body").delegate("#editNameProfile", "click", function() {
 
-    $('#editPasswordProfile').click(function() {
-        $(this).off();
-        $('#passwordProfile').html('<input type="password" placeholder="Old password" class="form-control text-center" id="txtOldPassword">');
-        $('#editPasswordProfile').html('<i class="btn btn-info pt-2 pb-2 fa fa-arrow-right text-light" title="Continue" id="btnContinuePassword"></i>&nbsp;<i class="btn btn-danger pt-2 pb-2 fa fa-close text-light" title="Cancel" id="btnCancelEdit"></i>');
-    });
+        $('#nameProfile').addClass('hide');
+        $('#editNameProfile').addClass('hide');
+        $('#nameProfile2').removeClass('hide');
+        $('#editNameProfile2').removeClass('hide');
 
-    $("body").delegate("#btnSaveChangeNameProfile","click", function(){
+    })
+
+    $("body").delegate("#btnCancelEdit", "click", function() {
+
+        $('#nameProfile2').addClass('hide');
+        $('#editNameProfile2').addClass('hide');
+        $('#nameProfile').removeClass('hide');
+        $('#editNameProfile').removeClass('hide');
+
+    })
+
+    $("body").delegate("#btnCancelEditPass", "click", function() {
+
+        $('#passwordProfile').removeClass('hide');
+        $('#editPasswordProfile').removeClass('hide');
+        $('#passwordProfile2').addClass('hide');
+        $('#editPasswordProfile2').addClass('hide');
+        $('#passwordProfile3').addClass('hide');
+        $('#editPasswordProfile3').addClass('hide');
+
+    })
+
+    $("body").delegate("#editPasswordProfile", "click", function() {
+
+        $('#passwordProfile2').removeClass('hide');
+        $('#editPasswordProfile2').removeClass('hide');
+        $('#passwordProfile').addClass('hide');
+        $('#editPasswordProfile').addClass('hide');
+
+    })
+
+    $("body").delegate("#btnSaveChangeNameProfile", "click", function() {
 
         var nameChange = $('#txtNameProfile').val();
 
-        if (nameChange.length == 0) {
+        if (nameChange.trim().length == 0) {
             alert('Please fill in the blank.');
-        }else{
-            if (nameChange.length < 6 || nameChange.length > 20){
+        } else {
+            if (nameChange.trim().length < 6 || nameChange.trim().length > 20) {
                 alert('Username must be between 6 and 20 characters.');
-            }else{
+            } else
+            if (nameChange.trim() == currentName.trim()) {
+
+                $('#nameProfile2').addClass('hide');
+                $('#editNameProfile2').addClass('hide');
+                $('#nameProfile').removeClass('hide');
+                $('#editNameProfile').removeClass('hide');
+
+            } else {
                 $.ajax({
 
                     url: "controller/user/change_profile.php",
-                    data: { nameChange: nameChange},
+                    data: {nameChange:nameChange},
                     type: "POST",
-                    success: function(res){
+                    success: function(res) {
 
-                        if (res == 'current name'){
+                        if (res = 'reset success') {
+                            alert(res);
                             location.reload();
-                        }else
-                            if (res = 'reset success'){
-                                alert(res);
-                                location.reload();
-                            }else alert('fail');
+                        } else alert('fail');
 
                     },
                     error: function(xhr, status, errorThrown) {
-                            console.log(errorThrown + status + xhr);
+                        console.log(errorThrown + status + xhr);
                     }
 
                 });
             }
         }
 
-    });
+    })
 
-    $("body").delegate("#btnContinuePassword","click", function() {
+    $("body").delegate("#btnContinuePassword", "click", function() {
 
         var oldPass = $('#txtOldPassword').val();
 
         if (oldPass.length == 0) {
             alert('Please fill in the blank.');
-        }else{
+        } else {
 
             $.ajax({
 
                 url: "controller/user/change_profile.php",
-                data: { oldPass: oldPass},
+                data: { oldPass: oldPass },
                 type: "POST",
-                success: function(res){
-                    if (res == 'fail'){
+                success: function(res) {
+                    if (res == 'fail') {
                         alert('The passwords you entered do not match');
-                    }else{
+                    } else {
 
                         alert(res);
 
-                        $('#passwordProfile').html('<div class="input-group">' +
-                            '<input type="password" class="form-control text-center mr-1" placeholder="New password" id="txtNewPass">' +
-                            '<input type="password" class="form-control text-center" placeholder="Confirm new password" id="txtConfirmNewPass">' +
-                            '</div>');
-                        $('#editPasswordProfile').html('<i class="btn btn-success pt-2 pb-2 fa fa-check text-light title="Save" id="btnSaveResetPassword""></i>&nbsp;<i class="btn btn-danger pt-2 pb-2 fa fa-close text-light" title="Cancel" id="btnCancelEdit"></i>');
+                        $('#passwordProfile2').addClass('hide');
+                        $('#editPasswordProfile2').addClass('hide');
+                        $('#passwordProfile3').removeClass('hide');
+                        $('#editPasswordProfile3').removeClass('hide');
 
                     }
-                    
+
                 },
                 error: function(xhr, status, errorThrown) {
-                        console.log(errorThrown + status + xhr);
+                    console.log(errorThrown + status + xhr);
                 }
 
             });
 
         }
 
-        
-       
-    });
+    })
 
 
-    $("body").delegate("#btnSaveResetPassword","click", function() {
+    $("body").delegate("#btnSaveResetPassword", "click", function() {
 
-            var newPass = $('#txtNewPass').val();
-            var confirmNewPass = $('#txtConfirmNewPass').val();
+        var newPass = $('#txtNewPass').val();
+        var confirmNewPass = $('#txtConfirmNewPass').val();
 
-            if (newPass.length == 0 || confirmNewPass.length == 0) {
+        var passValid = new RegExp('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$');
 
-                alert('Please fill in the blank.');
+        if (newPass.length == 0 || confirmNewPass.length == 0) {
 
-            }else 
-                if(newPass != confirmNewPass){
+            alert('Please fill in the blank.');
 
-                    alert('The passwords you entered do not match.');
+        }else
+            if (newPass != confirmNewPass) {
 
-                }else{
+                alert('The passwords you entered do not match.');
+
+            }else
+                if( !passValid.test(newPass) ) { 
+
+                    alert('The password must have at least 8 characters, at least 1 digit(s), at least 1 lower case letter(s), at least 1 upper case letter(s)');
+                
+                }
+                else {
 
                     $.ajax({
 
                         url: "controller/user/change_profile.php",
                         data: { newPass: newPass },
                         type: "POST",
-                        success: function(res){
+                        success: function(res) {
 
-                            if (res == '1'){
+                            if (res == '1') {
                                 alert('bi trung voi mat khau hien tai, chon mat khau khac');
                                 return;
-                            }else {
+                            } else {
                                 alert(res);
                                 location.reload();
                             }
 
                         },
                         error: function(xhr, status, errorThrown) {
-                                console.log(errorThrown + status + xhr);
+                            console.log(errorThrown + status + xhr);
                         }
 
                     });
 
-            }
+        }
 
-    });
+    })
 
 
 

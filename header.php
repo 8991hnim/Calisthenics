@@ -9,7 +9,7 @@
                        
                         <?php showPopupLevel() ?>
 
-                        <a href="post.php" class="button hvr-wobble-to-bottom-right healthy col-6 col-sm-4 col-md-4">
+                        <a href="post.php?cat=nutrition" class="button hvr-wobble-to-bottom-right healthy col-6 col-sm-4 col-md-4">
                             NUTRITION
                         </a>
                     </div>
