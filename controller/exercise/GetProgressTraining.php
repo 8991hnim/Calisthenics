@@ -23,7 +23,7 @@
 			array_push($arrayDayTrained, $progressTraining);
         }
 		
-		$_SESSION['progress_training'] = serialize($progressTraining);
+		// $_SESSION['progress_training'] = serialize($progressTraining);
 		echo json_encode($arrayDayTrained);
 	}
 ?>

@@ -46,12 +46,12 @@
     <div class="container-fluid">
         
         <nav class="navbar navbar-expand-md navbar-dark menuHead fixed-top justify-content-end">
-          <a class= "nav-link animated slideInRight" id="nameCompanyMenu" title="Home" href="index.php">MVTech</a>
+          <a class= "nav-link animated swing" id="nameCompanyMenu" title="Home" href="index.php">MVTech</a>
           
             <?php 
                 if(isset($user)){
                     if($user->type==1){
-                        echo ' <ul class="navbar-nav animated slideInLeft">
+                        echo ' <ul class="navbar-nav animated swing">
                                     <li class="nav-item dropdown">
                                       <a class="nav-link dropdown-toggle btnLoginHome" href="#" id="navbardrop" data-toggle="dropdown">
                                         '.$user->username.'
@@ -64,7 +64,7 @@
                                     </li>
                                 </ul>';
                     }else{
-                        echo ' <ul class="navbar-nav animated slideInLeft">
+                        echo ' <ul class="navbar-nav animated swing">
                                     <li class="nav-item dropdown">
                                       <a class="nav-link dropdown-toggle btnLoginHome" href="#" id="navbardrop" data-toggle="dropdown">
                                         '.$user->username.'

@@ -17,6 +17,7 @@
     <meta charset="UTF-8">
     <title>Calisthenics</title>
     <script type="text/javascript" src="helper/jquery/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>  <!--popover tooltip-->
     <script type="text/javascript" src="helper/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="helper/jquery.bootpag.js"></script>
     <link rel="stylesheet" type="text/css" href="helper/bootstrap/css/bootstrap.css">
@@ -30,14 +31,14 @@
 <div class="container-fluid">
 
   <nav class="navbar navbar-expand-md navbar-dark menuHead fixed-top justify-content-end">
-  <a class= "nav-link animated slideInRight" id="nameCompanyMenu" title="Home" href="index.php">MVTech</a>
+  <a class= "nav-link animated swing" id="nameCompanyMenu" title="Home" href="index.php">MVTech</a>
   
     
     <?php 
 
         if(isset($user)){
             if($user->type==1){
-                echo ' <ul class="navbar-nav animated slideInLeft">
+                echo ' <ul class="navbar-nav animated swing">
                             <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle btnLoginHome" href="#" id="navbardrop" data-toggle="dropdown">
                                 '.$user->username.'
@@ -50,7 +51,7 @@
                             </li>
                         </ul>';
             }else{
-                echo ' <ul class="navbar-nav animated slideInLeft">
+                echo ' <ul class="navbar-nav animated swing">
                             <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle btnLoginHome" href="#" id="navbardrop" data-toggle="dropdown">
                                 '.$user->username.'
@@ -64,7 +65,7 @@
             }
         }
         else{
-            echo '<li class="nav-item animated slideInLeft">
+            echo '<li class="nav-item animated swing">
                       <a class="nav-link btnLoginHome hvr-rotate" href="login.php">Log in</a>
                   </li>
                   <li class="nav-item animated slideInLeft">

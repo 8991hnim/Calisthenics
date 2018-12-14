@@ -1,7 +1,11 @@
 
 $(document).ready(function() {
 
+    $('[data-toggle="tooltip"]').tooltip();   //active tooltip 
+
     var currentName = $('#nameProfile').attr('data-id');
+    var userID = $('#userID').attr('data-id');  
+
 
     $('#nameProfile2').addClass('hide');  
     $('#editNameProfile2').addClass('hide');
@@ -177,6 +181,31 @@ $(document).ready(function() {
         }
 
     })
+
+
+
+// lấy level và ngày đã tập của user đang login
+    $.ajax({
+        url: "controller/exercise/GetProgressTraining.php",
+        type: "POST",
+        data: {
+            userID: userID
+        },
+        success: function(res) {
+            var arrayProgressTraining = $.parseJSON(res);
+            $("#level1").attr("href", "training.php?level=1&day=" + (parseInt(arrayProgressTraining[0].dayTrained, 10) + 1));
+            $("#level2").attr("href", "training.php?level=2&day=" + (parseInt(arrayProgressTraining[1].dayTrained, 10) + 1));
+            $("#level3").attr("href", "training.php?level=3&day=" + (parseInt(arrayProgressTraining[2].dayTrained, 10) + 1));
+
+            $("#trained1").text("Day trained: "+arrayProgressTraining[0].dayTrained);
+            $("#trained2").text("Day trained: "+arrayProgressTraining[1].dayTrained);
+            $("#trained3").text("Day trained: "+arrayProgressTraining[2].dayTrained);
+
+        },
+        error: function(xhr, status, errorThrown) {
+            console.log(errorThrown + status + xhr);
+        }
+    });
 
 
 
