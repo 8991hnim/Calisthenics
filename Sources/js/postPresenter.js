@@ -61,7 +61,8 @@ $(document).ready(function() {
     }
 
     $("body").delegate(".card-block a", "click", function() {
-        var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/detail_post.php?cat=" + cat + "&id=" + $(this).attr('data-id')));
+        alert('a');
+        var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/detail_post.php?cat=" + cat + "&id=" + $(this).attr('data-id')));
         window.location.href = url.href;
     });
 
