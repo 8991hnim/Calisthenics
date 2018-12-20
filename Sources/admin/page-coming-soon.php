@@ -90,27 +90,11 @@
 
 	<div class="arrow-separator arrow-themelight"></div>
 
-<!-- 	<div class="fullwidth colour3 clearfix">
-		<div id="quotecont" class="bodycontainer clearfix">
-
-			<div id="commentslider">
-				<div class="item">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis enim nulla. Suspendisse posuere arcu ac eros iaculis egestas commodo risus tempus. Fusce placerat nulla nisi. Proin congue erat non orci adipiscing nec porttitor lacus egestas."</p>
-				</div>
-				<div class="item">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis enim nulla. Suspendisse posuere arcu ac eros iaculis egestas commodo risus tempus. Fusce placerat nulla nisi. Proin congue erat non orci adipiscing nec porttitor lacus egestas."</p>
-				</div>
-			</div>
-		
-		</div>
-	</div> -->
-
-	<!-- <div class="arrow-separator arrow-grey"></div> -->
-
 	<div class="fullwidth clearfix">
 		<div id="footercont" class="bodycontainer clearfix">
 
-			<p class="backtotop"><a title="" href="#backtotop"><i class="fa fa-angle-double-up"></i></a></p>
+			<!-- <p class="backtotop"><a title="" href="#backtotop"><i class="fa fa-angle-double-up"></i></a></p> -->
+			<p>Follow me </p>
 			<div id="socialmedia" class="clearfix">
 				<ul>
 					<li><a target="_blank" href="https://www.facebook.com/v21.official" rel="external"><i class="fa fa-facebook"></i></a></li>
@@ -118,7 +102,7 @@
 					<li><a target="_blank" href="https://www.youtube.com/channel/UC5Iy1dgJvDADSVZRZM6FSJg" rel="external"><i class="fa fa-youtube-play"></i></a></li>
 				</ul>
 			</div>
-			<p>Footer content <a href="">with links</a> Here</p>
+			
 		</div>
 	</div>
    

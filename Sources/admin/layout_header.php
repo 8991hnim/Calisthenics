@@ -90,7 +90,7 @@
 			<ul>
 
 					<li class="submenu">
-						<a class="" href="index.php"><i class="fa fa-fw fa-bars"></i><span> Dashboard </span> </a>
+						<a class="" href="index.php"><i class="fa fa-fw fa-area-chart"></i><span> Dashboard </span> </a>
                     </li>
 					
 					<li class="submenu">
@@ -102,7 +102,15 @@
                     </li>
 					
                     <li class="submenu">
-                        <a target="_blank" href="page-coming-soon.php"><i class="fa fa-fw fa-clock-o"></i><span> Countdown </span></a>							
+                        <a href="manage_post.php"><i class="fa fa-fw fa-newspaper-o"></i><span> Post </span></a>	
+                    </li>
+
+                    <li class="submenu">
+                        <a href=""><i class="fa fa-fw fa-beer"></i><span> Excercise </span></a>	
+                    </li>
+
+                    <li class="submenu">
+                        <a target="_blank" href="page-coming-soon.php"><i class="fa fa-fw fa-clock-o"></i><span> Countdown funny </span></a>	
                     </li>
 
 					<li class="submenu">
