@@ -13,7 +13,7 @@
                     <div class="breadcrumb-holder">
                         <ul class="breadcrumb float-right">
                             <li class="">
-                                <a href="" class="btn btn-info">Create post</a>
+                                <a href="create_post.php" class="btn btnColorPost"><i class="fa fa-fw fa-plus"></i>Create post</a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -25,10 +25,16 @@
                 <div class="col-md-4">
                     <label for="">Filters</label>
                     <select class="form-control">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
+                        <option value="all">Select a category</option>
+                        <option value="bicep">Bicep</option>
+                        <option value="tricep">Tricep</option>
+                        <option value="forearms">Forearms</option>
+                        <option value="shoulder">Shoulder</option>
+                        <option value="abs">Abs</option>
+                        <option value="cardio">Cardio</option>
+                        <option value="chest">Chest</option>
+                        <option value="leg">Leg</option>
+                        <option value="back">Back</option>
                     </select>
                 </div>
                 <div class="col-md-8">
@@ -36,10 +42,13 @@
                     <input type="text" id="" class="form-control" placeholder="nhập đi dmm">
                 </div>
             </div>
-
+            <div class="row">
+            	<div id="pag" style="text-align:right;"></div>
+            </div>
+			
             <div class="row">
                 <div class="col-md-12">
-                    <table class="table table-light table-bordered table-hover">
+                    <table class="table table-light table-bordered table-hover" id="table">
                         <thead class="text-center headPost">
                             <tr>
                                 <th>STT</th>
@@ -84,3 +93,5 @@
     require"layout_footer.php";
 
 ?>
+
+<script type="text/javascript" src="../js/managePostPresenter.js"></script>

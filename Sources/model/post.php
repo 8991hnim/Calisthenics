@@ -6,5 +6,6 @@
 		public $shortContent;
 		public $linkYoutube;
 		public $image;
+		public $cat;
 	}
 ?>

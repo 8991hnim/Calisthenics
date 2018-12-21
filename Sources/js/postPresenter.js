@@ -2,11 +2,13 @@ $(document).ready(function() {
     var cat = $("#container").attr('data-id');
     var arrayPost;
     var number_of_pages;
+    var limit = 3;
 
     $.ajax({
             url: "controller/post/GetTotalPagesCat.php",
             data: {
-                cat: cat
+                cat: cat,
+                limit : limit
             },
             type: "POST",
             success: function(res) {
@@ -22,7 +24,8 @@ $(document).ready(function() {
             url: "controller/post/GetPostByCategory.php",
             data: {
                 cat: cat,
-                page: 1
+                page: 1,
+                limit : limit
             },
             type: "POST",
             success: function(res) {
@@ -77,7 +80,8 @@ $(document).ready(function() {
             url: "controller/post/GetPostByCategory.php",
             data: {
                 cat: cat,
-                page: num
+                page: num,
+                limit:limit
             },
             type: "POST",
             success: function(res) {

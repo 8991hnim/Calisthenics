@@ -16,6 +16,7 @@
 		
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../helper/jquery.bootpag.js"></script>
 
 <script src="assets/js/detect.js"></script>
 <script src="assets/js/fastclick.js"></script>
