@@ -1204,3 +1204,20 @@ a.btn:focus {
 .label-info {
     background-color: #5bc0de;
 }
+
+.headPost{
+    background: #006666;
+    color: #fff
+}
+
+.width2btn{
+  width: 111px;
+}
+
+.widthSTT{
+  width: 10px;
+}
+
+.widthCate{
+  width: 150px;
+}
