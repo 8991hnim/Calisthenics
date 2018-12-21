@@ -52,6 +52,10 @@
                                     <h5 class="text-overflow"><small>Hello, admin</small> </h5>
                                 </div>
 
+                                <a href="../index.php" class="dropdown-item notify-item">
+                                    <i class="fa fa-user"></i> <span>Home</span>
+                                </a>
+
                                 <!-- item-->
                                 <a href="pro-profile.html" class="dropdown-item notify-item">
                                     <i class="fa fa-user"></i> <span>Profile</span>
