@@ -1221,3 +1221,28 @@ a.btn:focus {
 .widthCate{
   width: 150px;
 }
+
+.btnColorPost{
+  color: #fff;
+  background-color: #bf4040;
+  border-color: #bf4040;
+}
+
+.btnColorPost:hover {
+  color: #fff;
+  background-color: #ac3939;
+  border-color: #ac3939;
+}
+
+.form-control:focus {
+  border-color: #248f8f !important;
+  box-shadow: none;
+}
+
+.hide{
+  display: none;
+}
+
+input[type="file"]:hover {
+  cursor: pointer;
+}
