@@ -27,7 +27,7 @@
 	            </div>
 
 	            <div class="row pb-4">
-	            	<div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-8 offset-2 text-center">
+	            	<div class="col-md-6 col-sm-8 offset-sm-2 col-8 offset-2 text-center">
 	                    <select class="form-control text-center">
 	                        <option value="bicep">Bicep</option>
 	                        <option value="tricep">Tricep</option>
@@ -38,7 +38,6 @@
 	                        <option value="chest">Chest</option>
 	                        <option value="leg">Leg</option>
 	                        <option value="back">Back</option>
-	                        <option value="all" selected="">--- Select a category ---</option>
 	                    </select>
 	            	</div>
 	            </div>
