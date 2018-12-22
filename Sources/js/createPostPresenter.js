@@ -1,7 +1,7 @@
 $(document).ready(function() {
     tinymce.init({
         selector: '#contentPost',
-        height: 500,
+        height: 300,
         menubar: false
     });
 })
