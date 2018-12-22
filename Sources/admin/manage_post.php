@@ -25,6 +25,7 @@
                 <div class="col-md-4">
                     <label for="">Filters</label>
                     <select class="form-control">
+                    	<option value="all" selected="">--- Select a category ---</option>
                         <option value="bicep">Bicep</option>
                         <option value="tricep">Tricep</option>
                         <option value="forearms">Forearms</option>
@@ -34,12 +35,12 @@
                         <option value="chest">Chest</option>
                         <option value="leg">Leg</option>
                         <option value="back">Back</option>
-                        <option value="all" selected="">--- Select a category ---</option>
+                       
                     </select>
                 </div>
                 <div class="col-md-8">
                     <label for="">Search...</label>
-                    <input type="text" id="" class="form-control">
+                    <input type="text" id="input-search" class="form-control">
                 </div>
             </div>
 			
@@ -51,8 +52,8 @@
                                 <th>STT</th>
                                 <th>Image</th>
                                 <th>Post</th>
-                                <th>Category</th>
-                                <th></th>
+                                <th class="widthCate">Category</th>
+                                <th class="width2btn"></th>
                             </tr>
                         </thead>
                         <tbody class="text-center">

@@ -4,27 +4,59 @@ $(document).ready(function() {
     var stt = 1;
     var limit = 3;
 
-    $.ajax({
-        url: "../controller/post/GetTotalPagesCat.php",
-        data: {
-            cat: cat,
-            limit: limit
-        },
-        type: "POST",
-        success: function(res) {
-            number_of_pages = res;
-            setupBootpag();
-        },
-        error: function(xhr, status, errorThrown) {
-            console.log(errorThrown + status + xhr);
-        }
-    });
-
+    getTotalPages();
     getPost(1);
 
+    $('#input-search').on('input', function() {
+        console.log("in search");
+        var keyword = $(this).val();
+        stt = 1;
+        if (keyword.trim().length == 0) {
+
+            getPost(1);
+            getTotalPages();
+        } else {
+
+
+            $.ajax({
+                url: "../controller/post/FindPost.php",
+                data: {
+                    cat: cat,
+                    keyword: keyword
+                },
+                type: "POST",
+                success: function(res) {
+                    var arrayPost = $.parseJSON(res);
+                    console.log("length: " + arrayPost.length);
+                    $('#table tbody tr').remove();
+                    $('#pag').off();
+                    $('#pag ul').remove();
+                    if (arrayPost.length == 0) {
+
+                    } else {
+                        stt = 1;
+                        console.log(stt);
+                        $.each(arrayPost, function(index, value) {
+                            console.log("loop:" + stt);
+                            setupUI(stt, value.id, value.title, value.shortContent, value.image, value.cat, value.linkYoutube);
+                            stt++;
+                        });
+                    }
+
+                },
+                error: function(xhr, status, errorThrown) {
+                    console.log(errorThrown + status + xhr);
+                }
+            });
+        }
+
+    });
+
     $('select').on('change', function() {
+        stt = 1; //reset stt
         cat = this.value;
         getPost(1);
+        getTotalPages();
     });
 
     //setup UI
@@ -39,6 +71,25 @@ $(document).ready(function() {
             );
     }
 
+    //get total page
+    function getTotalPages() {
+        $.ajax({
+            url: "../controller/post/GetTotalPagesCat.php",
+            data: {
+                cat: cat,
+                limit: limit
+            },
+            type: "POST",
+            success: function(res) {
+                number_of_pages = res;
+                setupBootpag();
+            },
+            error: function(xhr, status, errorThrown) {
+                console.log(errorThrown + status + xhr);
+            }
+        });
+    }
+
     //get post
     function getPost(num) {
         $.ajax({
@@ -50,9 +101,8 @@ $(document).ready(function() {
             },
             type: "POST",
             success: function(res) {
-                arrayPost = $.parseJSON(res);
-                $('#table tr td').remove();
-                $('#table tr th.widthSTT').remove();
+                var arrayPost = $.parseJSON(res);
+                $('#table tbody tr').remove();
                 if (arrayPost.length == 0) {
 
                 } else {
@@ -72,12 +122,16 @@ $(document).ready(function() {
 
     //boot pag
     function setupBootpag() {
+        $('#pag').off();
+        $('#pag ul').remove();
+
         $('#pag').bootpag({
             total: number_of_pages,
             maxVisible: 5,
             page: 1
         }).on("page", function(event, /* page number here */ num) {
-            stt = (num-1)* limit + 1; //reset stt
+            stt = (num - 1) * limit + 1; //reset stt
+            alert(stt);
             getPost(num);
         });
 
