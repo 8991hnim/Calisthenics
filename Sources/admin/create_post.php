@@ -15,6 +15,7 @@
 				<div class="row">
 	                <div class="col-md-12 text-right">
 	                    <div class="breadcrumb-holder">
+	                    	<h1 class="main-title float-left pt-1">Create new post!</h1>
 	                        <ul class="breadcrumb float-right">
 	                            <li class="">
 	                                <a href="#" class="btn btnColorPost px-4">Save</a>
@@ -25,16 +26,19 @@
 	                </div>
 	            </div>
 
-	            <div class="row">
-	            	<h4 class="text-dark">Create new post!</h4>
-	            </div>
-
 	            <div class="row pb-4">
 	            	<div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-8 offset-2 text-center">
 	                    <select class="form-control text-center">
-	                        <option value="volvo">ABS</option>
-	                        <option value="saab">BICEP</option>
-	                    	<option class="text-center" value="volvo" selected>--- Select category ---</option>
+	                        <option value="bicep">Bicep</option>
+	                        <option value="tricep">Tricep</option>
+	                        <option value="forearms">Forearms</option>
+	                        <option value="shoulder">Shoulder</option>
+	                        <option value="abs">Abs</option>
+	                        <option value="cardio">Cardio</option>
+	                        <option value="chest">Chest</option>
+	                        <option value="leg">Leg</option>
+	                        <option value="back">Back</option>
+	                        <option value="all" selected="">--- Select a category ---</option>
 	                    </select>
 	            	</div>
 	            </div>

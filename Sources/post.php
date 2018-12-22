@@ -72,7 +72,7 @@
 					</div>
 				</div> -->
 			</div>
-			<div id="pag" style="text-align:center;"></div>
+			<div id="pag" class="float-right"></div>
 			
 		</div>
 

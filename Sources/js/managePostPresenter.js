@@ -33,9 +33,9 @@ $(document).ready(function() {
             .append($('<tr>')
                 .append($('<th class="widthSTT">').append(index))
                 .append($('<td>').append('<span><img alt="image" class="img-fluid" style="max-width:150px; height:auto;" src="../image/post/' + image + '.jpg" /></span>'))
-                .append($('<td>').append('<h5>' + title + '</h5><br>' + shortContent + '<br>Youtube: <a href="' + linkYoutube + '">' + linkYoutube + '</a>'))
+                .append($('<td>').append('<h5>' + title + '</h5><br>' + shortContent + '<br>Youtube: <a target="_blank" href="' + linkYoutube + '">' + linkYoutube + '</a>'))
                 .append($('<td class="widthCate">').append(cat))
-                .append($('<td class="width2btn">').append('<button class="btn btn-info" id="btnEditPost"><i class="fa fa-pencil"></i></button><button class="btn btn-danger" id="btnDeletePost"><i class="fa fa-trash-o"></i></button>'))
+                .append($('<td class="width2btn">').append('<button class="btn btn-info" id="btnEditPost"><i class="fa fa-pencil"></i></button> <button class="btn btn-danger" id="btnDeletePost"><i class="fa fa-trash-o"></i></button>'))
             );
     }
 

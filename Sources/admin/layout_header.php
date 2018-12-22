@@ -31,7 +31,7 @@
 <div id="main">
 
 	<!-- top bar navigation -->
-	<div class="headerbar">
+	<div class="headerbar fixed-layout">
 
 		<!-- LOGO -->
         <div class="headerbar-left">
@@ -85,7 +85,7 @@
 	
  
 	<!-- Left Sidebar -->
-	<div class="left main-sidebar">
+	<div class="left main-sidebar fixed-layout">
 	
 		<div class="sidebar-inner leftscroll">
 

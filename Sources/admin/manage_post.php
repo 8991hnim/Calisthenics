@@ -25,7 +25,6 @@
                 <div class="col-md-4">
                     <label for="">Filters</label>
                     <select class="form-control">
-                        <option value="all">Select a category</option>
                         <option value="bicep">Bicep</option>
                         <option value="tricep">Tricep</option>
                         <option value="forearms">Forearms</option>
@@ -35,15 +34,13 @@
                         <option value="chest">Chest</option>
                         <option value="leg">Leg</option>
                         <option value="back">Back</option>
+                        <option value="all" selected="">--- Select a category ---</option>
                     </select>
                 </div>
                 <div class="col-md-8">
                     <label for="">Search...</label>
-                    <input type="text" id="" class="form-control" placeholder="nhập đi dmm">
+                    <input type="text" id="" class="form-control">
                 </div>
-            </div>
-            <div class="row">
-            	<div id="pag" style="text-align:right;"></div>
             </div>
 			
             <div class="row">
@@ -80,6 +77,10 @@
                         </tbody>
                     </table>
                 </div>                    
+            </div>
+
+            <div class="row float-right">
+                <div class="col-md-12" id="pag"></div>
             </div>
 
         </div>

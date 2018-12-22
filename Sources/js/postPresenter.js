@@ -48,23 +48,22 @@ $(document).ready(function() {
     function setupUI(id, title, shortContent, image) {
         var postUI = '<div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-4 offset-md-0 mt-3 mb-3 hvr-hang">' +
             '<div class="card colorPost">' +
-            '<img class="card-img-top" alt="Bootstrap Thumbnail First" src="image/post/' + image + '.jpg" />' +
+            '<img class="card-img-top cursorPointer" data-id="' + id + '" alt="Bootstrap Thumbnail First" src="image/post/' + image + '.jpg" />' +
             '<div class="card-block">' +
-            '<h5 class="card-title text-info">' +
+            '<h5 class="card-title text-info hvr-wobble-top cursorPointer mt-3 mb-3" data-id="' + id + '">' +
             title +
             '</h5>' +
             '<p class="card-text">' +
             shortContent +
             '</p>' +
-            '<a target="_blank" class="btn btn-danger btn-detail" data-id="' + id + '">Detail</a>' +
+            '<a class="btn btn-danger btn-detail cursorPointer" data-id="' + id + '">Detail</a>' +
             '</div>' +
             '</div>' +
             '</div>';
         return postUI;
     }
 
-    $("body").delegate(".card-block a", "click", function() {
-        alert('a');
+    $("body").delegate(".cursorPointer", "click", function() {
         var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/detail_post.php?cat=" + cat + "&id=" + $(this).attr('data-id')));
         window.location.href = url.href;
     });
