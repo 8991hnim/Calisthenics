@@ -44,32 +44,32 @@
 	            </div>
 
 	            <div class="row pb-4">
-	            	<div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-8 offset-2 text-center">
+	            	<div class="col-md-12  col-sm-8 offset-sm-2 col-8 offset-2 text-center">
 	                    <input type="text" class="form-control" id="" placeholder="Title...">
 	            	</div>
 	            </div>
 
 	            <div class="row pb-4">
-	            	<div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-8 offset-2 text-center">
+	            	<div class="col-md-12 col-sm-8 offset-sm-2 col-8 offset-2 text-center">
 	                    <input type="text" class="form-control" id="" placeholder="Youtube...">
 	            	</div>
 	            </div>
 
 	            <div class="row pb-4">
-	            	<div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-8 offset-2 text-center">
+	            	<div class="col-md-12 col-sm-8 offset-sm-2 col-8 offset-2 text-center">
 	                    <input type="text" class="form-control" id="" placeholder="Short content...">
 	            	</div>
 	            </div>
 
 	            <div class="row pb-4">
-	            	<div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-8 offset-2 text-center">
-	                    <textarea rows="4" class="form-control col-md-12" placeholder="Content post...">
+	            	<div class="col-md-12  col-sm-8 offset-sm-2 col-8 offset-2">
+	                    <textarea id="contentPost">
 						</textarea>
 	            	</div>
 	            </div>
 
 	            <div class="row">
-					<div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-8 offset-2 text-center">
+					<div class="col-md-12  col-sm-8 offset-sm-2 col-8 offset-2 text-center">
 						<span class="text-primary">
 							Image for post...
 							<input type="file" class="mb-2" onchange="readURL(this);" />
@@ -115,3 +115,4 @@
     }
 
 </script>
+<script type="text/javascript" src="../js/createPostPresenter.js"></script>
