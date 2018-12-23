@@ -29,7 +29,7 @@ $(document).ready(function() {
             .attr("src", post.linkYoutube)
             .appendTo(".actualyoutube");
         $('#postTitle').text(post.title);
-        $('#postContent').text(post.content);
+        $('#postContent').html(post.content);
     }
 
     //related post

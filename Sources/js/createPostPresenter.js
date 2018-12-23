@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     $('select').on('change', function() {
         cat = this.value;
+        alert(cat);
     });
 
     //check image
@@ -48,7 +49,7 @@ $(document).ready(function() {
         if (isContentEmpty()) {
             alert("Please fill in the blank.");
         } else {
-        	var yt = new RegExp('^https://www.youtube.com/embed/[A-z0-9]{11}$');
+        	var yt = new RegExp('^https://www.youtube.com/embed/[A-z0-9-_]{11}$');
             if (!yt.test($('#linkYT').val())) {
             	alert("Link youtube does not match!");
             } else if ($("#imgInp").val() == '') {

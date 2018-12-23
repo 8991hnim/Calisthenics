@@ -10,9 +10,9 @@
 		$content = $_POST['content'];
 		$image = $_POST['image'];
 
-		$stmt2 = $conn->prepare("SELECT ID FROM category WHERE Name = '$cat'");
-		$catId = $stmt2->execute();
-// INSERT INTO post VALUES(NULL,$title,$content,$shortContent, $linkYT, $image,$catId,1)
+		$stmt2 = $conn->query("SELECT ID FROM category WHERE Name = '$cat'");
+		$catId = $stmt2->fetchColumn(0);
+		
 		$stmt = $conn->prepare('INSERT INTO post VALUES(NULL,"'.$title.'","'.$content.'","'.$shortContent.'", "'.$linkYT.'", "'.$image.'",'.$catId.',1)');
 		if($stmt ->execute()){
 			echo "success";
