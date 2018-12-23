@@ -18,9 +18,9 @@
 
 		//truy vấn với limit, offset
 		if($cat=="all"){
-			$stmt2 = $conn->prepare("SELECT post.*, Name FROM post,category WHERE CategoryID = category.ID LIMIT $offset, $limit");
+			$stmt2 = $conn->prepare("SELECT post.*, Name FROM post,category WHERE isActive = 1 AND CategoryID = category.ID LIMIT $offset, $limit");
 		}else{
-			$stmt2 = $conn->prepare("SELECT post.*, Name FROM post,category WHERE CategoryID = category.ID AND Name = '$cat' LIMIT $offset, $limit");
+			$stmt2 = $conn->prepare("SELECT post.*, Name FROM post,category WHERE isActive = 1 AND CategoryID = category.ID AND Name = '$cat' LIMIT $offset, $limit");
 		}
 		
 		$stmt2 ->execute();

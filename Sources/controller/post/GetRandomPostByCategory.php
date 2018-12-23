@@ -7,7 +7,7 @@
 		$cat = $_POST['cat'];
 		$postID = $_POST['postID'];
 
-		$stmt = $conn->prepare("SELECT * FROM post WHERE ID != $postID AND 
+		$stmt = $conn->prepare("SELECT * FROM post WHERE isActive = 1 AND ID != $postID AND 
 			CategoryID = ( SELECT ID FROM category WHERE Name = '$cat') ORDER BY RAND() LIMIT 4");
 		$stmt ->execute();
 

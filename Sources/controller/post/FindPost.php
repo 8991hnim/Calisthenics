@@ -8,9 +8,9 @@
 		$keyword = $_POST['keyword'];
 
 		if($cat=="all"){
-			$stmt2 = $conn->prepare("SELECT post.*, Name FROM post,category WHERE CategoryID = category.ID AND LOWER(Title) like '%$keyword%' collate utf8mb4_bin ");
+			$stmt2 = $conn->prepare("SELECT post.*, Name FROM post,category WHERE isActive = 1 AND CategoryID = category.ID AND LOWER(Title) like '%$keyword%' collate utf8mb4_bin ");
 		}else{
-			$stmt2 = $conn->prepare("SELECT post.*, Name FROM post,category WHERE CategoryID = category.ID AND Name = '$cat' AND LOWER(Title) like '%$keyword%' collate utf8mb4_bin");
+			$stmt2 = $conn->prepare("SELECT post.*, Name FROM post,category WHERE isActive = 1 AND CategoryID = category.ID AND Name = '$cat' AND LOWER(Title) like '%$keyword%' collate utf8mb4_bin");
 		}
 		
 		$stmt2 ->execute();

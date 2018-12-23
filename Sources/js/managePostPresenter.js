@@ -67,9 +67,11 @@ $(document).ready(function() {
                 .append($('<td>').append('<span><img alt="image" class="img-fluid" style="max-width:150px; height:auto;" src="../image/post/' + image + '.jpg" /></span>'))
                 .append($('<td>').append('<h5>' + title + '</h5><br>' + shortContent + '<br>Youtube: <a target="_blank" href="' + linkYoutube + '">' + linkYoutube + '</a>'))
                 .append($('<td class="widthCate">').append(cat))
-                .append($('<td class="width2btn">').append('<button class="btn btn-info" id="btnEditPost"><i class="fa fa-pencil"></i></button> <button class="btn btn-danger" id="btnDeletePost"><i class="fa fa-trash-o"></i></button>'))
+                .append($('<td class="width2btn">').append('<button class="btn btn-info" id="btnEditPost"><i class="fa fa-pencil"></i></button> <button class="btn btn-danger" id="btnDeletePost" onclick="deletePost('+id+');"><i class="fa fa-trash-o"></i></button>'))
             );
     }
+
+    
 
     //get total page
     function getTotalPages() {
@@ -120,6 +122,15 @@ $(document).ready(function() {
 
     }
 
+    // $("body").delegate("#btnDeletePost", "click", function() {
+
+    //    var idPost = $("#table tr .widthSTT").attr("data-id");
+    //    alert(idPost);
+
+    // });
+
+    
+
     //boot pag
     function setupBootpag() {
         $('#pag').off();
@@ -131,7 +142,7 @@ $(document).ready(function() {
             page: 1
         }).on("page", function(event, /* page number here */ num) {
             stt = (num - 1) * limit + 1; //reset stt
-            alert(stt);
+            // alert(stt);
             getPost(num);
         });
 
@@ -140,3 +151,31 @@ $(document).ready(function() {
 
     }
 })
+
+
+
+function deletePost(idPost){
+
+    if(idPost <= 0) {
+        alert('oops :(');
+    }else {
+
+        $.ajax({
+
+            url: "../controller/post/DeletePost.php",
+            data: { postID: idPost },
+            type: "POST",
+            success: function(res) {
+                
+                alert(res);
+                location.reload();
+
+            },
+            error: function(xhr, status, errorThrown) {
+                console.log(errorThrown + status + xhr);
+            }
+
+        });
+
+    }
+};

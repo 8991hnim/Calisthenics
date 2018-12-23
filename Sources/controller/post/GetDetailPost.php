@@ -6,7 +6,7 @@
 	if(isset($_POST['postID'])){
 		$postID = $_POST['postID'];
 
-		$stmt = $conn->prepare("SELECT * FROM post WHERE ID = $postID");
+		$stmt = $conn->prepare("SELECT * FROM post WHERE isActive = 1 AND ID = $postID");
 		$stmt ->execute();
 
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
