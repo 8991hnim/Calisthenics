@@ -22,7 +22,7 @@
 	                    	</h1>
 	                        <ul class="breadcrumb float-right">
 	                            <li class="">
-	                                <a href="#" class="btn btnColorPost px-4">Save</a>
+	                                <a class="btn btnColorPost px-4" style="color:white">Save</a>
 	                            </li>
 	                        </ul>
 	                        <div class="clearfix"></div>
@@ -35,21 +35,21 @@
 		            <div class="row pb-4 pt-4">
 		            	<div class="col-md-12 col-sm-12 col-12 txtBeauty">
 		            		<label for="">Title</label>
-		                    <input type="text" class="form-control" id="" placeholder="Title...">
+		                    <input type="text" class="form-control" id="title" placeholder="Title...">
 		            	</div>
 		            </div>
 
 		            <div class="row pb-4">
 		            	<div class="col-md-12 col-sm-12 col-12 txtBeauty">
 		            		<label for="">Link youtube</label>
-		                    <input type="text" class="form-control" id="" placeholder="Youtube...">
+		                    <input type="text" class="form-control" id="linkYT" placeholder="https://www.youtube.com/embed/idVideo">
 		            	</div>
 		            </div>
 
 		            <div class="row pb-4">
 		            	<div class="col-md-12 col-sm-12 col-12 txtBeauty">
 		            		<label for="">Short content</label>
-		                    <input type="text" class="form-control" id="" placeholder="Short content...">
+		                    <input type="text" class="form-control" id="shortContent" placeholder="Short content...">
 		            	</div>
 		            </div>
 
@@ -63,9 +63,8 @@
 
 		            <div class="row pb-4">
 		            	<div class="col-md-12 col-sm-12 col-12">
-		            		<label for="">Seleect a category</label>
+		            		<label for="">Select a category</label>
 		                    <select class="form-control text-center">
-		                        <option value="all" selected="">--- Select a category ---</option>
 		                        <option value="bicep">Bicep</option>
 		                        <option value="tricep">Tricep</option>
 		                        <option value="forearms">Forearms</option>
@@ -83,9 +82,9 @@
 						<div class="col-md-12 col-sm-12 col-12">
 							<span class="text-primary">
 								Image for post...
-								<input type="file" class="mb-2" onchange="readURL(this);" />
+								<input type="file" class="mb-2" id="imgInp"/>
 							</span>
-	    					<img id="imgPost" src="" class="hide" alt="your image" />
+	    					<img id="imgPost" src="#" class="hide" alt="your image" />
 		            	</div>
 		            </div>
 
@@ -110,22 +109,22 @@
 
 <script type="text/javascript">
 
-	function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
+	// function readURL(input) {
+ //        if (input.files && input.files[0]) {
+ //            var reader = new FileReader();
 
-            $("#imgPost").removeClass("hide");
+ //            $("#imgPost").removeClass("hide");
 
-            reader.onload = function (e) {
-                $('#imgPost')
-                    .attr('src', e.target.result)
-                    .width(690)
-                    .height(400);
-            };
+ //            reader.onload = function (e) {
+ //                $('#imgPost')
+ //                    .attr('src', e.target.result)
+ //                    .width(690)
+ //                    .height(400);
+ //            };
 
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
+ //            reader.readAsDataURL(input.files[0]);
+ //        }
+ //    }
 
 </script>
 <script type="text/javascript" src="../js/createPostPresenter.js"></script>

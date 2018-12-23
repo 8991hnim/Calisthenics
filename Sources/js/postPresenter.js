@@ -48,7 +48,7 @@ $(document).ready(function() {
     function setupUI(id, title, shortContent, image) {
         var postUI = '<div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-4 offset-md-0 mt-3 mb-3 hvr-hang">' +
             '<div class="card colorPost">' +
-            '<img class="card-img-top cursorPointer" data-id="' + id + '" alt="Bootstrap Thumbnail First" src="image/post/' + image + '.jpg" />' +
+            '<img class="card-img-top cursorPointer" data-id="' + id + '" alt="Bootstrap Thumbnail First" src="' + image + '" />' +
             '<div class="card-block">' +
             '<h5 class="card-title text-info hvr-wobble-top cursorPointer mt-3 mb-3" data-id="' + id + '">' +
             title +
