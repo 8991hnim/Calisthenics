@@ -6,9 +6,9 @@
         $cat = $_POST['cat'];
         $limit = $_POST['limit'];
         if($cat=="all"){
-            $stmt = $conn->prepare("SELECT COUNT(*) FROM post");
+            $stmt = $conn->prepare("SELECT COUNT(*) FROM post WHERE  isActive = 1");
         }else{
-             $stmt = $conn->prepare("SELECT COUNT(*) FROM post WHERE CategoryID = ( SELECT ID FROM category WHERE Name = '$cat')");
+             $stmt = $conn->prepare("SELECT COUNT(*) FROM post WHERE isActive = 1 AND CategoryID = ( SELECT ID FROM category WHERE Name = '$cat')");
         }
         //lấy tổng số trang
         $stmt ->execute();
