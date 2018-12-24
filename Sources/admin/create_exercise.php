@@ -30,7 +30,7 @@
 		            <div class="row pb-4 pt-4">
 		            	<div class="col-md-12 col-sm-12 col-12 txtBeauty">
 		            		<label for="">Name</label>
-		                    <input type="text" class="form-control" id="title" placeholder="Title...">
+		                    <input type="text" class="form-control" id="name" placeholder="Name...">
 		            	</div>
 		            </div>
 
@@ -43,7 +43,7 @@
 
 		            <div class="row pb-2 pt-4 text-right">
 		            	<div class="col-md-12 col-sm-12 col-12 txtBeauty">
-		            		<button class="btn btn-primary">Save</button>
+		            		<button class="btn btn-primary" id="btnSave">Save</button>
 		            	</div>
 		            </div>
 
@@ -66,4 +66,4 @@
 ?>
 
 
-<script type="text/javascript" src="../js/createPostPresenter.js"></script>
+<script type="text/javascript" src="../js/createExercise.js"></script>
