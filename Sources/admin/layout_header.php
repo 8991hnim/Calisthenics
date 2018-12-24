@@ -94,39 +94,39 @@
         
 			<ul>
 
-					<li class="submenu">
-						<a class="" href="index.php"><i class="fa fa-fw fa-area-chart"></i><span> Dashboard </span> </a>
-                    </li>
-					
-					<li class="submenu">
-                        <a href="#"><i class="fa fa-fw fa-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
-							<ul class="list-unstyled">
-								<li><a href="tables-basic.php">Basic Tables</a></li>
-								<li><a href="tables-datatable.php">Data Tables</a></li>
-							</ul>
-                    </li>
-					
-                    <li class="submenu">
-                        <a href="manage_post.php"><i class="fa fa-fw fa-newspaper-o"></i><span> Post </span></a>	
-                    </li>
+				<li class="submenu">
+					<a class="" href="index.php"><i class="fa fa-fw fa-area-chart"></i><span> Dashboard </span> </a>
+                </li>
+				
+				<li class="submenu">
+                    <a href="#"><i class="fa fa-fw fa-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
+						<ul class="list-unstyled">
+							<li><a href="tables-basic.php">Basic Tables</a></li>
+							<li><a href="tables-datatable.php">Data Tables</a></li>
+						</ul>
+                </li>
+				
+                <li class="submenu">
+                    <a href="manage_post.php"><i class="fa fa-fw fa-newspaper-o"></i><span> Post </span></a>	
+                </li>
 
-                    <li class="submenu">
-                        <a href=""><i class="fa fa-fw fa-beer"></i><span> Excercise </span></a>	
-                    </li>
+                <li class="submenu">
+                    <a href="manage_exercise.php"><i class="fa fa-fw fa-beer"></i><span> Excercise </span></a>	
+                </li>
 
-                    <li class="submenu">
-                        <a target="_blank" href="page-coming-soon.php"><i class="fa fa-fw fa-clock-o"></i><span> Countdown funny </span></a>	
-                    </li>
+                <li class="submenu">
+                    <a target="_blank" href="page-coming-soon.php"><i class="fa fa-fw fa-clock-o"></i><span> Countdown funny </span></a>	
+                </li>
 
-					<li class="submenu">
-                        <a class="pro" href="#"><i class="fa fa-fw fa-star"></i><span> Pike Admin PRO </span> <span class="menu-arrow"></span></a>
-                            <ul class="list-unstyled">								
-								<li><a href="pro-profile.php">My Profile</a></li>
-                                <li><a href="pro-users.php">Users</a></li>
-                                <li><a href="pro-articles.php">Articles</a></li>
-								<li><a href="pro-slider.php">Slider</a></li>
-                            </ul>
-                    </li>
+				<li class="submenu">
+                    <a class="pro" href="#"><i class="fa fa-fw fa-star"></i><span> Pike Admin PRO </span> <span class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">								
+							<li><a href="pro-profile.php">My Profile</a></li>
+                            <li><a href="pro-users.php">Users</a></li>
+                            <li><a href="pro-articles.php">Articles</a></li>
+							<li><a href="pro-slider.php">Slider</a></li>
+                        </ul>
+                </li>
 					
             </ul>
 

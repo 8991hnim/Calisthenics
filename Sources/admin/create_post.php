@@ -22,7 +22,7 @@
 	                    	</h1>
 	                        <ul class="breadcrumb float-right">
 	                            <li class="">
-	                                <a class="btn btnColorPost px-4" style="color:white">Save</a>
+	                                <a class="btn btnColorPost px-4 text-white">Save</a>
 	                            </li>
 	                        </ul>
 	                        <div class="clearfix"></div>
@@ -74,6 +74,7 @@
 		                        <option value="chest">Chest</option>
 		                        <option value="leg">Leg</option>
 		                        <option value="back">Back</option>
+		                        <option value="nutrition">Nutrition</option>
 		                    </select>
 		            	</div>
 		            </div>

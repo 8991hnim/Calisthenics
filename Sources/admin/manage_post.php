@@ -35,7 +35,7 @@
                         <option value="chest">Chest</option>
                         <option value="leg">Leg</option>
                         <option value="back">Back</option>
-                       
+                        <option value="nutrition">Nutrition</option>
                     </select>
                 </div>
                 <div class="col-md-8">
@@ -58,7 +58,7 @@
                         </thead>
                         <tbody class="text-center">
                             <tr>
-                                <th class="widthSTT">1</th>
+                                <!-- <th class="widthSTT">1</th>
                                 <td>
                                     <span>
                                         <img alt="image" class="img-fluid" style="max-width:150px; height:auto;" src="../image/post/bicep2.jpg" />
@@ -73,7 +73,7 @@
                                     <button class="btn btn-danger" id="btnDeletePost">
                                         <i class="fa fa-trash-o"></i>
                                     </button>
-                                </td>
+                                </td> -->
                             </tr>
                         </tbody>
                     </table>
