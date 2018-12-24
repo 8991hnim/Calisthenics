@@ -67,7 +67,7 @@ $(document).ready(function() {
                 .append($('<td>').append('<span><img alt="image" class="img-fluid" style="max-width:150px; height:auto;" src="../' + image + '" /></span>'))
                 .append($('<td>').append('<h5>' + title + '</h5><br>' + shortContent + '<br>Youtube: <a target="_blank" href="' + linkYoutube + '">' + linkYoutube + '</a>'))
                 .append($('<td class="widthCate">').append(cat))
-                .append($('<td class="width2btn">').append('<button class="btn btn-info" id="btnEditPost"><i class="fa fa-pencil"></i></button> <button class="btn btn-danger" id="btnDeletePost" onclick="deletePost('+id+');"><i class="fa fa-trash-o"></i></button>'))
+                .append($('<td class="width2btn">').append('<button class="btn btn-info" id="btnEditPost" onclick="editPost('+id+')";><i class="fa fa-pencil"></i></button> <button class="btn btn-danger" id="btnDeletePost" onclick="deletePost('+id+');"><i class="fa fa-trash-o"></i></button>'))
             );
     }
 
@@ -177,5 +177,15 @@ function deletePost(idPost){
 
         });
 
+    }
+};
+
+function editPost(idPost){
+
+    if(idPost <= 0) {
+        alert('oops :(');
+    }else {
+        var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/admin/edit_post.php?id=" + idPost));
+        window.location.href = url.href;
     }
 };
