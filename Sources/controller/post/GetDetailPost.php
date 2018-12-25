@@ -17,6 +17,7 @@
 		$post->shortContent = $row['ShortContent'];
 		$post->linkYoutube = "https://www.youtube.com/embed/".$row['LinkYoutube'];
 		$post->image = $row['Image'];
+		$post->catId = $row['CategoryID'];
 	
 		echo json_encode($post);
 	}

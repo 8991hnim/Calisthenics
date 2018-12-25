@@ -33,7 +33,7 @@
 	                </div>
 	            </div>
 
-	            <div class="col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-12 bg-white"> <!-- START col-md-8 panel form create -->
+	            <div class="col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-12 bg-white" id="startContent"> <!-- START col-md-8 panel form create -->
 
 		            <div class="row pb-4 pt-4">
 		            	<div class="col-md-12 col-sm-12 col-12 txtBeauty">
@@ -67,7 +67,7 @@
 		            <div class="row pb-4">
 		            	<div class="col-md-12 col-sm-12 col-12">
 		            		<label for="">Select a category</label>
-		                    <select class="form-control text-center">
+		                    <select class="form-control text-center" id="#select">
 		                        <option value="bicep">Bicep</option>
 		                        <option value="tricep">Tricep</option>
 		                        <option value="forearms">Forearms</option>
@@ -83,7 +83,7 @@
 		            </div>
 
 		            <div class="row pb-4">
-						<div class="col-md-12 col-sm-12 col-12">
+						<div class="col-md-12 col-sm-12 col-12" id="divImage">
 							<span class="text-primary">
 								Image for post...
 								<input type="file" class="mb-2" id="imgInp"/>

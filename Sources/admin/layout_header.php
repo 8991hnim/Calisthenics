@@ -7,7 +7,8 @@
 		<title>admin calisthenics</title>
 		<meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
 		<meta name="author" content="Pike Web Development - https://www.pikephp.com">
-
+<!-- <script type="text/javascript" src="../helper/tinymce/tinymce.min.js"></script> -->
+<script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="assets/images/favicon.ico">
 
@@ -23,7 +24,8 @@
 		<!-- BEGIN CSS for this page -->
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
 		<!-- END CSS for this page -->
-		
+		<!-- <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script> -->
+
 		
 </head>
 

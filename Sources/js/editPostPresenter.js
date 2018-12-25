@@ -1,17 +1,12 @@
 $(document).ready(function() {
-    var cat = "bicep";
-    var id  = $('#getIdPost').attr('data-id');
-    alert(id);
-    tinymce.init({
-        selector: '#contentPost',
-        height: 300,
-        menubar: false
-    });
+    var cat;
+    var id = $('#getIdPost').attr('data-id');
 
     $('select').on('change', function() {
         cat = this.value;
-        alert(cat);
     });
+
+    init(id);
 
     //check image
     $("#imgInp").change(function() {
@@ -50,16 +45,24 @@ $(document).ready(function() {
         if (isContentEmpty()) {
             alert("Please fill in the blank.");
         } else {
-        	var yt = new RegExp('^https://www.youtube.com/embed/[A-z0-9-_]{11}$');
+            var yt = new RegExp('^https://www.youtube.com/embed/[A-z0-9-_]{11}$');
             if (!yt.test($('#linkYT').val())) {
-            	alert("Link youtube does not match!");
+                alert("Link youtube does not match!");
             } else if ($("#imgInp").val() == '') {
-                alert("Insert a image");
+                alert("Image dont change");
+                var title = $('#title').val();
+                var linkYT = $('#linkYT').val();
+                var shortContent = $('#shortContent').val();
+                var content = tinyMCE.activeEditor.getContent();
+
+                var idLinkYT = linkYT.split("/");
+                editPost(id, title, idLinkYT[4], shortContent, content, cat);
             } else {
+                alert("image changed");
                 var file_data = $('#imgInp').prop('files')[0];
                 var form_data = new FormData();
                 form_data.append('fileToUpload', file_data);
-                alert(form_data);
+
                 $.ajax({
                     url: '../utils/upload.php', // point to server-side PHP script 
                     dataType: 'text', // what to expect back from the PHP script, if anything
@@ -80,7 +83,7 @@ $(document).ready(function() {
 
                             var idLinkYT = linkYT.split("/");
 
-                            createNewPost(title,idLinkYT[4],shortContent,content,image,cat);
+                            editPostWithNewImage(id, title, idLinkYT[4], shortContent, content, image, cat);
 
                         }
                     },
@@ -95,24 +98,47 @@ $(document).ready(function() {
         }
     })
 
-    function createNewPost(title,linkYT,shortContent,content,image,cat){
+    function editPostWithNewImage(id, title, linkYT, shortContent, content, image, cat) {
 
-    	 $.ajax({
-            url: "../controller/post/CreatePost.php",
+        $.ajax({
+            url: "../controller/post/EditPost.php",
             data: {
+                id: id,
                 title: title,
                 linkYT: linkYT,
-                shortContent : shortContent,
-                content:content,
-                image:image,
-                cat:cat
+                shortContent: shortContent,
+                content: content,
+                image: image,
+                cat: cat
             },
             type: "POST",
             success: function(res) {
-            	alert(res);
+                alert(res);
             },
             error: function(xhr, status, errorThrown) {
-                console.log("a:"+errorThrown + status + xhr);
+                console.log("a:" + errorThrown + status + xhr);
+            }
+        });
+    }
+
+    function editPost(id, title, linkYT, shortContent, content, cat) {
+
+        $.ajax({
+            url: "../controller/post/EditPost.php",
+            data: {
+                id:id,
+                title: title,
+                linkYT: linkYT,
+                shortContent: shortContent,
+                content: content,
+                cat: cat
+            },
+            type: "POST",
+            success: function(res) {
+                alert(res);
+            },
+            error: function(xhr, status, errorThrown) {
+                console.log("a:" + errorThrown + status + xhr);
             }
         });
     }
@@ -121,5 +147,72 @@ $(document).ready(function() {
         if ($('#title').val().trim().length < 1 || $('#linkYT').val().trim().length < 1 || $('#shortContent').val().trim().length < 1 ||
             (tinyMCE.activeEditor.getContent()).trim().length < 1) return true;
         return false;
+    }
+
+    function init(postId) {
+        $.ajax({
+            url: "../controller/post/GetDetailPost.php",
+            data: {
+                postID: postId
+            },
+            type: "POST",
+            success: function(res) {
+                var post = $.parseJSON(res);
+                if (post.id != null) {
+                    $('#title').val(post.title);
+                    $('#linkYT').val(post.linkYoutube);
+                    $('#shortContent').val(post.shortContent);
+
+                    $('#contentPost').html(post.content);
+                    tinymce.init({
+                        selector: '#contentPost',
+                        height: 300,
+                        menubar: false
+                    });
+
+                    $('select').val(getCat(post.catId)).change();
+
+                    //set image
+                    $("#imgPost").removeClass("hide");
+                    $('#imgPost').attr('src', "../" + post.image);
+                    $("#divImage input").val("fgg");
+
+
+
+
+                } else {
+                    $('.content').html('<div style="color:#fff; font-size:30px"><p><strong>Opps :(</strong></p>Not found 404</div>');
+                }
+            },
+            error: function(xhr, status, errorThrown) {
+                console.log("a:" + errorThrown + status + xhr);
+            }
+        });
+    }
+
+    function getCat(catId) {
+        switch (catId) {
+            case '1':
+                return "bicep";
+            case '2':
+                return "tricep";
+            case '3':
+                return "forearms";
+            case '4':
+                return "shoulder";
+            case '5':
+                return "abs";
+            case '6':
+                return "cardio";
+            case '7':
+                return "chest";
+            case '8':
+                return "leg";
+            case '9':
+                return "back";
+            case '10':
+                return "nutrition";
+
+        }
     }
 })
