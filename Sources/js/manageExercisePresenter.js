@@ -123,16 +123,16 @@ $(document).ready(function() {
 
 
 
-function deletePost(idPost){
+function deleteExercise(idExercise){
 
-    if(idPost <= 0) {
+    if(idExercise <= 0) {
         alert('oops :(');
     }else {
 
         $.ajax({
 
-            url: "../controller/post/DeletePost.php",
-            data: { postID: idPost },
+            url: "../controller/exercise/DeleteExercise.php",
+            data: { exerciseID: idExercise },
             type: "POST",
             success: function(res) {
                 
