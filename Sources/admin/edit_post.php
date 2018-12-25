@@ -88,7 +88,7 @@
 								Image for post...
 								<input type="file" class="mb-2" id="imgInp"/>
 							</span>
-	    					<img id="imgPost" src="#" class="hide" alt="your image" />
+	    					<img id="imgPost" src="#" class="col-md-12 hide" alt="your image" />
 		            	</div>
 		            </div>
 
