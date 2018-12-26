@@ -30,7 +30,7 @@ $(document).ready(function() {
                     if (arrayExercise.length == 0) {
 
                     } else {
-                         stt = 1;
+                        stt = 1;
                         $.each(arrayExercise, function(index, value) {
                             setupUI(stt, value.name, value.linkYoutube);
                             stt++;
@@ -144,7 +144,10 @@ function deleteExercise(id) {
                         console.log(errorThrown + status + xhr);
                     }
                 });
-            } 
+            }
+        })
+}
+
 
 function editExercise(id) {
     var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/admin/edit_exercise.php?id=" + id));
