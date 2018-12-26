@@ -7,8 +7,9 @@
 		<title>admin calisthenics</title>
 		<meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
 		<meta name="author" content="Pike Web Development - https://www.pikephp.com">
-<!-- <script type="text/javascript" src="../helper/tinymce/tinymce.min.js"></script> -->
-<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+
+		<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="assets/images/favicon.ico">
 
@@ -96,45 +97,50 @@
 
 			<div id="sidebar-menu">
         
-			<ul>
+				<ul>
 
-				<li class="submenu">
-					<a class="" href="index.php"><i class="fa fa-fw fa-area-chart"></i><span> Dashboard </span> </a>
-                </li>
-				
-				<li class="submenu">
-                    <a href="#"><i class="fa fa-fw fa-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
-						<ul class="list-unstyled">
-							<li><a href="tables-basic.php">Basic Tables</a></li>
-							<li><a href="tables-datatable.php">Data Tables</a></li>
-						</ul>
-                </li>
-				
-                <li class="submenu">
-                    <a href="manage_post.php"><i class="fa fa-fw fa-newspaper-o"></i><span> Post </span></a>	
-                </li>
-
-                <li class="submenu">
-                    <a href="manage_exercise.php"><i class="fa fa-fw fa-beer"></i><span> Excercise </span></a>	
-                </li>
-
-                <li class="submenu">
-                    <a target="_blank" href="page-coming-soon.php"><i class="fa fa-fw fa-clock-o"></i><span> Countdown funny </span></a>	
-                </li>
-
-				<li class="submenu">
-                    <a class="pro" href="#"><i class="fa fa-fw fa-star"></i><span> Pike Admin PRO </span> <span class="menu-arrow"></span></a>
-                        <ul class="list-unstyled">								
-							<li><a href="pro-profile.php">My Profile</a></li>
-                            <li><a href="pro-users.php">Users</a></li>
-                            <li><a href="pro-articles.php">Articles</a></li>
-							<li><a href="pro-slider.php">Slider</a></li>
-                        </ul>
-                </li>
+					<li class="submenu">
+						<a class="" href="index.php"><i class="fa fa-fw fa-area-chart"></i><span> Dashboard </span> </a>
+	                </li>
 					
-            </ul>
+	                <li class="submenu">
+	                    <a href="manage_post.php"><i class="fa fa-fw fa-newspaper-o"></i><span> Post </span></a>	
+	                </li>
 
-            <div class="clearfix"></div>
+	                <li class="submenu">
+	                    <a href="manage_exercise.php"><i class="fa fa-fw fa-beer"></i><span> Excercise </span></a>	
+	                </li>
+
+	                <li class="submenu">
+	                    <a href="#"><i class="fa fa-fw fa-rocket"></i> <span> Level </span> <span class="menu-arrow"></span></a>
+							<ul class="list-unstyled">
+								<li><a href="manage_level.php"><i class="fa fa-fw fa-battery-1"></i> Level 1</a></li>
+								<li><a href="manage_level.php"><i class="fa fa-fw fa-battery-3"></i> Level 2</a></li>
+								<li><a href="manage_level.php"><i class="fa fa-fw fa-battery-full"></i> Level 3</a></li>
+							</ul>
+	                </li>
+
+	                <li class="submenu">
+						<a class="" href=""><i class="fa fa-fw fa-user"></i><span> User </span> </a>
+	                </li>
+
+	                <li class="submenu">
+	                    <a target="_blank" href="page-coming-soon.php"><i class="fa fa-fw fa-clock-o"></i><span> Countdown funny </span></a>	
+	                </li>
+
+					<li class="submenu">
+	                    <a class="pro" href="#"><i class="fa fa-fw fa-star"></i><span> Pike Admin PRO </span> <span class="menu-arrow"></span></a>
+	                        <ul class="list-unstyled">								
+								<li><a href="pro-profile.php">My Profile</a></li>
+	                            <li><a href="pro-users.php">Users</a></li>
+	                            <li><a href="pro-articles.php">Articles</a></li>
+								<li><a href="pro-slider.php">Slider</a></li>
+	                        </ul>
+	                </li>
+						
+	            </ul>
+
+	            <div class="clearfix"></div>
 
 			</div>
         

@@ -145,8 +145,6 @@ function deleteExercise(id) {
                     }
                 });
             } 
-        });
-};
 
 function editExercise(id) {
     var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/admin/edit_exercise.php?id=" + id));

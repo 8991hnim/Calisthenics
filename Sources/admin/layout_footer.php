@@ -33,3 +33,27 @@
 
 </body>
 </html>
+
+
+
+<script type="text/javascript">
+	
+
+$(document).ready(function(){
+
+
+	$("#sidebar-menu li").each(function() {
+
+
+        $(this).click(function(){
+
+        	$(this).css("background", "darkred");
+
+        })
+        
+
+    });
+
+});
+
+</script>
