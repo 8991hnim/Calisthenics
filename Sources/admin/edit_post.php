@@ -20,14 +20,9 @@
 				<div class="row">
 	                <div class="col-md-12 text-right" data-id='<?php echo $id?>' id='getIdPost'>
 	                    <div class="breadcrumb-holder">
-	                    	<h1 class="main-title float-left pt-1">
+	                    	<h1 class="main-title float-left pt-0 pb-3">
 	                    		<i class="fa fa-fw fa-newspaper-o"></i> Edit post!
 	                    	</h1>
-	                        <ul class="breadcrumb float-right">
-	                            <li class="">
-	                                <a class="btn btnColorPost px-4 text-white">Save</a>
-	                            </li>
-	                        </ul>
 	                        <div class="clearfix"></div>
 	                    </div>
 	                </div>
@@ -37,28 +32,28 @@
 
 		            <div class="row pb-4 pt-4">
 		            	<div class="col-md-12 col-sm-12 col-12 txtBeauty">
-		            		<label for="">Title</label>
+		            		<label class="text-primary">Title</label>
 		                    <input type="text" class="form-control" id="title" placeholder="Title...">
 		            	</div>
 		            </div>
 
 		            <div class="row pb-4">
 		            	<div class="col-md-12 col-sm-12 col-12 txtBeauty">
-		            		<label for="">Link youtube</label>
+		            		<label class="text-primary">Link youtube</label>
 		                    <input type="text" class="form-control" id="linkYT" placeholder="https://www.youtube.com/embed/idVideo">
 		            	</div>
 		            </div>
 
 		            <div class="row pb-4">
 		            	<div class="col-md-12 col-sm-12 col-12 txtBeauty">
-		            		<label for="">Short content</label>
+		            		<label class="text-primary">Short content</label>
 		                    <input type="text" class="form-control" id="shortContent" placeholder="Short content...">
 		            	</div>
 		            </div>
 
 		            <div class="row pb-4">
 		            	<div class="col-md-12 col-sm-12 col-12 txtBeauty">
-		            		<label for="">Content post</label>
+		            		<label class="text-primary">Content post</label>
 		                    <textarea id="contentPost">
 							</textarea>
 		            	</div>
@@ -66,7 +61,7 @@
 
 		            <div class="row pb-4">
 		            	<div class="col-md-12 col-sm-12 col-12">
-		            		<label for="">Select a category</label>
+		            		<label class="text-primary">Select a category</label>
 		                    <select class="form-control text-center" id="#select">
 		                        <option value="bicep">Bicep</option>
 		                        <option value="tricep">Tricep</option>
@@ -92,8 +87,21 @@
 		            	</div>
 		            </div>
 
+		            <div class="col-md-12 border-form"></div>
+
+		            <div class="row pb-2 pt-2 text-right">
+		            	<div class="col-md-12 col-sm-12 col-12 txtBeauty">
+		            		<button class="btn btn-secondary" id="btnCancelPost">Cancel</button>
+		            		<button class="btn btnColorPost px-4 text-white">Save</button>
+		            	</div>
+		            </div>
+
 	        	</div> <!-- END col-md-8 panel form create -->
 			
+
+
+
+
             </div>
 			<!-- END container-fluid -->
 

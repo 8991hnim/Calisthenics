@@ -11,18 +11,24 @@
         <div class="content">
             
 			<div class="container-fluid">
+
+
+
 					
 				<div class="row">
 					<div class="col-xl-12">
 						<div class="breadcrumb-holder">
-							<h1 class="main-title float-left pb-3" id="levelName">Level</h1>
+	                        <h1 class="main-title float-left pt-2" id="levelName">Level</h1>
+							<ol class="breadcrumb float-right">
+								<a href="" class="btn btnColorLevel"><i class="fa fa-fw fa-plus"></i> Add exercise</a>
+							</ol>
 							<div class="clearfix"></div>
 						</div>
 					</div>
 				</div>
 
                 <div class="row py-3">
-	                <div class="col-md-4">
+	                <div class="col-md-3">
 	                    <select class="form-control">
 	                        <option value="">1</option>
 	                        <option value="">2</option>
@@ -38,9 +44,6 @@
 	                        <option value="">12</option>
 	                    	<option value="all" selected>--- Select day ---</option>
 	                    </select>
-	                </div>
-	                <div class="col-md-8">
-	                    <input type="text" id="input-search" class="form-control" placeholder="Search...">
 	                </div>
 	            </div>
 				
@@ -68,11 +71,8 @@
 	                                <td>25</td>
 	                                <td>3</td>
 	                                <td>45s</td>
-	                                <td class="width2btn">
-	                                    <button class="btn btn-info" id="btnEditPost">
-	                                        <i class="fa fa-pencil"></i>
-	                                    </button>
-	                                    <button class="btn btn-danger" id="btnDeletePost">
+	                                <td>
+	                                    <button class="btn btn-danger" id="">
 	                                        <i class="fa fa-trash-o"></i>
 	                                    </button>
 	                                </td>
@@ -85,6 +85,10 @@
 	            <div class="row float-right">
 	                <div class="col-md-12" id="pag"></div>
 	            </div>
+
+
+
+
 
             </div>
 			<!-- END container-fluid -->
