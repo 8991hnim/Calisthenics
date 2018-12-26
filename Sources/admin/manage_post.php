@@ -49,7 +49,7 @@
                     <table class="table table-light table-bordered table-hover" id="table">
                         <thead class="text-center headPost">
                             <tr>
-                                <th>STT</th>
+                                <th>No.</th>
                                 <th>Image</th>
                                 <th>Post</th>
                                 <th class="widthCate">Category</th>

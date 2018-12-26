@@ -67,11 +67,11 @@ $(document).ready(function() {
                 .append($('<td>').append('<span><img alt="image" class="img-fluid" style="max-width:150px; height:auto;" src="../' + image + '" /></span>'))
                 .append($('<td>').append('<h5>' + title + '</h5><br>' + shortContent + '<br>Youtube: <a target="_blank" href="' + linkYoutube + '">' + linkYoutube + '</a>'))
                 .append($('<td class="widthCate">').append(cat))
-                .append($('<td class="width2btn">').append('<button class="btn btn-info" id="btnEditPost" onclick="editPost('+id+')";><i class="fa fa-pencil"></i></button> <button class="btn btn-danger" id="btnDeletePost" onclick="deletePost('+id+');"><i class="fa fa-trash-o"></i></button>'))
+                .append($('<td class="width2btn">').append('<button class="btn btn-info" id="btnEditPost" onclick="editPost(' + id + ')";><i class="fa fa-pencil"></i></button> <button class="btn btn-danger" id="btnDeletePost" onclick="deletePost(' + id + ');"><i class="fa fa-trash-o"></i></button>'))
             );
     }
 
-    
+
 
     //get total page
     function getTotalPages() {
@@ -129,7 +129,7 @@ $(document).ready(function() {
 
     // });
 
-    
+
 
     //boot pag
     function setupBootpag() {
@@ -154,38 +154,35 @@ $(document).ready(function() {
 
 
 
-function deletePost(idPost){
+function deletePost(idPost) {
+    swal({
+            title: "Are you sure?",
+            text: "Delete this post?",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                $.ajax({
 
-    if(idPost <= 0) {
-        alert('oops :(');
-    }else {
+                    url: "../controller/post/DeletePost.php",
+                    data: { postID: idPost },
+                    type: "POST",
+                    success: function(res) {
+                        location.reload();
 
-        $.ajax({
-
-            url: "../controller/post/DeletePost.php",
-            data: { postID: idPost },
-            type: "POST",
-            success: function(res) {
-                
-                alert(res);
-                location.reload();
-
-            },
-            error: function(xhr, status, errorThrown) {
-                console.log(errorThrown + status + xhr);
+                    },
+                    error: function(xhr, status, errorThrown) {
+                        console.log(errorThrown + status + xhr);
+                    }
+                });
             }
-
         });
 
-    }
 };
 
-function editPost(idPost){
-
-    if(idPost <= 0) {
-        alert('oops :(');
-    }else {
-        var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/admin/edit_post.php?id=" + idPost));
-        window.location.href = url.href;
-    }
+function editPost(idPost) {
+    var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/admin/edit_post.php?id=" + idPost));
+    window.location.href = url.href;
 };

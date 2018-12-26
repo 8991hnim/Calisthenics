@@ -17,11 +17,10 @@ $(document).ready(function() {
         var ValidImageTypes = ["image/jpeg", "image/png", "image/jpg"];
         if ($.inArray(fileType, ValidImageTypes) < 0) {
             // invalid file type code goes here.
-            alert("not valid");
+            alert("Image not valid!");
             $("#imgInp").val('');
             $("#imgPost").addClass("hide");
         } else {
-            alert("img ok");
             readURL(inp);
         }
     })
@@ -49,7 +48,6 @@ $(document).ready(function() {
             if (!yt.test($('#linkYT').val())) {
                 alert("Link youtube does not match!");
             } else if ($("#imgInp").val() == '') {
-                alert("Image dont change");
                 var title = $('#title').val();
                 var linkYT = $('#linkYT').val();
                 var shortContent = $('#shortContent').val();
@@ -58,7 +56,6 @@ $(document).ready(function() {
                 var idLinkYT = linkYT.split("/");
                 editPost(id, title, idLinkYT[4], shortContent, content, cat);
             } else {
-                alert("image changed");
                 var file_data = $('#imgInp').prop('files')[0];
                 var form_data = new FormData();
                 form_data.append('fileToUpload', file_data);
@@ -73,7 +70,11 @@ $(document).ready(function() {
                     type: 'post',
                     success: function(res) {
                         if (res == "false") {
-                            alert("Có lỗi upload ảnh");
+                            swal({
+                                title: "Opps :(",
+                                text: "Upload image failed.",
+                                icon: "warning"
+                            });
                         } else {
                             var title = $('#title').val();
                             var linkYT = $('#linkYT').val();
@@ -113,7 +114,23 @@ $(document).ready(function() {
             },
             type: "POST",
             success: function(res) {
-                alert(res);
+                if (res != "fail") {
+                    swal({
+                            title: "Success",
+                            text: "Edited",
+                            icon: "success"
+                        })
+                        .then((value) => {
+                            var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/admin/manage_post.php"));
+                            window.location.href = url.href;
+                        });
+                } else {
+                    swal({
+                        title: "Opps :(",
+                        text: "Something went wrong",
+                        icon: "warning"
+                    })
+                }
             },
             error: function(xhr, status, errorThrown) {
                 console.log("a:" + errorThrown + status + xhr);
@@ -126,7 +143,7 @@ $(document).ready(function() {
         $.ajax({
             url: "../controller/post/EditPost.php",
             data: {
-                id:id,
+                id: id,
                 title: title,
                 linkYT: linkYT,
                 shortContent: shortContent,
@@ -135,7 +152,23 @@ $(document).ready(function() {
             },
             type: "POST",
             success: function(res) {
-                alert(res);
+                if (res != "fail") {
+                    swal({
+                            title: "Success",
+                            text: "Edited",
+                            icon: "success"
+                        })
+                        .then((value) => {
+                            var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/admin/manage_post.php"));
+                            window.location.href = url.href;
+                        });
+                } else {
+                    swal({
+                        title: "Opps :(",
+                        text: "Something went wrong",
+                        icon: "warning"
+                    })
+                }
             },
             error: function(xhr, status, errorThrown) {
                 console.log("a:" + errorThrown + status + xhr);

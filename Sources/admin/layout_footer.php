@@ -18,6 +18,8 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../helper/jquery.bootpag.js"></script>
 
+<!-- <script type="text/javascript" src="assets/plugins/sweetalert/sweetalert.js"></script> -->
+
 <script src="assets/js/detect.js"></script>
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/jquery.blockUI.js"></script>
@@ -25,7 +27,7 @@
 
 <!-- App js -->
 <script src="assets/js/pikeadmin.js"></script>
-<!-- <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script> -->
+
 
 
 
