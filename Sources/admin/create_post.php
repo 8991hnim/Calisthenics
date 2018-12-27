@@ -89,7 +89,7 @@
 		            <div class="row pb-2 pt-2 text-right">
 		            	<div class="col-md-12 col-sm-12 col-12 txtBeauty">
 		            		<button class="btn btn-secondary" id="btnCancelPost">Cancel</button>
-		            		<button class="btn btnColorPost px-4 text-white">Save</button>
+		            		<button class="btn btnColorPost px-4 text-white" id="btnSave">Save</button>
 		            	</div>
 		            </div>
 

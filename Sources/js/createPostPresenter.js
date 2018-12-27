@@ -44,7 +44,7 @@ $(document).ready(function() {
         }
     }
 
-    $('.btnColorPost').click(function() {
+    $('#btnSave').click(function() {
         var content = tinyMCE.activeEditor.getContent();
         if (isContentEmpty()) {
             alert("Please fill in the blank.");
@@ -141,4 +141,9 @@ $(document).ready(function() {
             (tinyMCE.activeEditor.getContent()).trim().length < 1) return true;
         return false;
     }
+
+    $('#btnCancelPost').click(function(){
+        var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/admin/manage_post.php"));
+        window.location.href = url.href;
+    })
 })
