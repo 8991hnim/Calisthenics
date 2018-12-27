@@ -11,17 +11,40 @@
             <div class="row">
                 <div class="col-md-12 text-right">
                     <div class="breadcrumb-holder">
-                        <ul class="breadcrumb float-right">
+                        <!-- <ul class="breadcrumb float-right">
                             <li class="">
                                 <a href="create_post.php" class="btn btnColorPost"><i class="fa fa-fw fa-plus"></i>Create post</a>
                             </li>
-                        </ul>
+                        </ul> -->
+                        <div class="row pb-3 pt-1">
+                            <div class="col-md-6">
+                                <input type="text" id="input-search" class="form-control" placeholder="search...">
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-control">
+                                    <option value="bicep">Bicep</option>
+                                    <option value="tricep">Tricep</option>
+                                    <option value="forearms">Forearms</option>
+                                    <option value="shoulder">Shoulder</option>
+                                    <option value="abs">Abs</option>
+                                    <option value="cardio">Cardio</option>
+                                    <option value="chest">Chest</option>
+                                    <option value="leg">Leg</option>
+                                    <option value="back">Back</option>
+                                    <option value="nutrition">Nutrition</option>
+                                    <option value="all" selected>--- Select a category ---</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="create_post.php" class="col-md-12 btn btnColorPost"><i class="fa fa-fw fa-plus"></i>Create post</a>
+                            </div>
+                        </div>
                         <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="row py-3">
+            <!-- <div class="row py-3">
                 <div class="col-md-4">
                     <label for="">Filters</label>
                     <select class="form-control">
@@ -42,9 +65,9 @@
                     <label for="">Search...</label>
                     <input type="text" id="input-search" class="form-control">
                 </div>
-            </div>
+            </div> -->
 			
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-md-12">
                     <table class="table table-light table-bordered table-hover" id="table">
                         <thead class="text-center headPost">
