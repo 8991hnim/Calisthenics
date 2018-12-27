@@ -11,5 +11,5 @@
 		$stmt = $conn->prepare("UPDATE exercise SET isActive = 0 WHERE ID = $id");
 		
 		$stmt ->execute();
-	
+	}
 ?>

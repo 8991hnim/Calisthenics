@@ -69,7 +69,11 @@ $(document).ready(function() {
                     type: 'post',
                     success: function(res) {
                         if (res == "false") {
-                            alert("Có lỗi upload ảnh");
+                             swal({
+                                title: "Opps :(",
+                                text: "Upload image failed.",
+                                icon: "warning"
+                            });
                         } else {
                             var title = $('#title').val();
                             var linkYT = $('#linkYT').val();
@@ -108,7 +112,23 @@ $(document).ready(function() {
             },
             type: "POST",
             success: function(res) {
-            	alert(res);
+            	 if (res != "fail") {
+                    swal({
+                            title: "Success",
+                            text: "",
+                            icon: "success"
+                        })
+                        .then((value) => {
+                            var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/admin/manage_post.php"));
+                            window.location.href = url.href;
+                        });
+                } else {
+                    swal({
+                        title: "Opps :(",
+                        text: "Something went wrong",
+                        icon: "warning"
+                    })
+                }
             },
             error: function(xhr, status, errorThrown) {
                 console.log("a:"+errorThrown + status + xhr);
