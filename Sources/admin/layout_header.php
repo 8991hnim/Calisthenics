@@ -59,7 +59,7 @@
                                 </div>
 
                                 <a href="../index.php" class="dropdown-item notify-item">
-                                    <i class="fa fa-user"></i> <span>Home</span>
+                                    <i class="fa fa-home"></i> <span>Home</span>
                                 </a>
 
                                 <!-- item-->
@@ -121,21 +121,15 @@
 	                </li>
 
 	                <li class="submenu">
-						<a class="" href=""><i class="fa fa-fw fa-user"></i><span> User </span> </a>
-	                </li>
-
-	                <li class="submenu">
 	                    <a target="_blank" href="page-coming-soon.php"><i class="fa fa-fw fa-clock-o"></i><span> Countdown funny </span></a>	
 	                </li>
 
 					<li class="submenu">
 	                    <a class="pro" href="#"><i class="fa fa-fw fa-star"></i><span> Pike Admin PRO </span> <span class="menu-arrow"></span></a>
-	                        <ul class="list-unstyled">								
-								<li><a href="pro-profile.php">My Profile</a></li>
-	                            <li><a href="pro-users.php">Users</a></li>
-	                            <li><a href="pro-articles.php">Articles</a></li>
-								<li><a href="pro-slider.php">Slider</a></li>
-	                        </ul>
+                        <ul class="list-unstyled">								
+							<li><a href="pro-profile.php">My Profile</a></li>
+                            <li><a href="pro-users.php">Users</a></li>
+                        </ul>
 	                </li>
 						
 	            </ul>

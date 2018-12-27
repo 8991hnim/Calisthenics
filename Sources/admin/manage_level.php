@@ -20,7 +20,7 @@
 						<div class="breadcrumb-holder">
 	                        <h1 class="main-title float-left pt-2" id="levelName">Level</h1>
 							<ol class="breadcrumb float-right">
-								<a href="" class="btn btnColorLevel"><i class="fa fa-fw fa-plus"></i> Add exercise</a>
+								<a href="add_exercise_level.php" class="btn btnColorLevel"><i class="fa fa-fw fa-plus"></i> Add exercise</a>
 							</ol>
 							<div class="clearfix"></div>
 						</div>

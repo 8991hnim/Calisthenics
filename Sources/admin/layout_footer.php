@@ -1,9 +1,6 @@
 	<footer class="footer">
-		<span class="text-right">
-		Copyright <a target="_blank" href="#">Your Website</a>
-		</span>
 		<span class="float-right">
-		Powered by <a target="_blank" href="https://www.pikeadmin.com"><b>Pike Admin</b></a>
+		Made by <a target="_blank" href="https://www.facebook.com/v21.official"><b>MVTech</b></a>
 		</span>
 	</footer>
 
@@ -33,27 +30,3 @@
 
 </body>
 </html>
-
-
-
-<script type="text/javascript">
-	
-
-$(document).ready(function(){
-
-
-	$("#sidebar-menu li").each(function() {
-
-
-        $(this).click(function(){
-
-        	$(this).css("background", "darkred");
-
-        })
-        
-
-    });
-
-});
-
-</script>
