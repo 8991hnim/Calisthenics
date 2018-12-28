@@ -114,9 +114,9 @@
 	                <li class="submenu">
 	                    <a href="#"><i class="fa fa-fw fa-rocket"></i> <span> Level </span> <span class="menu-arrow"></span></a>
 							<ul class="list-unstyled">
-								<li><a href="manage_level.php"><i class="fa fa-fw fa-battery-1"></i> Level 1</a></li>
-								<li><a href="manage_level.php"><i class="fa fa-fw fa-battery-3"></i> Level 2</a></li>
-								<li><a href="manage_level.php"><i class="fa fa-fw fa-battery-full"></i> Level 3</a></li>
+								<li><a href="manage_level.php?level=1"><i class="fa fa-fw fa-battery-1"></i> Level 1</a></li>
+								<li><a href="manage_level.php?level=2"><i class="fa fa-fw fa-battery-3"></i> Level 2</a></li>
+								<li><a href="manage_level.php?level=3"><i class="fa fa-fw fa-battery-full"></i> Level 3</a></li>
 							</ul>
 	                </li>
 

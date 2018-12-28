@@ -30,8 +30,14 @@ $(document).ready(function() {
             type: "POST",
             success: function(res) {
                 var exercise = $.parseJSON(res);
-                $('#name').val(exercise.name);
-                $('#linkYT').val(exercise.linkYoutube);
+                if (exercise.name != null) {
+                    $('#name').val(exercise.name);
+                    $('#linkYT').val(exercise.linkYoutube);
+                } else {
+                    $('.content').html('<div style="color:#fff; font-size:30px"><p><strong>Opps :(</strong></p>Not found 404</div>');
+
+                }
+
             },
             error: function(xhr, status, errorThrown) {
                 console.log("a:" + errorThrown + status + xhr);
