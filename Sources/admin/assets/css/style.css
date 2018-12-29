@@ -1278,9 +1278,6 @@ input[type="file"]:hover {
 }
 
 
-/* End Manage POST  */
-/*-----------------------------------------------------------------------*/
-
 .fixed-layout{
   position: fixed !important;
 }
@@ -1291,8 +1288,14 @@ input[type="file"]:hover {
   background: #86592d;
   color: #FFF;
 }
-/*-----------------------------------------------------------------------*/
 
+.color-menu {
+  background-color: darkred !important;
+  color: #fff !important;
+}
 
+a:focus {
+    box-shadow: none !important;
+}
 
 /*-----------------------------------------------------------------------*/

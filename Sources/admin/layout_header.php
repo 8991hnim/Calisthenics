@@ -1,3 +1,21 @@
+<?php
+    include_once("../config/core.php");
+    include_once("../model/user.php");
+    if(isset($_GET["logout"]) || !isset($_SESSION['logged_in'])) {
+        session_destroy();
+        header("Location: {$home_url}index.php");
+    }else if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
+        $user = unserialize($_SESSION['current_user']);
+
+        if ($user->type == 2){
+	        header("Location: {$home_url}index.php");
+	    } 
+    }
+    
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +73,7 @@
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <!-- item-->
                                 <div class="dropdown-item noti-title">
-                                    <h5 class="text-overflow"><small>Hello, admin</small> </h5>
+                                    <h5 class="text-overflow"><small>Hello, <?php echo $user->username ?></small> </h5>
                                 </div>
 
                                 <a href="../index.php" class="dropdown-item notify-item">
@@ -68,7 +86,7 @@
                                 </a>
 
                                 <!-- item-->
-                                <a href="#" class="dropdown-item notify-item">
+                                <a href="index.php?logout=true" class="dropdown-item notify-item">
                                     <i class="fa fa-sign-out"></i> <span>Logout</span>
                                 </a>
                             </div>
@@ -113,23 +131,21 @@
 
 	                <li class="submenu">
 	                    <a href="#"><i class="fa fa-fw fa-rocket"></i> <span> Level </span> <span class="menu-arrow"></span></a>
-							<ul class="list-unstyled">
-								<li><a href="manage_level.php?level=1"><i class="fa fa-fw fa-battery-1"></i> Level 1</a></li>
-								<li><a href="manage_level.php?level=2"><i class="fa fa-fw fa-battery-3"></i> Level 2</a></li>
-								<li><a href="manage_level.php?level=3"><i class="fa fa-fw fa-battery-full"></i> Level 3</a></li>
-							</ul>
+						<ul class="list-unstyled">
+							<li>
+								<a href="manage_level.php?level=1"><i class="fa fa-fw fa-battery-1"></i> Level 1</a>
+							</li>
+							<li>
+								<a href="manage_level.php?level=2"><i class="fa fa-fw fa-battery-3"></i> Level 2</a>
+							</li>
+							<li>
+								<a href="manage_level.php?level=3"><i class="fa fa-fw fa-battery-full"></i> Level 3</a>
+							</li>
+						</ul>
 	                </li>
 
 	                <li class="submenu">
 	                    <a target="_blank" href="page-coming-soon.php"><i class="fa fa-fw fa-clock-o"></i><span> Countdown funny </span></a>	
-	                </li>
-
-					<li class="submenu">
-	                    <a class="pro" href="#"><i class="fa fa-fw fa-star"></i><span> Pike Admin PRO </span> <span class="menu-arrow"></span></a>
-                        <ul class="list-unstyled">								
-							<li><a href="pro-profile.php">My Profile</a></li>
-                            <li><a href="pro-users.php">Users</a></li>
-                        </ul>
 	                </li>
 						
 	            </ul>

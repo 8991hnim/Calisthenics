@@ -1,6 +1,6 @@
 	<footer class="footer">
 		<span class="float-right">
-		Made by <a target="_blank" href="https://www.facebook.com/v21.official"><b>MVTech</b></a>
+		Made by <a href="#"><b>MVTech</b></a>
 		</span>
 	</footer>
 
@@ -30,3 +30,4 @@
 
 </body>
 </html>
+
