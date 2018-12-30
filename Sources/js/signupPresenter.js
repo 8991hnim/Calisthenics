@@ -16,22 +16,29 @@ $(document).ready(function(){
             $(".bg-text").height(480);
 		} else 
 			if( !emailValid.test(emailSignup) ) { 
+				$('#txtEmailSignUp').focus();
  				$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">The email invalid.</div>');
 	            $(".bg-text").height(480);
 			} else 
 				if (userNameSignup.trim().length < 6 || userNameSignup.trim().length > 20) {
+					$('#txtUserNameSignUp').focus();
 					$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">Username must be between 6 and 20 characters.</div>');
 	            	$(".bg-text").height(500);
 	            } else
 	            	if (accountSignup.trim().length < 6 || accountSignup.trim().length > 20) {
+	            		$('#txtAccountSignUp').focus();
 						$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">Account must be between 6 and 20 characters.</div>');
 		            	$(".bg-text").height(500);
 		            } else
 					if(passwordSignup != confirmPasswordSignup){
+						$('#txtPasswordSignUp').focus().val('');
+						$('#txtConfirmPasswordSignUp').val('');
 						$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">The passwords you entered do not match.</div>');
 			            $(".bg-text").height(500);
 					}else	
-						if( !passValid.test(passwordSignup) ) { 
+						if( !passValid.test(passwordSignup) ) {
+							$('#txtPasswordSignUp').focus().val('');
+							$('#txtConfirmPasswordSignUp').val('');
 			 				$('#signupAlert').html('<div class="alert alert-danger" style="color: red; font-weight: bolder;">The password must have at least 8 characters, at least 1 digit(s), at least 1 lower case letter(s), at least 1 upper case letter(s)</div>');
 				            $(".bg-text").height(550);
 						}
@@ -53,8 +60,16 @@ $(document).ready(function(){
 							            $(".bg-text").height(480);
 									} 
 									else if(res=='success'){
-										alert('add success');
-										location.reload();
+										swal({
+				                            title: "Thank you!",
+				                            text: "Sign up success",
+				                            icon: "success"
+				                        })
+				                        .then((value) => {
+				                           location.reload();
+				                        });
+
+										
 									}
 								},
 								error: function(xhr, status, errorThrown) {

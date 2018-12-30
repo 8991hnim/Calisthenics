@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="../helper/hover/css/hover.css" media="all">
     <script type="text/javascript" src="../helper/jquery/jquery.js"></script>
     <script type="text/javascript" src="../helper/bootstrap/js/bootstrap.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body>

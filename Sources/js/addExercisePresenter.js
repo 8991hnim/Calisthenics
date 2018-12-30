@@ -18,13 +18,33 @@ $(document).ready(function() {
 
         // alert();
         if (isEmpty()) {
-            alert("Please fill in the blank.");
+            // alert("Please fill in the blank.");
+            swal({
+                title: "",
+                text: "Please fill in the blank.",
+                icon: "warning"
+            })
         } else if (!isNumeric($('#setInp').val())) {
-            alert("Set must be a number");
+            // alert("Set must be a number");
+            swal({
+                title: "",
+                text: "Set must be a number",
+                icon: "warning"
+            })
         } else if (!isNumeric($('#repInp').val())) {
-            alert("Rep must be a number");
+            // alert("Rep must be a number");
+            swal({
+                title: "",
+                text: "Rep must be a number.",
+                icon: "warning"
+            })
         } else if (!isNumeric($('#breakTimeInp').val())) {
-            alert("Break time must be a number");
+            // alert("Break time must be a number");
+            swal({
+                title: "",
+                text: "Break time must be a number",
+                icon: "warning"
+            })
         } else {
             //lay ds exercise, kiem tra trung
             $.ajax({
@@ -47,7 +67,12 @@ $(document).ready(function() {
                     })
 
                     if (isExist == true) {
-                        alert("This exercise already exist in day " + day);
+                        // alert("This exercise already exist in day " + day);
+                        swal({
+                            title: "",
+                            text: "This exercise already exist in day " + day,
+                            icon: "warning"
+                        })
                         isExist = false;
                     } else {
                         addExerciseToLevel();
@@ -94,7 +119,6 @@ $(document).ready(function() {
     }
 
     function addExerciseToLevel() {
-        alert(exerciseId);
         $.ajax({
             url: "../controller/exercise/AddExerciseLevel.php",
             data: {

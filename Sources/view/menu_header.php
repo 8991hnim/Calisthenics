@@ -20,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>  <!--popover tooltip-->
     <script type="text/javascript" src="../helper/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="../helper/jquery.bootpag.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../helper/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../helper/animate/animate.css">
     <link rel="stylesheet" href="../helper/hover/css/hover.css" media="all">
