@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     //cập nhật kết quả tập modal box
     $.ajax({
-        url: "controller/exercise/GetProgressTraining.php",
+        url: "../controller/exercise/GetProgressTraining.php",
         type: "POST",
         data: {
             userID: userID

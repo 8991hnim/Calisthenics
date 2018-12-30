@@ -47,7 +47,7 @@
                         <div class="card-wrapper">
                             <div class="avatar hvr-grow-rotate">
                                 <a target="_blank" href="https://www.facebook.com/v21.official">
-                                    <img class="avatar-circle avatar-xxlg img-responsive" src="image/infor/hoavinh.jpg" title="Đội trưởng kỹ thuật" alt="Đội trưởng kỹ thuật" width="300">
+                                    <img class="avatar-circle avatar-xxlg img-responsive" src="../image/infor/hoavinh.jpg" title="Đội trưởng kỹ thuật" alt="Đội trưởng kỹ thuật" width="300">
                                 </a>
                             </div>
                             <div class="content-info">
@@ -72,7 +72,7 @@
                         <div class="card-wrapper">
                             <div class="avatar hvr-grow-rotate">
                                 <a target="_blank" href="https://www.facebook.com/trananh.minh.7564">
-                                    <img class="avatar-circle avatar-xxlg img-responsive" src="image/infor/hoaminh.jpg" title="Quản lý dự án" alt="Quản lý dự án" width="300">
+                                    <img class="avatar-circle avatar-xxlg img-responsive" src="../image/infor/hoaminh.jpg" title="Quản lý dự án" alt="Quản lý dự án" width="300">
                                 </a>
                             </div>
                             <div class="content-info">

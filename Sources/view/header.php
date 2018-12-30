@@ -17,16 +17,16 @@
 
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" alt="Carousel Bootstrap First" src="image/background/bg_slide1.jpg" />
+                        <img class="d-block w-100" alt="Carousel Bootstrap First" src="../image/background/bg_slide1.jpg" />
                     </div>
                     <div class="carousel-item ">
-                        <img class="d-block w-100" alt="Carousel Bootstrap Third" src="image/background/bg_slide2.png" />
+                        <img class="d-block w-100" alt="Carousel Bootstrap Third" src="../image/background/bg_slide2.png" />
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" alt="Carousel Bootstrap Second" src="image/background/bg_slide3.jpg" />
+                        <img class="d-block w-100" alt="Carousel Bootstrap Second" src="../image/background/bg_slide3.jpg" />
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" alt="Carousel Bootstrap Second" src="image/background/bg_slide4.jpg" />
+                        <img class="d-block w-100" alt="Carousel Bootstrap Second" src="../image/background/bg_slide4.jpg" />
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carousel-144218" role="button" data-slide="prev">

@@ -1,5 +1,5 @@
 <?php
-    include_once("config/core.php");
+    include_once("../config/core.php");
     if(isset($_SESSION['signup_success']) && $_SESSION['signup_success']){
         session_destroy();
         header("Location: {$home_url}login.php");
@@ -50,7 +50,7 @@
         <div id="signupAlert"></div>
     </div>
 
-    <script type="text/javascript" src="js/signupPresenter.js"></script>
+    <script type="text/javascript" src="../js/signupPresenter.js"></script>
 </body>
 
 </html>

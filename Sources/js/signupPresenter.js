@@ -38,7 +38,7 @@ $(document).ready(function(){
 						else{
 							$.ajax({
 
-								url: "controller/user/signup.php",
+								url: "../controller/user/signup.php",
 								data: {
 									email: emailSignup,
 									userName: userNameSignup, 				

@@ -1,5 +1,5 @@
 <?php 
-    include_once("config/core.php");
+    include_once("../config/core.php");
 
     if(isset($_GET["cat"])) {
         $cat = $_GET["cat"];
@@ -83,4 +83,4 @@
  ?>
 
 
-<script type="text/javascript" src="js/postPresenter.js"></script>
+<script type="text/javascript" src="../js/postPresenter.js"></script>

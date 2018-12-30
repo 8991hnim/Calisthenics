@@ -1,6 +1,6 @@
 <?php
-    include_once("config/core.php");
-    include_once("model/user.php");
+    include_once("../config/core.php");
+    include_once("../model/user.php");
     if(isset($_GET["logout"])) {
         session_destroy();
         header("Location: {$home_url}index.php");
@@ -33,13 +33,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Calisthenics</title>
-    <link rel="stylesheet" type="text/css" href="helper/css/style.css">
-    <link rel="stylesheet" type="text/css" href="helper/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="helper/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="helper/hover/css/hover.css" media="all">
-    <link rel="stylesheet" type="text/css" href="helper/animate/animate.css">
-    <script type="text/javascript" src="helper/jquery/jquery.js"></script>
-    <script type="text/javascript" src="helper/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="../helper/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../helper/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../helper/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../helper/hover/css/hover.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../helper/animate/animate.css">
+    <script type="text/javascript" src="../helper/jquery/jquery.js"></script>
+    <script type="text/javascript" src="../helper/bootstrap/js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -172,4 +172,4 @@
         require"footer.php";
  ?>
 
- <script type="text/javascript" src="js/trainingPresenter.js"></script>
+ <script type="text/javascript" src="../js/trainingPresenter.js"></script>

@@ -72,7 +72,7 @@ $(document).ready(function() {
             } else {
                 $.ajax({
 
-                    url: "controller/user/change_profile.php",
+                    url: "../controller/user/change_profile.php",
                     data: {nameChange:nameChange},
                     type: "POST",
                     success: function(res) {
@@ -103,7 +103,7 @@ $(document).ready(function() {
 
             $.ajax({
 
-                url: "controller/user/change_profile.php",
+                url: "../controller/user/change_profile.php",
                 data: { oldPass: oldPass },
                 type: "POST",
                 success: function(res) {
@@ -158,7 +158,7 @@ $(document).ready(function() {
 
                     $.ajax({
 
-                        url: "controller/user/change_profile.php",
+                        url: "../controller/user/change_profile.php",
                         data: { newPass: newPass },
                         type: "POST",
                         success: function(res) {
@@ -186,7 +186,7 @@ $(document).ready(function() {
 
 // lấy level và ngày đã tập của user đang login
     $.ajax({
-        url: "controller/exercise/GetProgressTraining.php",
+        url: "../controller/exercise/GetProgressTraining.php",
         type: "POST",
         data: {
             userID: userID

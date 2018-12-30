@@ -5,7 +5,7 @@ $(document).ready(function() {
     var limit = 3;
 
     $.ajax({
-            url: "controller/post/GetTotalPagesCat.php",
+            url: "../controller/post/GetTotalPagesCat.php",
             data: {
                 cat: cat,
                 limit : limit
@@ -21,7 +21,7 @@ $(document).ready(function() {
         });
 
      $.ajax({
-            url: "controller/post/GetPostByCategory.php",
+            url: "../controller/post/GetPostByCategory.php",
             data: {
                 cat: cat,
                 page: 1,
@@ -48,7 +48,7 @@ $(document).ready(function() {
     function setupUI(id, title, shortContent, image) {
         var postUI = '<div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-4 offset-md-0 mt-3 mb-3 hvr-hang">' +
             '<div class="card colorPost">' +
-            '<img class="card-img-top cursorPointer" data-id="' + id + '" alt="Bootstrap Thumbnail First" src="' + image + '" />' +
+            '<img class="card-img-top cursorPointer" data-id="' + id + '" alt="Bootstrap Thumbnail First" src="../' + image + '" />' +
             '<div class="card-block">' +
             '<h5 class="card-title text-info hvr-wobble-top cursorPointer mt-3 mb-3" data-id="' + id + '">' +
             title +
@@ -64,7 +64,7 @@ $(document).ready(function() {
     }
 
     $("body").delegate(".cursorPointer", "click", function() {
-        var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/detail_post.php?cat=" + cat + "&id=" + $(this).attr('data-id')));
+        var url = new URL(window.location.replace("http://localhost:8080/Calisthenics/Sources/view/detail_post.php?cat=" + cat + "&id=" + $(this).attr('data-id')));
         window.location.href = url.href;
     });
 
@@ -76,7 +76,7 @@ $(document).ready(function() {
         page: 1
     }).on("page", function(event, /* page number here */ num) {
         $.ajax({
-            url: "controller/post/GetPostByCategory.php",
+            url: "../controller/post/GetPostByCategory.php",
             data: {
                 cat: cat,
                 page: num,

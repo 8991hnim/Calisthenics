@@ -4,7 +4,7 @@ $(document).ready(function() {
     var arrayPost;
 
     $.ajax({
-        url: "controller/post/GetDetailPost.php",
+        url: "../controller/post/GetDetailPost.php",
         type: "POST",
         data: {
             postID: postID
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
     //related post
      $.ajax({
-        url: "controller/post/GetRandomPostByCategory.php",
+        url: "../controller/post/GetRandomPostByCategory.php",
         data: {
             cat: cat,
             postID: postID
@@ -59,7 +59,7 @@ $(document).ready(function() {
     function setupUIRelatedPost(id, title, shortContent, image) {
         var postUI = '<div class="col-10 offset-1 col-sm-5 offset-sm-1 col-md-3 offset-md-0 mt-3 mb-3 hvr-hang">' +
             '<div class="card colorPost">' +
-            '<img class="card-img-top" alt="Related post" src="' + image + '" />' +
+            '<img class="card-img-top" alt="Related post" src="../' + image + '" />' +
             '<div class="card-block">' +
             '<h5 class="card-title text-info">' +
             title +

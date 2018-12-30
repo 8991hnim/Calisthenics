@@ -1,5 +1,5 @@
 <?php
-    include_once("config/core.php");
+    include_once("../config/core.php");
     if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
         header("Location: {$home_url}index.php");
     }else if(isset($_SESSION['require_login']) && isset($_SESSION['require_login'])){
@@ -62,7 +62,7 @@
     </div>
 
 
-    <script type="text/javascript" src="js/loginPresenter.js"></script>
+    <script type="text/javascript" src="../js/loginPresenter.js"></script>
 
 </body>
 

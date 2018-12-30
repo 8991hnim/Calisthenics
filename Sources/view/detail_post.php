@@ -1,5 +1,5 @@
 <?php 
-	 include_once("config/core.php");
+	 include_once("../config/core.php");
 
     if(isset($_GET["id"]) && isset($_GET["cat"])) {
         $postID = $_GET["id"];
@@ -92,4 +92,4 @@
  <?php 
 	require"footer.php"
  ?>
- <script type="text/javascript" src="js/detailPostPresenter.js"></script>
+ <script type="text/javascript" src="../js/detailPostPresenter.js"></script>

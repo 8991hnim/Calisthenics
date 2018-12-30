@@ -9,7 +9,7 @@ $(document).ready(function() {
     $("#dayNumber").text("Day " + day);
 
     $.ajax({
-        url: "controller/exercise/GetExerciseByDay.php",
+        url: "../controller/exercise/GetExerciseByDay.php",
         data: {
             level: level,
             day: day
@@ -28,7 +28,7 @@ $(document).ready(function() {
     });
 
     $.ajax({
-        url: "controller/exercise/GetDayTrained.php",
+        url: "../controller/exercise/GetDayTrained.php",
         data: {
             level: level,
             userID: userID
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
     $('#btnFinishTraining').click(function() {
         $.ajax({
-            url: "controller/exercise/UpdateDayTrained.php",
+            url: "../controller/exercise/UpdateDayTrained.php",
             data: {
                 level: level,
                 userID: userID,

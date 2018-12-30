@@ -137,4 +137,4 @@
 	require"footer.php"
  ?>
 
- <script type="text/javascript" src="js/profilePresenter.js"></script>
+ <script type="text/javascript" src="../js/profilePresenter.js"></script>
