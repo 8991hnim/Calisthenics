@@ -76,12 +76,11 @@
                                     <h5 class="text-overflow"><small>Hello, <?php echo $user->username ?></small> </h5>
                                 </div>
 
-                                <a href="../index.php" class="dropdown-item notify-item">
+                                <a href="../view/index.php" class="dropdown-item notify-item">
                                     <i class="fa fa-home"></i> <span>Home</span>
                                 </a>
 
-                                <!-- item-->
-                                <a href="pro-profile.html" class="dropdown-item notify-item">
+                                <a href="../view/profile.php" class="dropdown-item notify-item">
                                     <i class="fa fa-user"></i> <span>Profile</span>
                                 </a>
 

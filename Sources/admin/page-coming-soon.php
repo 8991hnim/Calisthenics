@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Coming Soon</title>
+	<title>2019</title>
 	<meta name="description" content="">
 	<link rel="stylesheet" href="assets/css/coming-soon.css">
 	<script src="assets/js/jquery.min.js"></script>
