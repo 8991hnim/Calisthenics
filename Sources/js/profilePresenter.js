@@ -1,13 +1,12 @@
-
 $(document).ready(function() {
 
-    $('[data-toggle="tooltip"]').tooltip();   //active tooltip 
+    $('[data-toggle="tooltip"]').tooltip(); //active tooltip 
 
     var currentName = $('#nameProfile').attr('data-id');
-    var userID = $('#userID').attr('data-id');  
+    var userID = $('#userID').attr('data-id');
 
 
-    $('#nameProfile2').addClass('hide');  
+    $('#nameProfile2').addClass('hide');
     $('#editNameProfile2').addClass('hide');
     $('#passwordProfile2').addClass('hide');
     $('#editPasswordProfile2').addClass('hide');
@@ -57,10 +56,20 @@ $(document).ready(function() {
         var nameChange = $('#txtNameProfile').val();
 
         if (nameChange.trim().length == 0) {
-            alert('Please fill in the blank.');
+            // alert('Please fill in the blank.');
+            swal({
+                title: "",
+                text: "Fill in the blank",
+                icon: "warning"
+            })
         } else {
             if (nameChange.trim().length < 6 || nameChange.trim().length > 20) {
-                alert('Username must be between 6 and 20 characters.');
+                // alert('Username must be between 6 and 20 characters.');
+                swal({
+                    title: "",
+                    text: "Username must be between 6 and 20 characters.",
+                    icon: "warning"
+                })
             } else
             if (nameChange.trim() == currentName.trim()) {
 
@@ -73,14 +82,23 @@ $(document).ready(function() {
                 $.ajax({
 
                     url: "../controller/user/change_profile.php",
-                    data: {nameChange:nameChange},
+                    data: { nameChange: nameChange },
                     type: "POST",
                     success: function(res) {
 
                         if (res = 'reset success') {
-                            alert(res);
-                            location.reload();
-                        } else alert('fail');
+                            swal({
+                                title: "Success",
+                                text: "Edited",
+                                icon: "success"
+                            }).then((value) => {
+                                location.reload();
+                            });
+                        } else swal({
+                                    title: "",
+                                    text: "Fail.",
+                                    icon: "warning"
+                                })
 
                     },
                     error: function(xhr, status, errorThrown) {
@@ -98,7 +116,12 @@ $(document).ready(function() {
         var oldPass = $('#txtOldPassword').val();
 
         if (oldPass.length == 0) {
-            alert('Please fill in the blank.');
+            // alert('Please fill in the blank.');
+            swal({
+                title: "",
+                text: "Fill in the blank",
+                icon: "warning"
+            })
         } else {
 
             $.ajax({
@@ -108,10 +131,13 @@ $(document).ready(function() {
                 type: "POST",
                 success: function(res) {
                     if (res == 'fail') {
-                        alert('The passwords you entered do not match');
+                        // alert('The passwords you entered do not match');
+                        swal({
+                            title: "",
+                            text: "The passwords you entered do not match",
+                            icon: "warning"
+                        })
                     } else {
-
-                        alert(res);
 
                         $('#passwordProfile2').addClass('hide');
                         $('#editPasswordProfile2').addClass('hide');
@@ -141,42 +167,64 @@ $(document).ready(function() {
 
         if (newPass.length == 0 || confirmNewPass.length == 0) {
 
-            alert('Please fill in the blank.');
+            // alert('Please fill in the blank.');
+            swal({
+                title: "",
+                text: "Fill in the blank",
+                icon: "warning"
+            })
 
-        }else
-            if (newPass != confirmNewPass) {
+        } else
+        if (!passValid.test(newPass)) {
+            // alert('The password must have at least 8 characters, at least 1 digit(s), at least 1 lower case letter(s), at least 1 upper case letter(s)');
+            swal({
+                title: "",
+                text: "The password must have at least 8 characters, at least 1 digit(s), at least 1 lower case letter(s), at least 1 upper case letter(s)",
+                icon: "warning"
+            })
 
-                alert('The passwords you entered do not match.');
+        } else
+        if (newPass != confirmNewPass) {
+            // alert('The passwords you entered do not match.');
+            swal({
+                title: "",
+                text: "The passwords you entered do not match.",
+                icon: "warning"
+            })
 
-            }else
-                if( !passValid.test(newPass) ) { 
+        } else {
 
-                    alert('The password must have at least 8 characters, at least 1 digit(s), at least 1 lower case letter(s), at least 1 upper case letter(s)');
-                
-                }
-                else {
+            $.ajax({
 
-                    $.ajax({
+                url: "../controller/user/change_profile.php",
+                data: { newPass: newPass },
+                type: "POST",
+                success: function(res) {
 
-                        url: "../controller/user/change_profile.php",
-                        data: { newPass: newPass },
-                        type: "POST",
-                        success: function(res) {
-
-                            if (res == '1') {
-                                alert('bi trung voi mat khau hien tai, chon mat khau khac');
-                                return;
-                            } else {
-                                alert(res);
+                    if (res == '1') {
+                        // alert('bi trung voi mat khau hien tai, chon mat khau khac');
+                        swal({
+                            title: "",
+                            text: "Bi trung voi mat khau hien tai, chon mat khau khac.",
+                            icon: "warning"
+                        })
+                        return;
+                    } else {
+                         swal({
+                                title: "Success",
+                                text: "Edited",
+                                icon: "success"
+                            }).then((value) => {
                                 location.reload();
-                            }
+                            });
+                    }
 
-                        },
-                        error: function(xhr, status, errorThrown) {
-                            console.log(errorThrown + status + xhr);
-                        }
+                },
+                error: function(xhr, status, errorThrown) {
+                    console.log(errorThrown + status + xhr);
+                }
 
-                    });
+            });
 
         }
 
@@ -184,7 +232,7 @@ $(document).ready(function() {
 
 
 
-// lấy level và ngày đã tập của user đang login
+    // lấy level và ngày đã tập của user đang login
     $.ajax({
         url: "../controller/exercise/GetProgressTraining.php",
         type: "POST",
@@ -197,9 +245,9 @@ $(document).ready(function() {
             $("#level2").attr("href", "training.php?level=2&day=" + (parseInt(arrayProgressTraining[1].dayTrained, 10) + 1));
             $("#level3").attr("href", "training.php?level=3&day=" + (parseInt(arrayProgressTraining[2].dayTrained, 10) + 1));
 
-            $("#trained1").text("Day trained: "+arrayProgressTraining[0].dayTrained);
-            $("#trained2").text("Day trained: "+arrayProgressTraining[1].dayTrained);
-            $("#trained3").text("Day trained: "+arrayProgressTraining[2].dayTrained);
+            $("#trained1").text("Day trained: " + arrayProgressTraining[0].dayTrained);
+            $("#trained2").text("Day trained: " + arrayProgressTraining[1].dayTrained);
+            $("#trained3").text("Day trained: " + arrayProgressTraining[2].dayTrained);
 
         },
         error: function(xhr, status, errorThrown) {

@@ -29,7 +29,7 @@
 						<div class="card-box noradius noborder bg-info">
 							<i class="fa fa-user-o float-right text-white"></i>
 							<h6 class="text-white text-uppercase m-b-20">Users</h6>
-							<h1 class="m-b-20 text-white counter pb-1" id="countUser">120</h1>
+							<h1 class="m-b-20 text-white counter pb-1" id="countUser"></h1>
 						</div>
 					</div>
 
@@ -37,7 +37,7 @@
 						<div class="card-box noradius noborder bg-warning">
 							<i class="fa fa-newspaper-o float-right text-white"></i>
 							<h6 class="text-white text-uppercase m-b-20">Posts</h6>
-							<h1 class="m-b-20 text-white counter pb-1" id="countPost">250</h1>
+							<h1 class="m-b-20 text-white counter pb-1" id="countPost"></h1>
 						</div>
 					</div>
 
@@ -45,7 +45,7 @@
 						<div class="card-box noradius noborder bg-danger">
 							<i class="fa fa-beer float-right text-white"></i>
 							<h6 class="text-white text-uppercase m-b-20">Exercises</h6>
-							<h1 class="m-b-20 text-white counter pb-1" id="countExercise">58</h1>
+							<h1 class="m-b-20 text-white counter pb-1" id="countExercise"></h1>
 						</div>
 					</div>
 				</div>

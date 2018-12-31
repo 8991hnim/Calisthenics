@@ -2,9 +2,19 @@ $(document).ready(function() {
     $('#btnSave').click(function() {
         var yt = new RegExp('^https://www.youtube.com/embed/[A-z0-9-_]{11}$');
         if ($('#name').val().trim().length < 1) {
-            alert('Fill in the blank');
+            // alert('Fill in the blank');
+            swal({
+                title: "",
+                text: "Fill in the blank",
+                icon: "warning"
+            })
         } else if (!yt.test($('#linkYT').val())) {
-            alert("Link youtube does not match!");
+            // alert("Link youtube does not match!");
+            swal({
+                title: "",
+                text: "Link youtube does not match!",
+                icon: "warning"
+            })
         } else {
             var name = $('#name').val();
             var linkYT = $('#linkYT').val();

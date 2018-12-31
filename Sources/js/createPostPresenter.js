@@ -21,11 +21,15 @@ $(document).ready(function() {
         var ValidImageTypes = ["image/jpeg", "image/png", "image/jpg"];
         if ($.inArray(fileType, ValidImageTypes) < 0) {
             // invalid file type code goes here.
-            alert("not valid");
+            // alert("not valid");
+            swal({
+                title: "",
+                text: "Image not valid.",
+                icon: "warning"
+            });
             $("#imgInp").val('');
             $("#imgPost").addClass("hide");
         } else {
-            alert("img ok");
             readURL(inp);
         }
     })
@@ -47,18 +51,32 @@ $(document).ready(function() {
     $('#btnSave').click(function() {
         var content = tinyMCE.activeEditor.getContent();
         if (isContentEmpty()) {
-            alert("Please fill in the blank.");
+            // alert("Please fill in the blank.");
+            swal({
+                title: "",
+                text: "Please fill in the blank.",
+                icon: "warning"
+            });
         } else {
         	var yt = new RegExp('^https://www.youtube.com/embed/[A-z0-9-_]{11}$');
             if (!yt.test($('#linkYT').val())) {
-            	alert("Link youtube does not match!");
+            	// alert("Link youtube does not match!");
+                swal({
+                    title: "",
+                    text: "Link youtube does not match!",
+                    icon: "warning"
+                });
             } else if ($("#imgInp").val() == '') {
-                alert("Insert a image");
+                // alert("Insert a image");
+                swal({
+                    title: "",
+                    text: "Insert a image.",
+                    icon: "warning"
+                });
             } else {
                 var file_data = $('#imgInp').prop('files')[0];
                 var form_data = new FormData();
                 form_data.append('fileToUpload', file_data);
-                alert(form_data);
                 $.ajax({
                     url: '../utils/upload.php', // point to server-side PHP script 
                     dataType: 'text', // what to expect back from the PHP script, if anything
