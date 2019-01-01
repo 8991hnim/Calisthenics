@@ -245,9 +245,9 @@ $(document).ready(function() {
             $("#level2").attr("href", "training.php?level=2&day=" + (parseInt(arrayProgressTraining[1].dayTrained, 10) + 1));
             $("#level3").attr("href", "training.php?level=3&day=" + (parseInt(arrayProgressTraining[2].dayTrained, 10) + 1));
 
-            $("#trained1").text("Day trained: " + arrayProgressTraining[0].dayTrained);
-            $("#trained2").text("Day trained: " + arrayProgressTraining[1].dayTrained);
-            $("#trained3").text("Day trained: " + arrayProgressTraining[2].dayTrained);
+            $("#trained1").text("Last day trained: " + arrayProgressTraining[0].dayTrained);
+            $("#trained2").text("Last day trained: " + arrayProgressTraining[1].dayTrained);
+            $("#trained3").text("Last day trained: " + arrayProgressTraining[2].dayTrained);
 
         },
         error: function(xhr, status, errorThrown) {

@@ -43,9 +43,9 @@
             <input type="password" class="form-control col-md-10" placeholder="Password" id="txtPasswordLogin" name="">
             <i class="iconPasswordLogin fa fa-lock"></i>
         </div>
-        <div class="text-right col-md-12 mt-2">
+        <!-- <div class="text-right col-md-12 mt-2">
             <a href="" class="text-right hvr-wobble-top forgot-pass">Forgot password?</a>
-        </div>
+        </div> -->
         <button class="col-md-11 btn btn-default hvr-wobble-top mt-5 btnLogin" id="btnLogin">LOG IN</button>
         <!-- </form> -->
         <p class="mt-4">Don't have an account? 

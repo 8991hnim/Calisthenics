@@ -86,7 +86,7 @@
 		        		<td>Day number: 12</td>
 		      		</tr>
 		      		<tr>
-		        		<td id="trained1">Day trained: 6</td>
+		        		<td id="trained1">Last day trained: 6</td>
 		      		</tr>
 		      		<tr>
 		        		<td><a href="" id="level1" class="btn btn-primary">Continue training</a></td>

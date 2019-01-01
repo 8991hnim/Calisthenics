@@ -31,6 +31,7 @@
 				</div>
 
                 <div class="row py-3">
+                	<div ><h5>   Day   </h5></div>
 	                <div class="col-md-3">
 	                    <select class="form-control">
 	                        <option value="1">1</option>

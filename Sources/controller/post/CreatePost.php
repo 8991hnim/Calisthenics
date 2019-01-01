@@ -15,7 +15,7 @@
 		
 		$stmt = $conn->prepare('INSERT INTO post VALUES(NULL,"'.$title.'","'.$content.'","'.$shortContent.'", "'.$linkYT.'", "'.$image.'",'.$catId.',1)');
 		if($stmt ->execute()){
-			echo "success";
+			echo "success" . $catId;
 		}else{
 			echo "fail";
 		};
