@@ -6,6 +6,7 @@
 	<title>2019</title>
 	<meta name="description" content="">
 	<link rel="stylesheet" href="assets/css/coming-soon.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/countdown.js"></script>
 
@@ -23,7 +24,7 @@
 		});
 		
 		$("#countdown").countdown({
-			date: "1 january 2019 00:00:00", // Enter date here
+			date: "5 february 2019 00:00:00", // Enter date here
 			format: "on"
 		});
 	});
@@ -36,8 +37,9 @@
 		<div id="topcontainer" class="bodycontainer clearfix">
 			
 			<p><span class="fa fa-bullhorn"></span></p>
-			<h1><span>We are coming soon</span></h1>
-			<p>2019 of V21</p>
+			<h1><span>Tet...</span></h1>
+			<!-- <h1><span>We are coming soon</span></h1> -->
+			<!-- <p>2019 of V21</p> -->
 			
 		</div>
 	</div>
@@ -73,7 +75,7 @@
 
 	<div class="arrow-separator arrow-theme"></div>
 
-	<div class="fullwidth colour2 clearfix">
+	<!-- <div class="fullwidth colour2 clearfix">
 		<div id="maincont" class="bodycontainer clearfix">		
 			<h2>Sign up to newsletter to know when we launch</h2>
 			<p>If you would want to receive news please subscribe to our newsletter:</p>
@@ -88,12 +90,45 @@
 		</div>
 	</div>
 
-	<div class="arrow-separator arrow-themelight"></div>
+	<div class="arrow-separator arrow-themelight"></div> -->
+
+
+	<div class="fullwidth colour2 clearfix">
+		<div id="footercont" class="bodycontainer clearfix">
+
+			<!-- <p class="backtotop"><a title="" href="#backtotop"><i class="fa fa-angle-double-up"></i></a></p> -->
+			<p class="text-white">Follow me </p>
+			<div id="socialmedia" class="clearfix">
+				<ul>
+					<li class="">
+						<a target="_blank" style="color: #4267FD;" href="https://www.facebook.com/v21.official" rel="external">
+							<i class="fa fa-facebook-official"></i>
+						</a>
+					</li>
+					<li class="">
+						<a target="_blank" style="color: #993d00;" href="https://www.instagram.com/v21official/" rel="external">
+							<i class="fa fa-instagram"></i>
+						</a>
+					</li>
+					<li class="pr-4">
+						<a target="_blank" style="color: red;" href="https://www.youtube.com/channel/UC5Iy1dgJvDADSVZRZM6FSJg" rel="external">
+							<i class="fa fa-youtube-play"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+
+
+
+	<!-- <div class="arrow-separator arrow-themelight"></div>
 
 	<div class="fullwidth clearfix">
 		<div id="footercont" class="bodycontainer clearfix">
 
-			<!-- <p class="backtotop"><a title="" href="#backtotop"><i class="fa fa-angle-double-up"></i></a></p> -->
+			 <p class="backtotop"><a title="" href="#backtotop"><i class="fa fa-angle-double-up"></i></a></p>
 			<p>Follow me </p>
 			<div id="socialmedia" class="clearfix">
 				<ul>
@@ -103,7 +138,7 @@
 				</ul>
 			</div>
 			
-		</div>
+		</div> -->
 	</div>
    
 </body>
