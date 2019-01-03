@@ -132,6 +132,7 @@ $(document).ready(function() {
                 success: function(res) {
                     if (res == 'fail') {
                         // alert('The passwords you entered do not match');
+						$('#txtOldPassword').val('').focus();
                         swal({
                             title: "",
                             text: "The passwords you entered do not match",
@@ -176,6 +177,8 @@ $(document).ready(function() {
 
         } else
         if (!passValid.test(newPass)) {
+			$('#txtNewPass').val('').focus();
+			$('#txtConfirmNewPass').val('');
             // alert('The password must have at least 8 characters, at least 1 digit(s), at least 1 lower case letter(s), at least 1 upper case letter(s)');
             swal({
                 title: "",
@@ -186,6 +189,8 @@ $(document).ready(function() {
         } else
         if (newPass != confirmNewPass) {
             // alert('The passwords you entered do not match.');
+			$('#txtNewPass').val('').focus();
+			$('#txtConfirmNewPass').val('');
             swal({
                 title: "",
                 text: "The passwords you entered do not match.",
@@ -202,6 +207,8 @@ $(document).ready(function() {
                 success: function(res) {
 
                     if (res == '1') {
+						$('#txtNewPass').val('').focus();
+						$('#txtConfirmNewPass').val('');
                         // alert('bi trung voi mat khau hien tai, chon mat khau khac');
                         swal({
                             title: "",
